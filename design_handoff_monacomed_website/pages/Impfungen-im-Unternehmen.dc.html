@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Impfungen im Unternehmen – Impfaktionen im Betrieb | MonacoMed</title>
+<meta name="description" content="Grippeschutz, reisemedizinische und tätigkeitsbezogene Impfungen direkt im Betrieb – von der Planung bis zur Dokumentation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f6f5; --panel:#ffffff; --ink:#11201c; --ink-soft:#46554f; --mute:#7c8a83;
+  --line:#dde4e0; --green:#13443a; --green-d:#0c2e27; --green-br:#2f8f74; --sand:#eef1ef;
+  --maxw:1280px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;padding-top:71px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 36px}
+h1,h2,h3{font-family:'Archivo',sans-serif;font-weight:700;line-height:1.08;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+.lbl{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--green-br)}
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--panel);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{font-family:'Archivo';font-size:20px;font-weight:800;letter-spacing:-.02em;color:var(--green-d);text-transform:uppercase}
+.brand i{font-style:normal;color:var(--green-br)}
+nav{flex:1;padding:0 40px}
+nav ul{display:flex;justify-content:center;list-style:none;gap:clamp(24px,3.2vw,52px)}
+nav a{font-size:14px;font-weight:500;color:var(--ink-soft)}
+nav a:hover{color:var(--green)}
+.hcta{display:flex;align-items:center;gap:18px}
+.btn{display:inline-block;font-weight:600;font-size:14px;padding:11px 20px;transition:.18s;border-radius:40px}
+.btn-primary{background:var(--green);color:#fff}
+.btn-primary:hover{background:var(--green-d)}
+.btn-ghost{border:1px solid var(--green);color:var(--green)}
+.btn-ghost:hover{background:var(--green);color:#fff}
+.btn-light{background:#fff;color:var(--green-d)}
+.btn-light:hover{background:var(--sand)}
+section.pad{padding:84px 0}
+.sec-head{margin-bottom:44px;display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(27px,3vw,40px);color:var(--green-d);max-width:20ch}
+.sec-head .lead{font-size:16px;color:var(--ink-soft);max-width:42ch}
+.hero{background:var(--panel);border-bottom:1px solid var(--line)}
+.hero .inner{padding:76px 0 68px;max-width:860px}
+.hero h1{font-size:clamp(34px,3.8vw,54px);color:var(--green-d);margin:18px 0 0;max-width:22ch}
+.hero .sub-strong{font-family:'Archivo';font-size:20px;font-weight:600;color:var(--green);margin-top:16px}
+.hero .sub{font-size:17px;color:var(--ink-soft);margin-top:18px;max-width:62ch}
+.hero-cta{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.step{padding:26px 22px 28px;border-left:1px solid var(--line)}
+.step:first-child{border-left:none}
+.step .n{font-family:'IBM Plex Mono';font-size:13px;color:var(--green-br)}
+.step .bar{height:3px;background:var(--green-br);width:34px;margin:14px 0}
+.step h4{font-family:'Archivo';font-size:15px;font-weight:600;color:var(--green-d);line-height:1.35}
+.step p{font-size:13px;color:var(--ink-soft);margin-top:9px;line-height:1.5}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px 22px 24px}
+.tile h4{font-family:'Archivo';font-size:16px;font-weight:600;color:var(--green-d);margin-bottom:7px}
+.tile p{font-size:14px;color:var(--ink-soft)}
+.faq-list{border:1px solid var(--line);background:var(--panel);border-radius:14px;overflow:hidden}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-item:last-child{border-bottom:none}
+.faq-item>summary{list-style:none;padding:22px 26px;display:flex;justify-content:space-between;gap:24px;align-items:center;cursor:pointer}
+.faq-item>summary::-webkit-details-marker{display:none}
+.faq-item>summary:hover{background:var(--sand)}
+.faq-item[open]>summary{background:var(--sand)}
+.faq-item>summary h4{font-family:'Archivo';font-size:17px;font-weight:600;color:var(--green-d)}
+.faq-item>summary .k{font-family:'IBM Plex Mono';font-size:12px;color:var(--green-br);flex:none}
+.faq-item>summary .k::before{content:"[ + ]"}
+.faq-item[open]>summary .k::before{content:"[ \2212 ]"}
+.faq-answer{padding:2px 26px 24px;font-size:15px;color:var(--ink-soft);max-width:74ch}
+.cta-band{background:var(--green-d);color:#cfe3da;padding:76px 0}
+.cta-band h2{color:#fff;font-size:clamp(26px,3vw,38px);max-width:24ch}
+.cta-band p{margin-top:14px;font-size:16px;color:#a9c8bd;max-width:56ch}
+footer{background:var(--green-d);color:#a9c8bd;padding:50px 0 28px;font-size:14px}
+.foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.12)}
+.foot-brand{font-family:'Archivo';font-size:18px;font-weight:800;color:#fff;text-transform:uppercase}
+.foot-brand i{font-style:normal;color:var(--green-br)}
+.foot-links a{margin-left:22px;color:#a9c8bd}.foot-links a:hover{color:#fff}
+.foot-bot{padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-family:'IBM Plex Mono';font-size:12px;color:#6f9385}
+@media(max-width:920px){
+  .wrap{padding:0 20px}
+  nav{display:none}
+  .steps,.tiles{grid-template-columns:1fr}
+  .step{border-left:none}
+  .sec-head{flex-direction:column;align-items:flex-start;gap:14px}
+}
+
+/* dropdown */
+nav li{position:relative}
+nav .subwrap{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:12px;z-index:70}
+nav li.has-sub:hover .subwrap,nav li.has-sub:focus-within .subwrap{display:block}
+.subpanel{background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 32px rgba(11,32,27,.14);padding:8px;min-width:250px;display:flex;flex-direction:column}
+.subpanel a{display:block;padding:10px 12px;border-radius:8px;font-size:13.5px;color:var(--ink-soft);white-space:nowrap}
+.subpanel a:hover{background:var(--sand);color:var(--green)}
+.has-sub>a::after{content:" \25BE";font-size:10px;color:var(--green-br)}
+/* mobile burger */
+.mnav{display:none;position:relative}
+.mnav summary{list-style:none;cursor:pointer;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:10px}
+.mnav summary::-webkit-details-marker{display:none}
+.mnav .bars{display:block;width:18px;height:2px;background:var(--green-d);position:relative}
+.mnav .bars::before,.mnav .bars::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--green-d)}
+.mnav .bars::before{top:-6px}.mnav .bars::after{top:6px}
+.mnav-panel{position:fixed;left:0;right:0;top:70px;background:var(--panel);border-bottom:1px solid var(--line);box-shadow:0 16px 30px rgba(11,32,27,.12);padding:8px 20px 14px;z-index:80}
+.mnav-panel ul{list-style:none;display:flex;flex-direction:column;gap:0}
+.mnav-panel a{display:block;padding:13px 4px;font-size:15px;font-weight:500;color:var(--ink);border-bottom:1px solid var(--line)}
+.mnav-panel li:last-child a{border-bottom:none}
+@media(max-width:920px){.mnav{display:block}}
+
+.crumbs{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.crumbs a{color:var(--green-br)}
+.crumbs a:hover{text-decoration:underline;text-underline-offset:3px}
+.crumbs .sep{color:var(--mute);opacity:.5}
+</style>
+</helmet>
+
+<header><div class="wrap bar">
+  <div class="brand"><a href="homepage.dc.html">Monaco<i>Med</i></a></div>
+  <nav><ul>
+    <li class="has-sub"><a href="Leistungen.dc.html">Leistungen</a><div class="subwrap"><div class="subpanel"><a href="Arbeitsmedizin.dc.html">Arbeitsmedizin</a><a href="Arbeitssicherheit.dc.html">Arbeitssicherheit</a><a href="Bahnmedizin.dc.html">Bahnmedizin</a><a href="Impfungen-im-Unternehmen.dc.html">Impfungen im Unternehmen</a><a href="Leistungen.dc.html#digitale-prozesse">Digitale Prozesse</a><a href="Leistungen.dc.html#gesundheitsmanagement">Gesundheitsmanagement</a></div></div></li>
+    <li><a href="Fuer-Unternehmen.dc.html">Für Unternehmen</a></li><li><a href="homepage.dc.html#leitung">Ärztliche Leitung</a></li>
+    <li><a href="FAQ.dc.html">FAQ</a></li><li><a href="Kontakt.dc.html">Kontakt</a></li>
+  </ul></nav>
+  <div class="hcta"><a href="Betreuungsbedarf-einschaetzen.dc.html" class="btn btn-primary">Betreuungsbedarf einschätzen</a></div>
+<details class="mnav"><summary aria-label="Menü öffnen"><span class="bars"></span></summary><div class="mnav-panel"><ul><li class="has-sub"><a href="Leistungen.dc.html">Leistungen</a><div class="subwrap"><div class="subpanel"><a href="Arbeitsmedizin.dc.html">Arbeitsmedizin</a><a href="Arbeitssicherheit.dc.html">Arbeitssicherheit</a><a href="Bahnmedizin.dc.html">Bahnmedizin</a><a href="Impfungen-im-Unternehmen.dc.html">Impfungen im Unternehmen</a><a href="Leistungen.dc.html#digitale-prozesse">Digitale Prozesse</a><a href="Leistungen.dc.html#gesundheitsmanagement">Gesundheitsmanagement</a></div></div></li>
+    <li><a href="Fuer-Unternehmen.dc.html">Für Unternehmen</a></li><li><a href="homepage.dc.html#leitung">Ärztliche Leitung</a></li>
+    <li><a href="FAQ.dc.html">FAQ</a></li><li><a href="Kontakt.dc.html">Kontakt</a></li></ul></div></details>
+</div></header>
+
+<!-- HERO -->
+<section class="hero"><div class="wrap"><div class="inner">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="Leistungen.dc.html">Leistungen</a><span class="sep">/</span><span aria-current="page">Impfungen im Unternehmen</span></nav>
+  <h1>Impfaktionen direkt im Betrieb</h1>
+  <p class="sub-strong">Von der Planung bis zur Dokumentation – ärztlich durchgeführt.</p>
+  <p class="sub">Grippeschutz vor der Saison, reisemedizinische Beratung vor Dienstreisen oder tätigkeitsbezogene Impfungen: MonacoMed organisiert Impftage direkt bei Ihnen – inklusive Aufklärung, Einwilligung und Nachweis.</p>
+  <div class="hero-cta">
+    <a href="Betreuungsbedarf-einschaetzen.dc.html" class="btn btn-primary">Impfaktion anfragen</a>
+    <a href="Rueckruf-vereinbaren.dc.html" class="btn btn-ghost">Rückruf vereinbaren</a>
+  </div>
+</div></div></section>
+
+<!-- ANGEBOT -->
+<section class="pad"><div class="wrap">
+  <div class="sec-head"><h2>Welche Impfungen wir anbieten</h2><p class="lead">Abgestimmt auf Tätigkeiten, Reisepläne und Saison.</p></div>
+  <div class="tiles">
+    <div class="tile"><h4>Grippeschutzimpfung</h4><p>Die jährliche Aktion im Herbst – planbar für das ganze Team.</p></div>
+    <div class="tile"><h4>Reisemedizinische Impfungen</h4><p>Beratung und Impfungen vor Dienstreisen – fachärztlich durch einen Reisemediziner.</p></div>
+    <div class="tile"><h4>Tätigkeitsbezogene Impfungen</h4><p>z. B. Hepatitis A/B bei entsprechender Gefährdung – eingeordnet über die Vorsorge.</p></div>
+  </div>
+</div></section>
+
+<!-- ABLAUF -->
+<section class="pad" style="padding-top:0"><div class="wrap">
+  <div class="sec-head"><h2>So läuft ein Impftag ab</h2></div>
+  <div class="steps">
+    <div class="step"><div class="n">01</div><div class="bar"></div><h4>Bedarf &amp; Termin</h4><p>Wir planen Umfang und Termin gemeinsam – abgestimmt auf Ihre Standorte.</p></div>
+    <div class="step"><div class="n">02</div><div class="bar"></div><h4>Anmeldung &amp; Aufklärung</h4><p>Mitarbeitende melden sich online an und erhalten alle Informationen vorab digital.</p></div>
+    <div class="step"><div class="n">03</div><div class="bar"></div><h4>Impftag im Betrieb</h4><p>Durchführung vor Ort – mit wenig Ausfallzeit für Ihr Team.</p></div>
+    <div class="step"><div class="n">04</div><div class="bar"></div><h4>Dokumentation</h4><p>Nachweise für die Mitarbeitenden, Erinnerung an Auffrischungen über das Kataster.</p></div>
+  </div>
+</div></section>
+
+<!-- FAQ -->
+<section class="pad" style="background:var(--sand);border-top:1px solid var(--line)"><div class="wrap">
+  <div class="sec-head"><h2>Häufige Fragen zu Impfaktionen</h2></div>
+  <div class="faq-list">
+    <details class="faq-item">
+      <summary><h4>Ab wie vielen Mitarbeitenden lohnt sich ein Impftag?</h4><span class="k"></span></summary>
+      <div class="faq-answer">Auch kleinere Teams sind möglich – Umfang und Format stimmen wir individuell ab. Alternativ können Mitarbeitende einzeln in unsere Praxis kommen.</div>
+    </details>
+    <details class="faq-item">
+      <summary><h4>Wie viel Vorlauf brauchen wir?</h4><span class="k"></span></summary>
+      <div class="faq-answer">In der Regel wenige Wochen. Grippeaktionen planen Sie am besten früh im Herbst, reisemedizinische Impfungen je nach Ziel mit mehreren Wochen Vorlauf.</div>
+    </details>
+    <details class="faq-item">
+      <summary><h4>Geht das auch an mehreren Standorten?</h4><span class="k"></span></summary>
+      <div class="faq-answer">Ja. Impftage werden standortübergreifend koordiniert – mit zentraler Anmeldung und einheitlicher Dokumentation.</div>
+    </details>
+    <details class="faq-item">
+      <summary><h4>Wer denkt an die Auffrischungen?</h4><span class="k"></span></summary>
+      <div class="faq-answer">Unser digitales Kataster überwacht Fälligkeiten und erinnert automatisch – niemand muss Listen führen.</div>
+    </details>
+  </div>
+</div></section>
+
+<!-- CTA -->
+<section class="cta-band"><div class="wrap">
+  <span class="lbl" style="color:#7fc2ab">Kontakt</span>
+  <h2 style="margin-top:14px">Planen wir Ihre nächste Impfaktion</h2>
+  <p>Wenige Angaben genügen – Ihre Anfrage wird direkt ärztlich geprüft, ohne Vertrieb oder Callcenter.</p>
+  <div style="margin-top:28px"><a href="Betreuungsbedarf-einschaetzen.dc.html" class="btn btn-light">Jetzt unverbindlich anfragen</a></div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="foot-top">
+    <div class="foot-brand">Monaco<i>Med</i></div>
+    <div class="foot-links"><a href="Leistungen.dc.html">Leistungen</a><a href="Arbeitsmedizin.dc.html">Arbeitsmedizin</a><a href="Arbeitssicherheit.dc.html">Arbeitssicherheit</a><a href="Bahnmedizin.dc.html">Bahnmedizin</a><a href="Impfungen-im-Unternehmen.dc.html">Impfungen</a><a href="Betriebsarzt-Muenchen.dc.html">Betriebsarzt München</a><a href="Fuer-Unternehmen.dc.html">Für Unternehmen</a><a href="homepage.dc.html#leitung">Ärztliche Leitung</a><a href="FAQ.dc.html">FAQ</a><a href="Kontakt.dc.html">Kontakt</a></div>
+  </div>
+  <div class="foot-bot"><span>Heidemannstraße 38 · 80939 München · <a href="Impressum.dc.html" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Impressum</a> · <a href="Impressum.dc.html#datenschutz" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Datenschutz</a> · <a href="Impressum.dc.html#datenschutz" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Cookies</a></span><span>© 2026 Dr. med. univ. David Manghabati</span></div>
+</div></footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals(){ return {}; }
+}
+</script>
+</body>
+</html>

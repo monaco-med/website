@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Rückruf vereinbaren | MonacoMed</title>
+<meta name="description" content="Hinterlassen Sie Ihr Anliegen und Ihr Wunschzeitfenster – wir rufen Sie zurück. Direkt, persönlich, ohne Callcenter.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f6f5; --panel:#ffffff; --ink:#11201c; --ink-soft:#46554f; --mute:#7c8a83;
+  --line:#dde4e0; --green:#13443a; --green-d:#0c2e27; --green-br:#2f8f74; --sand:#eef1ef;
+  --maxw:1280px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;padding-top:71px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 36px}
+h1,h2,h3{font-family:'Archivo',sans-serif;font-weight:700;line-height:1.08;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+.lbl{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--green-br)}
+
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--panel);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{font-family:'Archivo';font-size:20px;font-weight:800;letter-spacing:-.02em;color:var(--green-d);text-transform:uppercase}
+.brand i{font-style:normal;color:var(--green-br)}
+nav{flex:1;padding:0 40px}
+nav ul{display:flex;justify-content:center;list-style:none;gap:clamp(24px,3.2vw,52px)}
+nav a{font-size:14px;font-weight:500;color:var(--ink-soft)}
+nav a:hover{color:var(--green)}
+.hcta{display:flex;align-items:center;gap:18px}
+.tel{font-family:'IBM Plex Mono';font-size:13px;color:var(--mute)}
+.btn{display:inline-block;font-weight:600;font-size:14px;padding:11px 20px;transition:.18s;border-radius:40px}
+.btn-primary{background:var(--green);color:#fff}
+.btn-primary:hover{background:var(--green-d)}
+.btn-ghost{border:1px solid var(--green);color:var(--green)}
+.btn-ghost:hover{background:var(--green);color:#fff}
+
+section.pad{padding:84px 0}
+.sec-head{margin-bottom:44px;display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(27px,3vw,40px);color:var(--green-d);max-width:18ch}
+.sec-head .lead{font-size:16px;color:var(--ink-soft);max-width:42ch}
+
+/* rückruf — focused callback form */
+.cb-wrap{max-width:600px;margin:0 auto}
+.cb-head{text-align:center;margin-bottom:30px}
+.cb-head .lbl{display:block;margin-bottom:12px}
+.cb-head h1,.cb-head h2{font-size:clamp(27px,3vw,38px);color:var(--green-d)}
+.cb-head p{font-size:16px;color:var(--ink-soft);margin-top:14px;max-width:46ch;margin-left:auto;margin-right:auto}
+.cb-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:36px}
+
+.field{margin-bottom:15px}
+.field label{display:block;font-family:'IBM Plex Mono';font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);border-radius:9px;padding:11px 12px;font-family:inherit;font-size:14px;color:var(--ink);background:var(--bg)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--green-br);border-color:transparent}
+.req{color:var(--green-br)}
+.helper{font-size:13px;color:var(--mute);margin-top:14px;font-family:'IBM Plex Mono'}
+
+footer{background:var(--green-d);color:#a9c8bd;padding:50px 0 28px;font-size:14px}
+.foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.12)}
+.foot-brand{font-family:'Archivo';font-size:18px;font-weight:800;color:#fff;text-transform:uppercase}
+.foot-brand i{font-style:normal;color:var(--green-br)}
+.foot-links a{margin-left:22px;color:#a9c8bd}.foot-links a:hover{color:#fff}
+.foot-bot{padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-family:'IBM Plex Mono';font-size:12px;color:#6f9385}
+
+@media(max-width:920px){
+  .wrap{padding:0 20px}
+  nav,.tel{display:none}
+}
+
+/* dropdown */
+nav li{position:relative}
+nav .subwrap{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:12px;z-index:70}
+nav li.has-sub:hover .subwrap,nav li.has-sub:focus-within .subwrap{display:block}
+.subpanel{background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 32px rgba(11,32,27,.14);padding:8px;min-width:250px;display:flex;flex-direction:column}
+.subpanel a{display:block;padding:10px 12px;border-radius:8px;font-size:13.5px;color:var(--ink-soft);white-space:nowrap}
+.subpanel a:hover{background:var(--sand);color:var(--green)}
+.has-sub>a::after{content:" \25BE";font-size:10px;color:var(--green-br)}
+/* mobile burger */
+.mnav{display:none;position:relative}
+.mnav summary{list-style:none;cursor:pointer;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:10px}
+.mnav summary::-webkit-details-marker{display:none}
+.mnav .bars{display:block;width:18px;height:2px;background:var(--green-d);position:relative}
+.mnav .bars::before,.mnav .bars::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--green-d)}
+.mnav .bars::before{top:-6px}.mnav .bars::after{top:6px}
+.mnav-panel{position:fixed;left:0;right:0;top:70px;background:var(--panel);border-bottom:1px solid var(--line);box-shadow:0 16px 30px rgba(11,32,27,.12);padding:8px 20px 14px;z-index:80}
+.mnav-panel ul{list-style:none;display:flex;flex-direction:column;gap:0}
+.mnav-panel a{display:block;padding:13px 4px;font-size:15px;font-weight:500;color:var(--ink);border-bottom:1px solid var(--line)}
+.mnav-panel li:last-child a{border-bottom:none}
+@media(max-width:920px){.mnav{display:block}}
+
+.form-danke{display:none;margin-top:14px;padding:14px 18px;border:1px solid var(--green-br);border-radius:10px;background:var(--sand);color:var(--green-d);font-size:14px;line-height:1.5}
+.form-danke:target{display:block}
+</style>
+</helmet>
+
+<header><div class="wrap bar">
+  <div class="brand"><a href="homepage.dc.html">Monaco<i>Med</i></a></div>
+  <nav><ul>
+    <li class="has-sub"><a href="Leistungen.dc.html">Leistungen</a><div class="subwrap"><div class="subpanel"><a href="Arbeitsmedizin.dc.html">Arbeitsmedizin</a><a href="Arbeitssicherheit.dc.html">Arbeitssicherheit</a><a href="Bahnmedizin.dc.html">Bahnmedizin</a><a href="Impfungen-im-Unternehmen.dc.html">Impfungen im Unternehmen</a><a href="Leistungen.dc.html#digitale-prozesse">Digitale Prozesse</a><a href="Leistungen.dc.html#gesundheitsmanagement">Gesundheitsmanagement</a></div></div></li>
+    <li><a href="Fuer-Unternehmen.dc.html">Für Unternehmen</a></li><li><a href="homepage.dc.html#leitung">Ärztliche Leitung</a></li>
+    <li><a href="FAQ.dc.html">FAQ</a></li><li><a href="Kontakt.dc.html">Kontakt</a></li>
+  </ul></nav>
+  <div class="hcta"><a href="Betreuungsbedarf-einschaetzen.dc.html" class="btn btn-primary">Betreuungsbedarf einschätzen</a></div>
+<details class="mnav"><summary aria-label="Menü öffnen"><span class="bars"></span></summary><div class="mnav-panel"><ul><li class="has-sub"><a href="Leistungen.dc.html">Leistungen</a><div class="subwrap"><div class="subpanel"><a href="Arbeitsmedizin.dc.html">Arbeitsmedizin</a><a href="Arbeitssicherheit.dc.html">Arbeitssicherheit</a><a href="Bahnmedizin.dc.html">Bahnmedizin</a><a href="Impfungen-im-Unternehmen.dc.html">Impfungen im Unternehmen</a><a href="Leistungen.dc.html#digitale-prozesse">Digitale Prozesse</a><a href="Leistungen.dc.html#gesundheitsmanagement">Gesundheitsmanagement</a></div></div></li>
+    <li><a href="Fuer-Unternehmen.dc.html">Für Unternehmen</a></li><li><a href="homepage.dc.html#leitung">Ärztliche Leitung</a></li>
+    <li><a href="FAQ.dc.html">FAQ</a></li><li><a href="Kontakt.dc.html">Kontakt</a></li></ul></div></details>
+</div></header>
+
+<!-- RÜCKRUF VEREINBAREN — standalone page -->
+<section class="pad"><div class="wrap">
+  <div class="cb-wrap">
+    <div class="cb-head">
+      <span class="lbl">Rückruf</span>
+      <h1>Rückruf vereinbaren</h1>
+      <p>Hinterlassen Sie uns kurz Ihr Anliegen und wann es am besten passt — wir rufen zurück.</p>
+    </div>
+    <div class="cb-card">
+      <div class="field"><label>Grund des Rückrufwunsches</label><textarea rows="3" placeholder="Worum geht es?"></textarea></div>
+      <div class="field"><label>Name <span class="req">*</span></label><input type="text"></div>
+      <div class="field"><label>Unternehmen (optional)</label><input type="text"></div>
+      <div class="field"><label>E-Mail <span class="req">*</span></label><input type="email"></div>
+      <div class="field"><label>Beste Zeit für den Rückruf</label><select><option>9–12 Uhr</option><option>13–17 Uhr</option><option>Sonstige</option></select></div>
+      <a href="#danke" class="btn btn-primary" style="width:100%;text-align:center">Rückruf anfordern</a>
+      <div class="form-danke" id="danke">Vielen Dank – wir rufen Sie im gewünschten Zeitfenster zurück. <em style="color:var(--mute);font-style:normal">(Demo-Formular im Entwurf)</em></div>
+      <p class="helper">// Wir melden uns zum gewünschten Zeitfenster telefonisch bei Ihnen.</p>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="foot-top">
+    <div class="foot-brand">Monaco<i>Med</i></div>
+    <div class="foot-links"><a href="Leistungen.dc.html">Leistungen</a><a href="Arbeitsmedizin.dc.html">Arbeitsmedizin</a><a href="Arbeitssicherheit.dc.html">Arbeitssicherheit</a><a href="Bahnmedizin.dc.html">Bahnmedizin</a><a href="Impfungen-im-Unternehmen.dc.html">Impfungen</a><a href="Betriebsarzt-Muenchen.dc.html">Betriebsarzt München</a><a href="Fuer-Unternehmen.dc.html">Für Unternehmen</a><a href="homepage.dc.html#leitung">Ärztliche Leitung</a><a href="homepage.dc.html#faq">FAQ</a><a href="Kontakt.dc.html">Kontakt</a></div>
+  </div>
+  <div class="foot-bot"><span>Heidemannstraße 38 · 80939 München · <a href="Impressum.dc.html" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Impressum</a> · <a href="Impressum.dc.html#datenschutz" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Datenschutz</a> · <a href="Impressum.dc.html#datenschutz" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Cookies</a></span><span>© 2026 Dr. med. univ. David Manghabati</span></div>
+</div></footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals(){ return {}; }
+}
+</script>
+</body>
+</html>

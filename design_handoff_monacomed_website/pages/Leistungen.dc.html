@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Leistungen – Arbeitsmedizin, Arbeitssicherheit & mehr | MonacoMed</title>
+<meta name="description" content="Alle Leistungen von MonacoMed im Überblick: Arbeitsmedizin, Arbeitssicherheit, Bahnmedizin, Impfungen, digitale Prozesse und Gesundheitsmanagement.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f6f5; --panel:#ffffff; --ink:#11201c; --ink-soft:#46554f; --mute:#7c8a83;
+  --line:#dde4e0; --green:#13443a; --green-d:#0c2e27; --green-br:#2f8f74; --sand:#eef1ef;
+  --maxw:1280px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;padding-top:71px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 36px}
+h1,h2,h3{font-family:'Archivo',sans-serif;font-weight:700;line-height:1.08;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+.lbl{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--green-br)}
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--panel);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{font-family:'Archivo';font-size:20px;font-weight:800;letter-spacing:-.02em;color:var(--green-d);text-transform:uppercase}
+.brand i{font-style:normal;color:var(--green-br)}
+nav{flex:1;padding:0 40px}
+nav ul{display:flex;justify-content:center;list-style:none;gap:clamp(24px,3.2vw,52px)}
+nav a{font-size:14px;font-weight:500;color:var(--ink-soft)}
+nav a:hover{color:var(--green)}
+.hcta{display:flex;align-items:center;gap:18px}
+.btn{display:inline-block;font-weight:600;font-size:14px;padding:11px 20px;transition:.18s;border-radius:40px}
+.btn-primary{background:var(--green);color:#fff}
+.btn-primary:hover{background:var(--green-d)}
+.btn-ghost{border:1px solid var(--green);color:var(--green)}
+.btn-ghost:hover{background:var(--green);color:#fff}
+.btn-light{background:#fff;color:var(--green-d)}
+.btn-light:hover{background:var(--sand)}
+section.pad{padding:84px 0}
+.sec-head{margin-bottom:44px;display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(27px,3vw,40px);color:var(--green-d);max-width:20ch}
+.sec-head .lead{font-size:16px;color:var(--ink-soft);max-width:42ch}
+.hero{background:var(--panel);border-bottom:1px solid var(--line)}
+.hero .inner{padding:76px 0 68px;max-width:860px}
+.hero h1{font-size:clamp(34px,3.8vw,54px);color:var(--green-d);margin:18px 0 0;max-width:22ch}
+.hero .sub{font-size:17px;color:var(--ink-soft);margin-top:18px;max-width:62ch}
+.ix{border-top:1px solid var(--line)}
+.ix-row{display:grid;grid-template-columns:56px 300px 1fr auto;gap:26px;align-items:baseline;padding:22px 6px;border-bottom:1px solid var(--line);transition:background .15s ease}
+.ix-row:hover{background:var(--sand)}
+.ix-id{font-family:'IBM Plex Mono';font-size:13px;color:var(--green-br)}
+.ix-row h3{font-family:'Archivo';font-size:20px;font-weight:700;color:var(--green-d)}
+.ix-row p{font-size:14px;color:var(--ink-soft);max-width:58ch}
+.ix-more{font-family:'IBM Plex Mono';font-size:12.5px;color:var(--green);white-space:nowrap;justify-self:end}
+.ix-row:hover .ix-more{color:var(--green-br);text-decoration:underline;text-underline-offset:3px}
+.btn-sm{flex:none;font-size:12.5px;padding:8px 15px}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px 22px 24px}
+.tile h4{font-family:'Archivo';font-size:16px;font-weight:600;color:var(--green-d);margin-bottom:7px}
+.tile p{font-size:14px;color:var(--ink-soft)}
+.tile a{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+.tile a:hover{color:var(--green-br)}
+.sand{background:var(--sand);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cta-band{background:var(--green-d);color:#cfe3da;padding:76px 0}
+.cta-band h2{color:#fff;font-size:clamp(26px,3vw,38px);max-width:24ch}
+.cta-band p{margin-top:14px;font-size:16px;color:#a9c8bd;max-width:56ch}
+footer{background:var(--green-d);color:#a9c8bd;padding:50px 0 28px;font-size:14px}
+.foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.12)}
+.foot-brand{font-family:'Archivo';font-size:18px;font-weight:800;color:#fff;text-transform:uppercase}
+.foot-brand i{font-style:normal;color:var(--green-br)}
+.foot-links a{margin-left:22px;color:#a9c8bd}.foot-links a:hover{color:#fff}
+.foot-bot{padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-family:'IBM Plex Mono';font-size:12px;color:#6f9385}
+@media(max-width:920px){
+  .wrap{padding:0 20px}
+  nav{display:none}
+  .tiles{grid-template-columns:1fr}
+  .ix-row{grid-template-columns:40px 1fr;grid-template-rows:auto auto auto;gap:6px 14px}
+  .ix-row h3{grid-column:2}
+  .ix-row p,.ix-more{grid-column:2;justify-self:start}
+  .sec-head{flex-direction:column;align-items:flex-start;gap:14px}
+}
+
+/* dropdown */
+nav li{position:relative}
+nav .subwrap{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:12px;z-index:70}
+nav li.has-sub:hover .subwrap,nav li.has-sub:focus-within .subwrap{display:block}
+.subpanel{background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 32px rgba(11,32,27,.14);padding:8px;min-width:250px;display:flex;flex-direction:column}
+.subpanel a{display:block;padding:10px 12px;border-radius:8px;font-size:13.5px;color:var(--ink-soft);white-space:nowrap}
+.subpanel a:hover{background:var(--sand);color:var(--green)}
+.has-sub>a::after{content:" \25BE";font-size:10px;color:var(--green-br)}
+/* mobile burger */
+.mnav{display:none;position:relative}
+.mnav summary{list-style:none;cursor:pointer;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:10px}
+.mnav summary::-webkit-details-marker{display:none}
+.mnav .bars{display:block;width:18px;height:2px;background:var(--green-d);position:relative}
+.mnav .bars::before,.mnav .bars::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--green-d)}
+.mnav .bars::before{top:-6px}.mnav .bars::after{top:6px}
+.mnav-panel{position:fixed;left:0;right:0;top:70px;background:var(--panel);border-bottom:1px solid var(--line);box-shadow:0 16px 30px rgba(11,32,27,.12);padding:8px 20px 14px;z-index:80}
+.mnav-panel ul{list-style:none;display:flex;flex-direction:column;gap:0}
+.mnav-panel a{display:block;padding:13px 4px;font-size:15px;font-weight:500;color:var(--ink);border-bottom:1px solid var(--line)}
+.mnav-panel li:last-child a{border-bottom:none}
+@media(max-width:920px){.mnav{display:block}}
+
+.crumbs{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.crumbs a{color:var(--green-br)}
+.crumbs a:hover{text-decoration:underline;text-underline-offset:3px}
+.crumbs .sep{color:var(--mute);opacity:.5}
+</style>
+</helmet>
+
+<header><div class="wrap bar">
+  <div class="brand"><a href="homepage.dc.html">Monaco<i>Med</i></a></div>
+  <nav><ul>
+    <li class="has-sub"><a href="Leistungen.dc.html">Leistungen</a><div class="subwrap"><div class="subpanel"><a href="Arbeitsmedizin.dc.html">Arbeitsmedizin</a><a href="Arbeitssicherheit.dc.html">Arbeitssicherheit</a><a href="Bahnmedizin.dc.html">Bahnmedizin</a><a href="Impfungen-im-Unternehmen.dc.html">Impfungen im Unternehmen</a><a href="Leistungen.dc.html#digitale-prozesse">Digitale Prozesse</a><a href="Leistungen.dc.html#gesundheitsmanagement">Gesundheitsmanagement</a></div></div></li>
+    <li><a href="Fuer-Unternehmen.dc.html">Für Unternehmen</a></li><li><a href="homepage.dc.html#leitung">Ärztliche Leitung</a></li>
+    <li><a href="FAQ.dc.html">FAQ</a></li><li><a href="Kontakt.dc.html">Kontakt</a></li>
+  </ul></nav>
+  <div class="hcta"><a href="Betreuungsbedarf-einschaetzen.dc.html" class="btn btn-primary">Betreuungsbedarf einschätzen</a></div>
+<details class="mnav"><summary aria-label="Menü öffnen"><span class="bars"></span></summary><div class="mnav-panel"><ul><li class="has-sub"><a href="Leistungen.dc.html">Leistungen</a><div class="subwrap"><div class="subpanel"><a href="Arbeitsmedizin.dc.html">Arbeitsmedizin</a><a href="Arbeitssicherheit.dc.html">Arbeitssicherheit</a><a href="Bahnmedizin.dc.html">Bahnmedizin</a><a href="Impfungen-im-Unternehmen.dc.html">Impfungen im Unternehmen</a><a href="Leistungen.dc.html#digitale-prozesse">Digitale Prozesse</a><a href="Leistungen.dc.html#gesundheitsmanagement">Gesundheitsmanagement</a></div></div></li>
+    <li><a href="Fuer-Unternehmen.dc.html">Für Unternehmen</a></li><li><a href="homepage.dc.html#leitung">Ärztliche Leitung</a></li>
+    <li><a href="FAQ.dc.html">FAQ</a></li><li><a href="Kontakt.dc.html">Kontakt</a></li></ul></div></details>
+</div></header>
+
+<!-- HERO -->
+<section class="hero"><div class="wrap"><div class="inner">
+  <span class="lbl">Leistungen</span>
+  <h1>Gesundheit und Arbeitsschutz aus einer Hand</h1>
+  <p class="sub">Vier Leistungsbereiche, ein Team, ein System: Arbeitsmedizin, Arbeitssicherheit und Gesundheitsmanagement – digital organisiert und persönlich betreut.</p>
+</div></div></section>
+
+<!-- ÜBERBLICK -->
+<section style="padding:64px 0 20px"><div class="wrap">
+  <div class="ix">
+    <a class="ix-row" href="Arbeitsmedizin.dc.html">
+      <span class="ix-id">01</span>
+      <h3>Arbeitsmedizin</h3>
+      <p>Betriebsärztliche Betreuung, Vorsorge und Untersuchungen nach ASiG und DGUV V2.</p>
+      <span class="ix-more">Mehr erfahren →</span>
+    </a>
+    <a class="ix-row" href="Arbeitssicherheit.dc.html">
+      <span class="ix-id">02</span>
+      <h3>Arbeitssicherheit</h3>
+      <p>Fachkraft für Arbeitssicherheit, Gefährdungsbeurteilung und Unterweisungen.</p>
+      <span class="ix-more">Mehr erfahren →</span>
+    </a>
+    <a class="ix-row" href="Bahnmedizin.dc.html">
+      <span class="ix-id">03</span>
+      <h3>Bahnmedizin</h3>
+      <p>Eignungs- und Tauglichkeitsuntersuchungen für den Bahnbetrieb – als ermächtigte Untersuchungsstelle.</p>
+      <span class="ix-more">Mehr erfahren →</span>
+    </a>
+    <a class="ix-row" href="Impfungen-im-Unternehmen.dc.html">
+      <span class="ix-id">04</span>
+      <h3>Impfungen im Unternehmen</h3>
+      <p>Impfaktionen direkt im Betrieb – von der Planung bis zur Dokumentation.</p>
+      <span class="ix-more">Mehr erfahren →</span>
+    </a>
+    <a class="ix-row" href="#digitale-prozesse">
+      <span class="ix-id">05</span>
+      <h3>Digitale Prozesse</h3>
+      <p>Online-Terminbuchung, Vorsorgekataster und automatische Erinnerungen.</p>
+      <span class="ix-more">Mehr erfahren →</span>
+    </a>
+    <a class="ix-row" href="#gesundheitsmanagement">
+      <span class="ix-id">06</span>
+      <h3>Gesundheitsmanagement</h3>
+      <p>BGM, Gesundheitstage, Ergonomie und Prävention für Ihr Team.</p>
+      <span class="ix-more">Mehr erfahren →</span>
+    </a>
+  </div>
+</div></section>
+
+<!-- 01 ARBEITSMEDIZIN -->
+<section class="pad" id="arbeitsmedizin"><div class="wrap">
+  <div class="sec-head">
+    <div><span class="lbl">Leistungsbereich 01</span><h2 style="margin-top:12px">Arbeitsmedizin</h2></div>
+    <a href="Arbeitsmedizin.dc.html" class="btn btn-ghost">Mehr erfahren</a>
+  </div>
+  <div class="tiles">
+    <div class="tile"><h4>Betriebsärztliche Betreuung</h4><p>Nach ASiG und DGUV V2 – persönlich begleitet.</p></div>
+    <div class="tile"><h4>Arbeitsmedizinische Vorsorge</h4><p>Pflicht-, Angebots- und Wunschvorsorge klar organisiert.</p></div>
+    <div class="tile"><h4>Eignungsuntersuchungen</h4><p>Bei konkretem Anlass, sauber von Vorsorge getrennt.</p></div>
+    <div class="tile"><h4>ASA &amp; Begehungen</h4><p>Teilnahme, Dokumentation und konkrete Empfehlungen.</p></div>
+    <div class="tile"><h4>BEM &amp; Mutterschutz</h4><p>Arbeitsmedizinische Beratung für passende betriebliche Lösungen.</p></div>
+    <div class="tile"><h4>Impfaktionen</h4><p>Direkt im Betrieb – <a href="Impfungen-im-Unternehmen.dc.html">alle Details</a>.</p></div>
+  </div>
+</div></section>
+
+<!-- 02 ARBEITSSICHERHEIT -->
+<section class="pad sand" id="arbeitssicherheit"><div class="wrap">
+  <div class="sec-head">
+    <div><span class="lbl">Leistungsbereich 02</span><h2 style="margin-top:12px">Arbeitssicherheit</h2></div>
+    <a href="Arbeitssicherheit.dc.html" class="btn btn-ghost">Mehr erfahren</a>
+  </div>
+  <div class="tiles">
+    <div class="tile"><h4>Fachkraft für Arbeitssicherheit</h4><p>Sicherheitstechnische Betreuung und Beratung.</p></div>
+    <div class="tile"><h4>Gefährdungsbeurteilung</h4><p>Bewertung, Maßnahmenplanung und Dokumentation.</p></div>
+    <div class="tile"><h4>Unterweisungen</h4><p>Praxisnah, verständlich und auf den Betrieb abgestimmt.</p></div>
+    <div class="tile"><h4>Brandschutz</h4><p>Unterweisung und praktische Schulung im Brandschutz.</p></div>
+    <div class="tile"><h4>Maßnahmenverfolgung</h4><p>Offene Punkte strukturiert nachhalten.</p></div>
+  </div>
+</div></section>
+
+<!-- 03 BAHNMEDIZIN -->
+<section class="pad" id="bahnmedizin"><div class="wrap">
+  <div class="sec-head">
+    <div><span class="lbl">Leistungsbereich 03</span><h2 style="margin-top:12px">Bahnmedizin</h2></div>
+    <a href="Bahnmedizin.dc.html" class="btn btn-ghost">Mehr erfahren</a>
+  </div>
+  <div class="tiles">
+    <div class="tile"><h4>Triebfahrzeugführer (§ 16 TfV)</h4><p>Tauglichkeitsuntersuchungen für Lokführer gemäß den gesetzlichen Vorgaben.</p></div>
+    <div class="tile"><h4>VDV-Schrift 714</h4><p>Untersuchungen für Beschäftigte im öffentlichen Verkehrs- und Bahnbereich.</p></div>
+    <div class="tile"><h4>EBO-Untersuchungen</h4><p>Eignungsuntersuchungen für sicherheitsrelevante Tätigkeiten im Eisenbahnbetrieb.</p></div>
+    <div class="tile"><h4>DB Anforderungsgruppen A &amp; B</h4><p>Durchführung entsprechend den geltenden Konzernrichtlinien.</p></div>
+    <div class="tile"><h4>Weitere sicherheitsrelevante Tätigkeiten</h4><p>U. a. Sicherungsposten (SiPo) und Beschäftigte mit besonderen Anforderungen.</p></div>
+  </div>
+</div></section>
+
+<!-- 04 IMPFUNGEN -->
+<section class="pad sand" id="impfungen"><div class="wrap">
+  <div class="sec-head">
+    <div><span class="lbl">Leistungsbereich 04</span><h2 style="margin-top:12px">Impfungen im Unternehmen</h2></div>
+    <a href="Impfungen-im-Unternehmen.dc.html" class="btn btn-ghost">Mehr erfahren</a>
+  </div>
+  <div class="tiles">
+    <div class="tile"><h4>Grippeschutzimpfung</h4><p>Die jährliche Aktion im Herbst – planbar für das ganze Team.</p></div>
+    <div class="tile"><h4>Reisemedizinische Impfungen</h4><p>Beratung und Impfungen vor Dienstreisen – fachärztlich durchgeführt.</p></div>
+    <div class="tile"><h4>Tätigkeitsbezogene Impfungen</h4><p>z. B. Hepatitis A/B bei entsprechender Gefährdung.</p></div>
+    <div class="tile"><h4>Impftage im Betrieb</h4><p>Durchführung direkt vor Ort – mit wenig Ausfallzeit.</p></div>
+    <div class="tile"><h4>Dokumentation &amp; Erinnerung</h4><p>Nachweise und automatische Auffrischungs-Erinnerungen über das Kataster.</p></div>
+  </div>
+</div></section>
+
+<!-- 05 DIGITALE PROZESSE -->
+<section class="pad" id="digitale-prozesse"><div class="wrap">
+  <div class="sec-head">
+    <div><span class="lbl">Leistungsbereich 05</span><h2 style="margin-top:12px">Digitale Prozesse</h2></div>
+  </div>
+  <div class="tiles">
+    <div class="tile"><h4>Digitales Vorsorgekataster</h4><p>Vorsorgen, Fristen und Fälligkeiten jederzeit im Blick.</p></div>
+    <div class="tile"><h4>Online-Terminbuchung</h4><p>Mitarbeitende buchen Termine selbstständig online.</p></div>
+    <div class="tile"><h4>Automatische Erinnerungen</h4><p>Weniger Ausfälle und weniger organisatorischer Aufwand.</p></div>
+    <div class="tile"><h4>Vorabinformationen</h4><p>Wichtige Infos digital vor dem Termin.</p></div>
+    <div class="tile"><h4>Digitale Zusammenarbeit</h4><p>Klare Abläufe, sichere Dokumente und weniger E-Mail-Verkehr.</p></div>
+  </div>
+</div></section>
+
+<!-- 06 GESUNDHEITSMANAGEMENT -->
+<section class="pad sand" id="gesundheitsmanagement"><div class="wrap">
+  <div class="sec-head">
+    <div><span class="lbl">Leistungsbereich 06</span><h2 style="margin-top:12px">Gesundheitsmanagement</h2></div>
+  </div>
+  <div class="tiles">
+    <div class="tile"><h4>BGM</h4><p>Gesundheitsangebote passend zum Unternehmen.</p></div>
+    <div class="tile"><h4>Gesundheitstage</h4><p>Aktionen zu Vorsorge, Bewegung, Ergonomie oder Impfungen.</p></div>
+    <div class="tile"><h4>Ergonomie</h4><p>Gesunde Gestaltung von Bildschirm- und Arbeitsplätzen.</p></div>
+    <div class="tile"><h4>Psychische Belastung</h4><p>Strukturierte Analyse und umsetzbare Maßnahmen.</p></div>
+    <div class="tile"><h4>Prävention</h4><p>Angebote zu Stress, Bewegung, Schlaf oder Herz-Kreislauf.</p></div>
+  </div>
+</div></section>
+
+<!-- CTA -->
+<section class="cta-band"><div class="wrap">
+  <span class="lbl" style="color:#7fc2ab">Kontakt</span>
+  <h2 style="margin-top:14px">Welche Leistungen braucht Ihr Betrieb?</h2>
+  <p>Wenige Angaben genügen – Ihre Anfrage wird direkt ärztlich geprüft, ohne Vertrieb oder Callcenter.</p>
+  <div style="margin-top:28px"><a href="Betreuungsbedarf-einschaetzen.dc.html" class="btn btn-light">Betreuungsbedarf kostenlos einschätzen</a></div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="foot-top">
+    <div class="foot-brand">Monaco<i>Med</i></div>
+    <div class="foot-links"><a href="Leistungen.dc.html">Leistungen</a><a href="Arbeitsmedizin.dc.html">Arbeitsmedizin</a><a href="Arbeitssicherheit.dc.html">Arbeitssicherheit</a><a href="Bahnmedizin.dc.html">Bahnmedizin</a><a href="Impfungen-im-Unternehmen.dc.html">Impfungen</a><a href="Betriebsarzt-Muenchen.dc.html">Betriebsarzt München</a><a href="Fuer-Unternehmen.dc.html">Für Unternehmen</a><a href="homepage.dc.html#leitung">Ärztliche Leitung</a><a href="FAQ.dc.html">FAQ</a><a href="Kontakt.dc.html">Kontakt</a></div>
+  </div>
+  <div class="foot-bot"><span>Heidemannstraße 38 · 80939 München · <a href="Impressum.dc.html" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Impressum</a> · <a href="Impressum.dc.html#datenschutz" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Datenschutz</a> · <a href="Impressum.dc.html#datenschutz" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Cookies</a></span><span>© 2026 Dr. med. univ. David Manghabati</span></div>
+</div></footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals(){ return {}; }
+}
+</script>
+</body>
+</html>

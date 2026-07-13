@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Betreuungsbedarf kostenlos einschätzen | MonacoMed</title>
+<meta name="description" content="Wenige Angaben genügen: Wir prüfen Ihren arbeitsmedizinischen Betreuungsbedarf und melden uns mit einer kostenlosen ärztlichen Ersteinschätzung.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f6f5; --panel:#ffffff; --ink:#11201c; --ink-soft:#46554f; --mute:#7c8a83;
+  --line:#dde4e0; --green:#13443a; --green-d:#0c2e27; --green-br:#2f8f74; --sand:#eef1ef;
+  --maxw:1280px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;padding-top:71px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 36px}
+h1,h2,h3{font-family:'Archivo',sans-serif;font-weight:700;line-height:1.08;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+.lbl{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--green-br)}
+
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--panel);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{font-family:'Archivo';font-size:20px;font-weight:800;letter-spacing:-.02em;color:var(--green-d);text-transform:uppercase}
+.brand i{font-style:normal;color:var(--green-br)}
+nav{flex:1;padding:0 40px}
+nav ul{display:flex;justify-content:center;list-style:none;gap:clamp(24px,3.2vw,52px)}
+nav a{font-size:14px;font-weight:500;color:var(--ink-soft)}
+nav a:hover{color:var(--green)}
+.hcta{display:flex;align-items:center;gap:18px}
+.tel{font-family:'IBM Plex Mono';font-size:13px;color:var(--mute)}
+.btn{display:inline-block;font-weight:600;font-size:14px;padding:11px 20px;transition:.18s;border-radius:40px}
+.btn-primary{background:var(--green);color:#fff}
+.btn-primary:hover{background:var(--green-d)}
+.btn-ghost{border:1px solid var(--green);color:var(--green)}
+.btn-ghost:hover{background:var(--green);color:#fff}
+
+/* hero — structured split with index rail */
+.hero{background:var(--panel);border-bottom:1px solid var(--line)}
+.hero .grid{display:grid;grid-template-columns:1fr 360px;min-height:520px}
+.hero .main{padding:70px 56px 64px 0;border-right:1px solid var(--line)}
+.hero h1{font-size:clamp(36px,4.2vw,58px);color:var(--green-d);margin:20px 0 0;max-width:15ch}
+.hero .sub{font-size:18px;color:var(--ink-soft);margin-top:24px;max-width:48ch}
+.coverage{font-family:'IBM Plex Mono';font-size:13px;color:var(--mute);margin-top:28px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:inline-block}
+.hero-cta{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.hero .rail{padding:70px 0 64px 40px;display:flex;flex-direction:column;gap:0}
+.rail .ri{padding:16px 0;border-top:1px solid var(--line);display:flex;gap:14px;align-items:baseline}
+.rail .ri:first-child{border-top:none}
+.rail .ri .k{font-family:'IBM Plex Mono';font-size:12px;color:var(--green-br);flex:none;width:26px}
+.rail .ri .v{font-size:14px;color:var(--ink-soft);font-weight:500}
+
+/* trust ticker */
+.trust{background:var(--green-d);color:#cfe3da}
+.trust .row{display:grid;grid-template-columns:repeat(5,1fr)}
+.trust .item{padding:22px 24px;border-left:1px solid rgba(255,255,255,.1);font-size:13.5px}
+.trust .item:first-child{border-left:none}
+.trust .item .lbl{color:#7fc2ab;display:block;margin-bottom:6px}
+.trust .item b{color:#fff;font-family:'Archivo';font-weight:600;font-size:15px}
+
+section.pad{padding:84px 0}
+.sec-head{margin-bottom:44px;display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap}
+.sec-head h1,.sec-head h2{font-size:clamp(27px,3vw,40px);color:var(--green-d);max-width:18ch}
+.sec-head .lead{font-size:16px;color:var(--ink-soft);max-width:42ch}
+
+/* leistungen — dense module grid */
+.serv{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.serv .card{background:var(--panel);padding:26px 24px 28px}
+.serv .card:hover{background:var(--sand)}
+.serv .id{font-family:'IBM Plex Mono';font-size:12px;color:var(--green-br)}
+.serv h3{font-family:'Archivo';font-size:18px;font-weight:600;margin:14px 0 8px;color:var(--green-d)}
+.serv p{font-size:14px;color:var(--ink-soft)}
+.split-note{font-family:'IBM Plex Mono';font-size:12.5px;color:var(--mute);margin-top:22px}
+
+/* unternehmen — data panel */
+.firm{background:var(--sand);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.firm .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:stretch}
+.firm h2{color:var(--green-d);font-size:clamp(27px,3vw,38px)}
+.firm .lead{font-size:17px;color:var(--ink-soft);margin-top:20px}
+.matrix{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.matrix .mh{padding:16px 22px;border-bottom:1px solid var(--line);font-family:'IBM Plex Mono';font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--green-br)}
+.mrow{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}
+.mrow:last-child{border-bottom:none}
+.mcell{padding:15px 22px;font-size:14px;color:var(--ink-soft);border-left:1px solid var(--line)}
+.mcell:first-child{border-left:none}
+
+/* ablauf — process bar */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.step{padding:26px 22px 28px;border-left:1px solid var(--line)}
+.step:first-child{border-left:none}
+.step .n{font-family:'IBM Plex Mono';font-size:13px;color:var(--green-br)}
+.step .bar{height:3px;background:var(--green-br);width:34px;margin:14px 0}
+.step h4{font-family:'Archivo';font-size:15px;font-weight:600;color:var(--green-d);line-height:1.35}
+
+/* erfahrung */
+.exp{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.exp .sectors,.exp .case{background:var(--panel);padding:34px}
+.sectors .lbl{margin-bottom:18px}
+.sector-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.sector-grid span{background:var(--panel);padding:13px 16px;font-size:13.5px;color:var(--ink-soft)}
+.case .tag{font-family:'IBM Plex Mono';font-size:12px;color:var(--green-br)}
+.case h3{font-family:'Archivo';font-size:19px;color:var(--green-d);margin:10px 0 20px;line-height:1.25}
+.case .blk{margin-bottom:14px;padding-left:14px;border-left:2px solid var(--green-br)}
+.case .blk b{font-family:'IBM Plex Mono';font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--green);display:block;margin-bottom:3px}
+.case .blk p{font-size:14px;color:var(--ink-soft)}
+
+/* leitung */
+.leitung{background:var(--panel);border-bottom:1px solid var(--line)}
+.leitung .grid{display:grid;grid-template-columns:340px 1fr;gap:50px;align-items:center}
+.photo-ph{aspect-ratio:4/5;border:1px solid var(--line);background:var(--sand);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--mute);font-family:'IBM Plex Mono';font-size:12.5px;padding:20px;line-height:1.7;position:relative;border-radius:16px}
+.photo-ph::before{content:"";position:absolute;inset:14px;border:1px dashed #b4c2bb;border-radius:10px}
+.leitung h2{font-size:clamp(25px,2.6vw,34px);color:var(--green-d)}
+.name{font-family:'Archivo';font-size:22px;font-weight:700;color:var(--green);margin-top:8px}
+.quals{font-family:'IBM Plex Mono';font-size:13px;color:var(--ink-soft);margin-top:10px;line-height:1.8}
+.bio{font-size:16px;color:var(--ink-soft);margin-top:20px;max-width:52ch}
+
+/* faq */
+.faq-list{border:1px solid var(--line);background:var(--panel);border-radius:14px;overflow:hidden}
+.faq-row{padding:22px 26px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:24px;align-items:center;cursor:pointer}
+.faq-row:last-child{border-bottom:none}
+.faq-row:hover{background:var(--sand)}
+.faq-row h4{font-family:'Archivo';font-size:17px;font-weight:600;color:var(--green-d)}
+.faq-row .k{font-family:'IBM Plex Mono';font-size:12px;color:var(--green-br);flex:none}
+
+/* kontakt */
+.kontakt .grid{display:grid;grid-template-columns:1.25fr .9fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.form,.contact-side{background:var(--panel);padding:38px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{margin-bottom:15px}
+.field label{display:block;font-family:'IBM Plex Mono';font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);border-radius:9px;padding:11px 12px;font-family:inherit;font-size:14px;color:var(--ink);background:var(--bg)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--green-br);border-color:transparent}
+.req{color:var(--green-br)}
+.helper{font-size:13px;color:var(--mute);margin-top:14px;font-family:'IBM Plex Mono'}
+.contact-side h3{font-family:'Archivo';font-size:20px;color:var(--green-d);margin-bottom:20px}
+.ci{padding:16px 0;border-top:1px solid var(--line);font-size:15px;color:var(--ink-soft)}
+.ci .lbl{display:block;margin-bottom:4px}
+
+footer{background:var(--green-d);color:#a9c8bd;padding:50px 0 28px;font-size:14px}
+.foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.12)}
+.foot-brand{font-family:'Archivo';font-size:18px;font-weight:800;color:#fff;text-transform:uppercase}
+.foot-brand i{font-style:normal;color:var(--green-br)}
+.foot-links a{margin-left:22px;color:#a9c8bd}.foot-links a:hover{color:#fff}
+.foot-bot{padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-family:'IBM Plex Mono';font-size:12px;color:#6f9385}
+
+/* Entrance animation neutralized for the editing canvas — content stays visible/editable.
+   Restore for the live build with: .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease} */
+.reveal{opacity:1;transform:none}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media(max-width:920px){
+  .wrap{padding:0 20px}
+  nav,.tel{display:none}
+  .hero .grid,.firm .grid,.leitung .grid,.kontakt .grid{grid-template-columns:1fr}
+  .hero .main{border-right:none;padding-right:0}
+  .hero .rail{padding-left:0;border-top:1px solid var(--line)}
+  .serv,.steps,.trust .row,.exp,.sector-grid{grid-template-columns:1fr}
+  .step,.trust .item,.mcell{border-left:none}
+}
+
+/* dropdown */
+nav li{position:relative}
+nav .subwrap{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:12px;z-index:70}
+nav li.has-sub:hover .subwrap,nav li.has-sub:focus-within .subwrap{display:block}
+.subpanel{background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 32px rgba(11,32,27,.14);padding:8px;min-width:250px;display:flex;flex-direction:column}
+.subpanel a{display:block;padding:10px 12px;border-radius:8px;font-size:13.5px;color:var(--ink-soft);white-space:nowrap}
+.subpanel a:hover{background:var(--sand);color:var(--green)}
+.has-sub>a::after{content:" \25BE";font-size:10px;color:var(--green-br)}
+/* mobile burger */
+.mnav{display:none;position:relative}
+.mnav summary{list-style:none;cursor:pointer;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:10px}
+.mnav summary::-webkit-details-marker{display:none}
+.mnav .bars{display:block;width:18px;height:2px;background:var(--green-d);position:relative}
+.mnav .bars::before,.mnav .bars::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--green-d)}
+.mnav .bars::before{top:-6px}.mnav .bars::after{top:6px}
+.mnav-panel{position:fixed;left:0;right:0;top:70px;background:var(--panel);border-bottom:1px solid var(--line);box-shadow:0 16px 30px rgba(11,32,27,.12);padding:8px 20px 14px;z-index:80}
+.mnav-panel ul{list-style:none;display:flex;flex-direction:column;gap:0}
+.mnav-panel a{display:block;padding:13px 4px;font-size:15px;font-weight:500;color:var(--ink);border-bottom:1px solid var(--line)}
+.mnav-panel li:last-child a{border-bottom:none}
+@media(max-width:920px){.mnav{display:block}}
+
+.form-danke{display:none;margin-top:14px;padding:14px 18px;border:1px solid var(--green-br);border-radius:10px;background:var(--sand);color:var(--green-d);font-size:14px;line-height:1.5}
+.form-danke:target{display:block}
+</style>
+</helmet>
+
+<header><div class="wrap bar">
+  <div class="brand"><a href="homepage.dc.html">Monaco<i>Med</i></a></div>
+  <nav><ul>
+    <li class="has-sub"><a href="Leistungen.dc.html">Leistungen</a><div class="subwrap"><div class="subpanel"><a href="Arbeitsmedizin.dc.html">Arbeitsmedizin</a><a href="Arbeitssicherheit.dc.html">Arbeitssicherheit</a><a href="Bahnmedizin.dc.html">Bahnmedizin</a><a href="Impfungen-im-Unternehmen.dc.html">Impfungen im Unternehmen</a><a href="Leistungen.dc.html#digitale-prozesse">Digitale Prozesse</a><a href="Leistungen.dc.html#gesundheitsmanagement">Gesundheitsmanagement</a></div></div></li>
+    <li><a href="Fuer-Unternehmen.dc.html">Für Unternehmen</a></li><li><a href="homepage.dc.html#leitung">Ärztliche Leitung</a></li>
+    <li><a href="FAQ.dc.html">FAQ</a></li><li><a href="Kontakt.dc.html">Kontakt</a></li>
+  </ul></nav>
+  <div class="hcta"><a href="Rueckruf-vereinbaren.dc.html" class="btn btn-primary">Rückruf vereinbaren</a></div>
+<details class="mnav"><summary aria-label="Menü öffnen"><span class="bars"></span></summary><div class="mnav-panel"><ul><li class="has-sub"><a href="Leistungen.dc.html">Leistungen</a><div class="subwrap"><div class="subpanel"><a href="Arbeitsmedizin.dc.html">Arbeitsmedizin</a><a href="Arbeitssicherheit.dc.html">Arbeitssicherheit</a><a href="Bahnmedizin.dc.html">Bahnmedizin</a><a href="Impfungen-im-Unternehmen.dc.html">Impfungen im Unternehmen</a><a href="Leistungen.dc.html#digitale-prozesse">Digitale Prozesse</a><a href="Leistungen.dc.html#gesundheitsmanagement">Gesundheitsmanagement</a></div></div></li>
+    <li><a href="Fuer-Unternehmen.dc.html">Für Unternehmen</a></li><li><a href="homepage.dc.html#leitung">Ärztliche Leitung</a></li>
+    <li><a href="FAQ.dc.html">FAQ</a></li><li><a href="Kontakt.dc.html">Kontakt</a></li></ul></div></details>
+</div></header>
+
+<!-- BETREUUNGSBEDARF EINSCHÄTZEN — standalone page -->
+<section class="pad" id="kontakt"><div class="wrap">
+  <div class="sec-head reveal"><h1>Betreuungsbedarf kostenlos einschätzen lassen</h1><p class="lead">Wenige Angaben genügen — wir prüfen den Bedarf und melden uns zur kurzen Einschätzung.</p></div>
+  <div class="grid">
+    <div class="form reveal">
+      <div class="f-row">
+        <div class="field"><label>Firma <span class="req">*</span></label><input type="text"></div>
+        <div class="field"><label>Name <span class="req">*</span></label><input type="text"></div>
+      </div>
+      <div class="f-row">
+        <div class="field"><label>Funktion</label><select><option>Geschäftsführung</option><option>HR / Personal</option><option>Arbeitsschutz</option><option>Fachkraft für Arbeitssicherheit</option><option>Betriebsrat</option></select></div>
+        <div class="field"><label>E-Mail <span class="req">*</span></label><input type="email"></div>
+      </div>
+      <div class="f-row">
+        <div class="field"><label>Telefon</label><input type="tel"></div>
+        <div class="field"><label>Mitarbeiterzahl</label><select><option>1–49</option><option>50–199</option><option>200–499</option><option>500+</option></select></div>
+      </div>
+      <div class="f-row">
+        <div class="field"><label>Standort(e)</label><input type="text"></div>
+        <div class="field"><label>Gewünschter Start</label><input type="text" placeholder="z. B. Q3 2026"></div>
+      </div>
+      <div class="field"><label>Gewünschte Leistung</label><input type="text"></div>
+      <div class="field"><label>Nachricht / Rückrufwunsch</label><textarea rows="3"></textarea></div>
+      <a href="#danke" class="btn btn-primary" style="width:100%;text-align:center">Anfrage senden</a>
+      <div class="form-danke" id="danke">Vielen Dank – Ihre Anfrage ist eingegangen. Wir melden uns kurzfristig. <em style="color:var(--mute);font-style:normal">(Demo-Formular im Entwurf)</em></div>
+      <p class="helper">// Ihre Anfrage wird direkt ärztlich geprüft. Sie sprechen von Anfang an mit einem fachlichen Ansprechpartner – ohne Umwege über Vertrieb oder Callcenter.</p>
+    </div>
+    <div class="contact-side reveal">
+      <h3>Direkt erreichbar</h3>
+      <div class="ci"><span class="lbl">Adresse</span>Heidemannstraße 38 · 80939 München</div>
+      <div class="ci"><span class="lbl">Vor Ort</span>München · Bayern · weitere Standorte n. A.</div>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="foot-top">
+    <div class="foot-brand">Monaco<i>Med</i></div>
+    <div class="foot-links"><a href="Leistungen.dc.html">Leistungen</a><a href="Arbeitsmedizin.dc.html">Arbeitsmedizin</a><a href="Arbeitssicherheit.dc.html">Arbeitssicherheit</a><a href="Bahnmedizin.dc.html">Bahnmedizin</a><a href="Impfungen-im-Unternehmen.dc.html">Impfungen</a><a href="Betriebsarzt-Muenchen.dc.html">Betriebsarzt München</a><a href="Fuer-Unternehmen.dc.html">Für Unternehmen</a><a href="homepage.dc.html#leitung">Ärztliche Leitung</a><a href="homepage.dc.html#faq">FAQ</a><a href="Kontakt.dc.html">Kontakt</a></div>
+  </div>
+  <div class="foot-bot"><span>Heidemannstraße 38 · 80939 München · <a href="Impressum.dc.html" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Impressum</a> · <a href="Impressum.dc.html#datenschutz" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Datenschutz</a> · <a href="Impressum.dc.html#datenschutz" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Cookies</a></span><span>© 2026 Dr. med. univ. David Manghabati</span></div>
+</div></footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals(){ return {}; }
+}
+</script>
+</body>
+</html>
