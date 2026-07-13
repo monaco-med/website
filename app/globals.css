@@ -1112,7 +1112,7 @@ section.pad {
 /* ─── kontakt / forms ─── */
 .kontakt .grid {
   display: grid;
-  grid-template-columns: 1.25fr 0.9fr;
+  grid-template-columns: 1fr;
   gap: 1px;
   background: var(--line);
   border: 1px solid var(--line);
