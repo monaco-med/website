@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "MonacoMed",
-  url: "https://www.monacomed.de",
+  url: "https://www.monaco-med.de",
   description:
     "Arbeitsmedizin, Arbeitssicherheit und Gesundheitsmanagement für Unternehmen in München – digital organisiert, persönlich ärztlich betreut.",
   address: {
@@ -12,6 +12,6 @@ export const siteConfig = {
   },
   // Platzhalter – noch nicht final vom Kunden bestätigt (siehe Handoff "Offene Punkte")
   phone: "+49 89 000000",
-  email: "info@monacomed.de",
+  email: "info@monaco-med.de",
   physician: "Dr. med. univ. David Manghabati",
 };

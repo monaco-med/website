@@ -35,13 +35,16 @@ app/                    routes (App Router) — one page.tsx per route, see Rout
   globals.css           design tokens + all shared component styles
   sitemap.ts / robots.ts
   not-found.tsx          404 page
+  api/lead/route.ts      proxies form submissions to the Google Apps Script
 components/              shared UI: Header, Footer, Hero/Tiles/Matrix/Steps/FaqList/
                          CtaBand/WhyLines/..., ContactForm, CallbackForm, Reveal (GSAP)
 lib/
   site.ts               site-wide constants (name, address, phone/email placeholders)
   routes.ts             typed route map, used everywhere instead of hardcoded strings
   gsap.ts               GSAP + ScrollTrigger registration
+  submitLead.ts         client helper used by ContactForm/CallbackForm to POST /api/lead
 public/images/           portrait + partner logos
+google-apps-script/      Code.gs + deployment instructions for the form-mailer backend
 design_handoff_monacomed_website/   original design reference (do not deploy/link publicly)
 ```
 
@@ -65,10 +68,14 @@ design_handoff_monacomed_website/   original design reference (do not deploy/lin
 
 ## Forms
 
-`ContactForm` and `CallbackForm` (`components/`) are client-side only right now:
-they validate and show a success state but **do not send anywhere**. Wiring
-them to a real backend/email target is an explicit open item — see
-[`design_handoff_monacomed_website/README.md`](./design_handoff_monacomed_website/README.md#offene-punkte-vom-kunden-noch-ausstehend).
+`ContactForm` (Betreuungsbedarf, also embedded on the homepage) and
+`CallbackForm` (Rückruf) submit to `/api/lead`, which forwards them
+server-side to a Google Apps Script that emails `info@monaco-med.de` via
+`MailApp`. See [`google-apps-script/README.md`](./google-apps-script/README.md)
+for how to deploy/redeploy that script, and `.env.example` for the two
+required environment variables (`GOOGLE_APPS_SCRIPT_URL`,
+`GOOGLE_APPS_SCRIPT_SECRET`) — without them, submissions fail with a clear
+"not configured" error instead of silently doing nothing.
 
 ## SEO
 
@@ -80,9 +87,10 @@ sub-pages), FAQPage JSON-LD (`/faq`), `sitemap.xml`, `robots.txt`.
 
 These are called out as open items in the design handoff — not yet done:
 
-- [ ] Replace placeholder phone/email in `lib/site.ts`
+- [ ] Replace placeholder phone in `lib/site.ts` (email is now live: `info@monaco-med.de`)
 - [ ] Legal review of Impressum/Datenschutz text (`app/impressum/page.tsx`)
-- [ ] Decide and wire up a real form backend (email vs. practice software)
+- [ ] Deploy the Google Apps Script and set `GOOGLE_APPS_SCRIPT_URL` /
+      `GOOGLE_APPS_SCRIPT_SECRET` in the hosting platform's env vars (see Forms above)
 - [ ] Cookie/consent banner — only needed if analytics is added later
 
 See [`design_handoff_monacomed_website/DEPLOY-NOTES.md`](./design_handoff_monacomed_website/DEPLOY-NOTES.md)

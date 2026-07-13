@@ -3,16 +3,33 @@
 import { useState, type FormEvent } from "react";
 import Link from "next/link";
 import { routes } from "@/lib/routes";
+import { submitLead } from "@/lib/submitLead";
+
+type Status = "idle" | "submitting" | "success" | "error";
 
 export default function ContactForm() {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<Status>("idle");
+  const [error, setError] = useState<string | null>(null);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     if (!form.reportValidity()) return;
-    setSubmitted(true);
-    form.reset();
+
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries()) as Record<string, string>;
+    delete (data as Record<string, unknown>).dsgvo;
+
+    setStatus("submitting");
+    setError(null);
+    try {
+      await submitLead("betreuungsbedarf", data);
+      setStatus("success");
+      form.reset();
+    } catch (err) {
+      setStatus("error");
+      setError(err instanceof Error ? err.message : "Unbekannter Fehler.");
+    }
   }
 
   return (
@@ -93,15 +110,15 @@ export default function ContactForm() {
           meiner Anfrage einverstanden. <span className="req">*</span>
         </label>
       </div>
-      <button type="submit" className="btn btn-primary btn-block">
-        Anfrage senden
+      <button type="submit" className="btn btn-primary btn-block" disabled={status === "submitting"}>
+        {status === "submitting" ? "Wird gesendet…" : "Anfrage senden"}
       </button>
-      {submitted && (
+      {status === "success" && (
         <div className="form-danke">
-          Vielen Dank – Ihre Anfrage ist eingegangen. Wir melden uns kurzfristig.{" "}
-          <em style={{ color: "var(--mute)", fontStyle: "normal" }}>(Demo-Formular im Entwurf)</em>
+          Vielen Dank – Ihre Anfrage ist eingegangen. Wir melden uns kurzfristig.
         </div>
       )}
+      {status === "error" && <p className="error-text">{error}</p>}
       <p className="helper">
         {
           "// Ihre Anfrage wird direkt ärztlich geprüft. Sie sprechen von Anfang an mit einem fachlichen Ansprechpartner – ohne Umwege über Vertrieb oder Callcenter."
