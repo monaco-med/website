@@ -89,8 +89,6 @@ These are called out as open items in the design handoff — not yet done:
 
 - [ ] Replace placeholder phone in `lib/site.ts` (email is now live: `info@monaco-med.de`)
 - [ ] Legal review of Impressum/Datenschutz text (`app/impressum/page.tsx`)
-- [v] Deploy the Google Apps Script and set `GOOGLE_APPS_SCRIPT_URL` /
-      `GOOGLE_APPS_SCRIPT_SECRET` in the hosting platform's env vars (see Forms above)
 - [ ] Cookie/consent banner — only needed if analytics is added later
 
 See [`design_handoff_monacomed_website/DEPLOY-NOTES.md`](./design_handoff_monacomed_website/DEPLOY-NOTES.md)
