@@ -1,76 +1,89 @@
-# Handoff: MonacoMed – Website (13 Seiten)
+# MonacoMed – Website
 
-## Overview
-Komplette Marketing-Website für **MonacoMed**, eine Praxis für Arbeitsmedizin in München (Dr. med. univ. David Manghabati). Zielgruppe: HR-Entscheider, die einen Betriebsarzt suchen. Sprache: Deutsch. 13 Seiten, untereinander verlinkt.
+Marketing website for **MonacoMed**, a practice for occupational medicine
+(Arbeitsmedizin) in Munich led by Dr. med. univ. David Manghabati. Built with
+Next.js from the design handoff in
+[`design_handoff_monacomed_website/`](./design_handoff_monacomed_website).
 
-## About the Design Files
-Die Dateien in `pages/` sind **Design-Referenzen in HTML** (Prototypen aus einem Design-Tool, Format `.dc.html`). Sie zeigen Look & Verhalten, sind aber **kein Produktionscode**. Aufgabe: Diese Designs im Ziel-Stack nachbauen. Existiert noch kein Codebase, empfiehlt sich ein statischer Stack (z. B. Astro oder Next.js static export) — die Seite ist inhaltsgetrieben, SEO-kritisch, ohne App-Logik.
+## Tech stack
 
-Jede `.dc.html` enthält im `<helmet>`-Block das komplette CSS der Seite und darunter das Markup. Template-Reste wie `{{ theme }}` oder `<sc-if>` (nur in homepage.dc.html) können ignoriert werden — maßgeblich ist das statische Markup. Interne Links zeigen auf die `.dc.html`-Dateinamen; im Zielprojekt durch sprechende URLs ersetzen (siehe Routen-Tabelle).
+- **Next.js 16** (App Router, TypeScript)
+- **next/font** — Archivo, Inter, IBM Plex Mono, self-hosted (no external font requests)
+- **GSAP** — scroll-triggered reveal animations (`components/Reveal.tsx`)
+- Plain CSS with design tokens as CSS custom properties (`app/globals.css`) — no CSS framework
 
-## Fidelity
-**High-fidelity.** Farben, Typografie, Abstände, Hover-Zustände und Texte sind final (Stand Feedback-Runde 3 mit dem Kunden). Pixel-genau nachbauen; Texte exakt übernehmen.
+## Getting started
 
-## Routen (empfohlen)
-| Datei | Route |
+```bash
+npm install
+npm run dev       # http://localhost:3000
+```
+
+Other scripts:
+
+```bash
+npm run build      # production build
+npm run start       # serve the production build
+npm run lint        # ESLint
+```
+
+## Project structure
+
+```
+app/                    routes (App Router) — one page.tsx per route, see Routes below
+  layout.tsx            root layout: fonts, <Header>/<Footer>, Organization JSON-LD
+  globals.css           design tokens + all shared component styles
+  sitemap.ts / robots.ts
+  not-found.tsx          404 page
+components/              shared UI: Header, Footer, Hero/Tiles/Matrix/Steps/FaqList/
+                         CtaBand/WhyLines/..., ContactForm, CallbackForm, Reveal (GSAP)
+lib/
+  site.ts               site-wide constants (name, address, phone/email placeholders)
+  routes.ts             typed route map, used everywhere instead of hardcoded strings
+  gsap.ts               GSAP + ScrollTrigger registration
+public/images/           portrait + partner logos
+design_handoff_monacomed_website/   original design reference (do not deploy/link publicly)
+```
+
+## Routes
+
+| Route | Page |
 |---|---|
-| homepage.dc.html | / |
-| Leistungen.dc.html | /leistungen |
-| Arbeitsmedizin.dc.html | /leistungen/arbeitsmedizin |
-| Arbeitssicherheit.dc.html | /leistungen/arbeitssicherheit |
-| Bahnmedizin.dc.html | /leistungen/bahnmedizin |
-| Impfungen-im-Unternehmen.dc.html | /leistungen/impfungen |
-| Betriebsarzt-Muenchen.dc.html | /betriebsarzt-muenchen |
-| Fuer-Unternehmen.dc.html | /fuer-unternehmen |
-| Betreuungsbedarf-einschaetzen.dc.html | /betreuungsbedarf |
-| Rueckruf-vereinbaren.dc.html | /rueckruf |
-| FAQ.dc.html | /faq |
-| Kontakt.dc.html | /kontakt |
-| Impressum.dc.html | /impressum (enthält #datenschutz) |
+| `/` | Homepage |
+| `/leistungen` | Services overview |
+| `/leistungen/arbeitsmedizin` | Arbeitsmedizin |
+| `/leistungen/arbeitssicherheit` | Arbeitssicherheit |
+| `/leistungen/bahnmedizin` | Bahnmedizin |
+| `/leistungen/impfungen` | Impfungen im Unternehmen |
+| `/betriebsarzt-muenchen` | Betriebsarzt München |
+| `/fuer-unternehmen` | Für Unternehmen (multi-site) |
+| `/betreuungsbedarf` | Lead form: Betreuungsbedarf einschätzen |
+| `/rueckruf` | Callback request form |
+| `/faq` | FAQ |
+| `/kontakt` | Contact chooser |
+| `/impressum` | Impressum & Datenschutz (`#datenschutz`) |
 
-## Design Tokens
-Farben (CSS Custom Properties, in jeder Datei identisch):
-- `--bg: #f4f6f5` Seitenhintergrund · `--panel: #ffffff` Karten/Header
-- `--ink: #11201c` Text · `--ink-soft: #46554f` Sekundärtext · `--mute: #7c8a83`
-- `--line: #dde4e0` Hairlines · `--sand: #eef1ef` helle Bänder
-- `--green: #13443a` Primär (Buttons) · `--green-d: #0c2e27` dunkel (Footer, CTA-Band) · `--green-br: #2f8f74` Akzent (Labels, Hover)
-- Layout: `--maxw: 1280px`, Section-Padding 84px (kompakte Bänder 44–64px)
+## Forms
 
-Typografie (Google Fonts):
-- **Archivo** 500–800 — Headlines, Brand (H1 clamp(34px,3.8vw,54px); H2 clamp(27px,3vw,40px))
-- **Inter** 400–600 — Fließtext (14–17px)
-- **IBM Plex Mono** 400–500 — Mono-Labels (12px, uppercase, letter-spacing .08em, Farbe --green-br), Zahlen, Breadcrumbs
+`ContactForm` and `CallbackForm` (`components/`) are client-side only right now:
+they validate and show a success state but **do not send anywhere**. Wiring
+them to a real backend/email target is an explicit open item — see
+[`design_handoff_monacomed_website/README.md`](./design_handoff_monacomed_website/README.md#offene-punkte-vom-kunden-noch-ausstehend).
 
-Wiederkehrende Muster:
-- Buttons: border-radius 40px; primary `--green`→hover `--green-d`; ghost 1px Rahmen `--green`→invertiert bei Hover
-- Header: fixed, 70px, weiß, 1px `--line` unten; Body hat padding-top:71px; scroll-padding-top:86px
-- Nav: Leistungen mit Hover-Dropdown (6 Einträge); mobil (≤920px) Burger via <details>
-- Brand-Schriftzug: „MONACO" in `--green-d` + „MED" in `--green-br` (kursiv-Tag <i> ohne Kursiv-Stil)
-- Karten: 1px `--line`, radius 12–14px, weiß auf `--bg` oder `--sand`
-- FAQ: <details>-Accordion, [ + ]/[ − ]-Marker in Mono
-- Formulare: Demo — Submit zeigt nur #danke-Box (`:target`), kein Backend
+## SEO
 
-## Interactions & Behavior
-- Hover-Dropdown Nav (CSS :hover/:focus-within, kein JS)
-- Burger-Menü: <details>/<summary>, kein JS
-- Reveal-Animationen: Klasse `.reveal` (IntersectionObserver im Original; im Zielprojekt optional nachbauen oder weglassen)
-- Formulare: 3 Stück (Betreuungsbedarf, Rückruf, Kontakt auf homepage) — im Zielprojekt an echtes Backend/E-Mail anbinden, DSGVO-Checkbox ergänzen
-- Smooth scroll + Anker (#leitung, #kontakt, #datenschutz …)
+Per-page `metadata` + canonical URLs, Organization JSON-LD (root layout),
+Physician JSON-LD (`/betriebsarzt-muenchen`), BreadcrumbList JSON-LD (Leistungen
+sub-pages), FAQPage JSON-LD (`/faq`), `sitemap.xml`, `robots.txt`.
 
-## SEO (bereits im Markup)
-- Jede Seite: <title> + <meta name="description"> (im <helmet>-Block)
-- Eine H1 pro Seite; Breadcrumbs auf Detailseiten (Mono-Stil)
-- Beim Live-Gang ergänzen: canonical, OG-Tags, sitemap.xml, robots.txt, Schema.org (LocalBusiness/Physician auf /betriebsarzt-muenchen, FAQPage auf /faq, BreadcrumbList) — siehe DEPLOY-NOTES.md
+## Before launch
 
-## Assets
-`assets/`: david-manghabati.jpg (Portrait, Ärztliche Leitung) + 8 Firmenlogos (PNG, werden grayscale gerendert: filter:grayscale(1), opacity .7, hover farbig). Paulaner erscheint bewusst als Text-Wortmarke (kein Logo vorhanden). Externe Fonts vor Launch lokal hosten (DSGVO).
+These are called out as open items in the design handoff — not yet done:
 
-## Offene Punkte (vom Kunden noch ausstehend)
-- Echte Telefonnummer/E-Mail (aktuell Platzhalter)
-- Impressum/Datenschutz: juristisch geprüfte Texte (aktuell markierter Entwurf)
-- Formular-Ziel (E-Mail vs. Praxissoftware)
-- Ggf. weitere Logos; Phase 2: eigene Seiten für Gesundheitsmanagement & Digitale Prozesse
+- [ ] Replace placeholder phone/email in `lib/site.ts`
+- [ ] Legal review of Impressum/Datenschutz text (`app/impressum/page.tsx`)
+- [ ] Decide and wire up a real form backend (email vs. practice software)
+- [ ] Cookie/consent banner — only needed if analytics is added later
 
-## Files
-- `pages/` — alle 13 Seiten (Design-Referenz)
-- `assets/` — Portrait + Logos
+See [`design_handoff_monacomed_website/DEPLOY-NOTES.md`](./design_handoff_monacomed_website/DEPLOY-NOTES.md)
+for the full pre-launch checklist.
