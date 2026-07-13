@@ -34,10 +34,10 @@ export default function Reveal({ children, className, id, style, stagger, delay 
         {
           opacity: 1,
           y: 0,
-          duration: 0.7,
+          duration: 0.45,
           delay,
           ease: "power2.out",
-          stagger: stagger ? 0.08 : 0,
+          stagger: stagger ? 0.05 : 0,
           scrollTrigger: {
             trigger: el,
             start: "top 88%",
