@@ -8,6 +8,7 @@ const footLinks = [
   { href: routes.arbeitssicherheit, label: "Arbeitssicherheit" },
   { href: routes.bahnmedizin, label: "Bahnmedizin" },
   { href: routes.impfungen, label: "Impfungen" },
+  { href: routes.gUntersuchungen, label: "Vorsorge & G-Untersuchungen" },
   { href: routes.betriebsarztMuenchen, label: "Betriebsarzt München" },
   { href: routes.fuerUnternehmen, label: "Für Unternehmen" },
   { href: routes.leitung, label: "Ärztliche Leitung" },

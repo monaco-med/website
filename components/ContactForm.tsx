@@ -72,7 +72,7 @@ export default function ContactForm() {
           <input id="telefon" name="telefon" type="tel" />
         </div>
         <div className="field">
-          <label htmlFor="mitarbeiterzahl">Mitarbeiterzahl</label>
+          <label htmlFor="mitarbeiterzahl">Anzahl der Mitarbeitenden</label>
           <select id="mitarbeiterzahl" name="mitarbeiterzahl" defaultValue="1–49">
             <option>1–49</option>
             <option>50–199</option>

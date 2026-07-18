@@ -9,6 +9,7 @@ const leistungenSub = [
   { href: routes.arbeitssicherheit, label: "Arbeitssicherheit" },
   { href: routes.bahnmedizin, label: "Bahnmedizin" },
   { href: routes.impfungen, label: "Impfungen im Unternehmen" },
+  { href: routes.gUntersuchungen, label: "Vorsorge & G-Untersuchungen" },
   { href: routes.digitaleProzesse, label: "Digitale Prozesse" },
   { href: routes.gesundheitsmanagement, label: "Gesundheitsmanagement" },
 ];

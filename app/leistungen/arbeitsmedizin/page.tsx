@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 const faqItems = [
   {
     q: "Ab wann braucht ein Unternehmen einen Betriebsarzt?",
-    a: "Grundsätzlich ab dem ersten Mitarbeitenden. Der Umfang der Betreuung richtet sich nach DGUV Vorschrift 2 – abhängig von Branche, Gefährdungen und Mitarbeiterzahl. Wir helfen bei der Einordnung.",
+    a: "Grundsätzlich ab dem ersten Mitarbeitenden. Der Umfang der Betreuung richtet sich nach DGUV Vorschrift 2 – abhängig von Branche, Gefährdungen und der Anzahl der Mitarbeitenden. Wir helfen bei der Einordnung.",
   },
   {
     q: "Finden Untersuchungen bei uns oder in der Praxis statt?",
@@ -53,7 +53,7 @@ export default function ArbeitsmedizinPage() {
             <h1>Arbeitsmedizinische Betreuung, die im Alltag funktioniert</h1>
             <p className="sub-strong">Nach ASiG und DGUV Vorschrift 2 – persönlich betreut, digital organisiert.</p>
             <p className="sub">
-              Vom Betriebsarzt-Mandat bis zur einzelnen Vorsorge: MonacoMed übernimmt die
+              Von der laufenden betriebsärztlichen Betreuung bis zur einzelnen Vorsorge: MonacoMed übernimmt die
               arbeitsmedizinische Betreuung Ihres Unternehmens – mit festem ärztlichen
               Ansprechpartner, digitaler Terminorganisation und lückenloser Dokumentation.
             </p>
@@ -124,7 +124,7 @@ export default function ArbeitsmedizinPage() {
           <SectionHead title="So starten wir" />
           <Steps
             items={[
-              { n: "01", title: "Bedarf klären", text: "Tätigkeiten, Gefährdungen und Mitarbeiterzahl – daraus ergibt sich der Betreuungsumfang." },
+              { n: "01", title: "Bedarf klären", text: "Tätigkeiten, Gefährdungen und Anzahl der Mitarbeitenden – daraus ergibt sich der Betreuungsumfang." },
               { n: "02", title: "Vorsorgeplan", text: "Wir legen fest, welche Vorsorgen und Untersuchungen anstehen." },
               { n: "03", title: "Untersuchungstage", text: "Im Betrieb oder in unserer Praxis – Mitarbeitende buchen online." },
               { n: "04", title: "Laufende Betreuung", text: "Fristen im Kataster, ASA-Teilnahme, Begehungen und feste Ansprechpartner." },

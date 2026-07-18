@@ -20,6 +20,7 @@ const overview = [
   { id: "04", href: routes.impfungen, title: "Impfungen im Unternehmen", text: "Impfaktionen direkt im Betrieb – von der Planung bis zur Dokumentation." },
   { id: "05", href: routes.digitaleProzesse, title: "Digitale Prozesse", text: "Online-Terminbuchung, Vorsorgekataster und automatische Erinnerungen." },
   { id: "06", href: routes.gesundheitsmanagement, title: "Gesundheitsmanagement", text: "BGM, Gesundheitstage, Ergonomie und Prävention für Ihr Team." },
+  { id: "07", href: routes.gUntersuchungen, title: "Arbeitsmedizinische Vorsorge & G-Untersuchungen", text: "G25, G37, G41 und weitere Untersuchungen – geplant, durchgeführt und dokumentiert." },
 ];
 
 export default function LeistungenPage() {
@@ -146,7 +147,7 @@ export default function LeistungenPage() {
               { title: "Online-Terminbuchung", text: "Mitarbeitende buchen Termine selbstständig online." },
               { title: "Automatische Erinnerungen", text: "Weniger Ausfälle und weniger organisatorischer Aufwand." },
               { title: "Vorabinformationen", text: "Wichtige Infos digital vor dem Termin." },
-              { title: "Digitale Zusammenarbeit", text: "Klare Abläufe, sichere Dokumente und weniger Papier-Verkehr." },
+              { title: "Digitale Zusammenarbeit", text: "Klare Abläufe, sichere Dokumente und weniger Papierverkehr." },
             ]}
           />
         </div>
@@ -162,6 +163,60 @@ export default function LeistungenPage() {
               { title: "Ergonomie", text: "Gesunde Gestaltung von Bildschirm- und Arbeitsplätzen." },
               { title: "Psychische Belastung", text: "Strukturierte Analyse und umsetzbare Maßnahmen." },
               { title: "Prävention", text: "Angebote zu Stress, Bewegung, Schlaf oder Herz-Kreislauf." },
+            ]}
+          />
+        </div>
+      </section>
+
+      <section className="pad" id="vorsorge-g-untersuchungen">
+        <div className="wrap">
+          <SectionHead
+            label="Leistungsbereich 07"
+            title="Arbeitsmedizinische Vorsorge & G-Untersuchungen"
+            action={{ href: routes.gUntersuchungen, label: "Mehr erfahren", variant: "ghost" }}
+          />
+          <Tiles
+            items={[
+              {
+                title: "G25 – Fahr-, Steuer- und Überwachungstätigkeiten",
+                text: (
+                  <>
+                    Eignungsbeurteilung für Fahrzeuge, Maschinen und Anlagen – <Link href={routes.g25}>mehr zur G25</Link>.
+                  </>
+                ),
+              },
+              {
+                title: "G37 – Bildschirmarbeitsplätze",
+                text: (
+                  <>
+                    Vorsorge bei Bildschirmarbeit mit Seh- und Beratungsanteil – <Link href={routes.g37}>mehr zur G37</Link>.
+                  </>
+                ),
+              },
+              {
+                title: "G41 – Arbeiten mit Absturzgefahr",
+                text: (
+                  <>
+                    Eignungsbeurteilung für Tätigkeiten mit besonderer Absturzgefährdung – <Link href={routes.g41}>mehr zur G41</Link>.
+                  </>
+                ),
+              },
+              {
+                title: "G42 – Tätigkeiten mit Infektionsgefährdung",
+                text: (
+                  <>
+                    Vorsorge für Gesundheitswesen, Labor und weitere Risikobereiche – <Link href={routes.g42}>mehr zur G42</Link>.
+                  </>
+                ),
+              },
+              {
+                title: "G20, G24 & Asbestvorsorge",
+                text: (
+                  <>
+                    Vorsorge bei Lärm, Hautbelastungen und Asbestexposition – <Link href={routes.gUntersuchungen}>alle G-Untersuchungen</Link>.
+                  </>
+                ),
+              },
             ]}
           />
         </div>

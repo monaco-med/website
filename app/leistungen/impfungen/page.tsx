@@ -24,7 +24,7 @@ const faqItems = [
   },
   {
     q: "Wie viel Vorlauf brauchen wir?",
-    a: "In der Regel wenige Wochen. Grippeaktionen planen Sie am besten früh im Herbst, reisemedizinische Impfungen je nach Ziel mit mehreren Wochen Vorlauf.",
+    a: "In der Regel wenige Wochen. Grippeimpfaktionen planen Sie am besten früh im Herbst, reisemedizinische Impfungen je nach Ziel mit mehreren Wochen Vorlauf.",
   },
   {
     q: "Geht das auch an mehreren Standorten?",

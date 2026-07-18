@@ -57,7 +57,7 @@ const services = [
 ];
 
 const steps = [
-  { n: "Schritt 01", title: "Anfrage senden", text: "Wenige Angaben reichen: Unternehmen, Mitarbeiterzahl, Standort und was Sie brauchen." },
+  { n: "Schritt 01", title: "Anfrage senden", text: "Wenige Angaben reichen: Unternehmen, Anzahl der Mitarbeitenden, Standort und was Sie brauchen." },
   { n: "Schritt 02", title: "Klarheit bekommen", text: "Wir prüfen den Bedarf und zeigen Ihnen, welche Betreuung wirklich sinnvoll ist." },
   { n: "Schritt 03", title: "Angebot erhalten", text: "Sie bekommen ein klares Angebot – verständlich, passend und ohne unnötigen Ballast." },
   { n: "Schritt 04", title: "Starten", text: "Sie sagen zu, wir organisieren den Rest: Termine, Vorsorgen, ASA-Sitzungen, Begehungen, Arbeitssicherheit und digitale Abläufe." },
@@ -74,7 +74,7 @@ const whyItems = [
 const faqItems = [
   {
     q: "Braucht mein Unternehmen überhaupt einen Betriebsarzt?",
-    a: "Arbeitgeber müssen eine arbeitsmedizinische Betreuung sicherstellen. Wie diese konkret aussieht, hängt von Mitarbeiterzahl, Tätigkeiten und Gefährdungen ab. Wir helfen bei der Einordnung.",
+    a: "Arbeitgeber müssen eine arbeitsmedizinische Betreuung sicherstellen. Wie diese konkret aussieht, hängt von der Anzahl der Mitarbeitenden, den Tätigkeiten und Gefährdungen ab. Wir helfen bei der Einordnung.",
   },
   {
     q: "Bietet MonacoMed auch Arbeitssicherheit an?",

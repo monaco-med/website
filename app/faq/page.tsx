@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const faqItems = [
   {
     q: "Braucht mein Unternehmen überhaupt einen Betriebsarzt?",
-    a: "Arbeitgeber müssen eine arbeitsmedizinische Betreuung sicherstellen. Wie diese konkret aussieht, hängt von Mitarbeiterzahl, Tätigkeiten und Gefährdungen ab. Wir helfen bei der Einordnung.",
+    a: "Arbeitgeber müssen eine arbeitsmedizinische Betreuung sicherstellen. Wie diese konkret aussieht, hängt von der Anzahl der Mitarbeitenden, den Tätigkeiten und Gefährdungen ab. Wir helfen bei der Einordnung.",
   },
   {
     q: "Bietet MonacoMed auch Arbeitssicherheit an?",
