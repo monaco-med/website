@@ -65,10 +65,10 @@ const steps = [
 
 const whyItems = [
   { n: "01", title: "Feste Ansprechpartner", text: "Direkte Kommunikation statt anonymer Strukturen." },
-  { n: "02", title: "Alles aus einer Hand", text: "Arbeitsmedizin, Arbeitssicherheit und Gesundheitsmanagement koordiniert." },
-  { n: "03", title: "Digitale Prozesse", text: "Online-Terminbuchung, digitales Vorsorgekataster und klare Abläufe." },
-  { n: "04", title: "Fachärztlich geleitet", text: "Ärztlich verantwortlich durch Dr. med. univ. David Manghabati." },
-  { n: "05", title: "Kurzfristige Termine", text: "Flexible Terminvergabe für Einzelpersonen und ganze Teams." },
+  { n: "02", title: "Zentrale Koordination", text: "Arbeitsmedizin, Arbeitssicherheit und Gesundheitsmanagement abgestimmt organisiert." },
+  { n: "03", title: "Digitale Prozesse", text: "Online-Terminbuchung, digitale Vorsorgeverwaltung und klare Abläufe." },
+  { n: "04", title: "Vor Ort im Unternehmen", text: "Planbare Vorsorge- und Untersuchungstage direkt an Ihrem Standort." },
+  { n: "05", title: "Flexibel skalierbar", text: "Von einzelnen Standorten bis zur standortübergreifenden Betreuung." },
 ];
 
 const faqItems = [

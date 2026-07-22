@@ -156,6 +156,17 @@ export default function GUntersuchungenPage() {
                 title: "G46 – Belastungen des Muskel-Skelett-Systems",
                 text: "Arbeitsmedizinische Vorsorge und Beratung bei Tätigkeiten mit besonderen körperlichen Belastungen des Muskel-Skelett-Systems.",
               },
+              {
+                title: "Asbest – Vorsorge bei Asbestexposition",
+                text: (
+                  <>
+                    {
+                      "Arbeitsmedizinische Pflichtvorsorge bei Tätigkeiten mit Asbest – inklusive nachgehender Vorsorge."
+                    }{" "}
+                    <Link href={routes.asbest}>Mehr erfahren →</Link>
+                  </>
+                ),
+              },
             ]}
           />
         </div>

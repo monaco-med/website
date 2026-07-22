@@ -19,6 +19,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow-wrap: break-word;
 }
 
 html {
@@ -221,6 +222,13 @@ nav li.has-sub:focus-within .subwrap {
   z-index: 80;
   max-height: calc(100vh - 70px);
   overflow-y: auto;
+}
+.mnav-panel .mnav-cta {
+  display: block;
+  margin: 10px 0 6px;
+  text-align: center;
+  color: #fff;
+  border-bottom: none;
 }
 .mnav-panel ul {
   list-style: none;
@@ -1198,7 +1206,7 @@ section.pad {
   border-radius: 9px;
   padding: 11px 12px;
   font-family: inherit;
-  font-size: 14px;
+  font-size: 16px;
   color: var(--ink);
   background: var(--bg);
 }
@@ -1498,7 +1506,8 @@ footer {
     padding: 0 20px;
   }
   nav,
-  .tel {
+  .tel,
+  .hcta {
     display: none;
   }
   .mnav {
@@ -1528,7 +1537,8 @@ footer {
   .why-grid,
   .pain-grid,
   .choices,
-  .compare-grid {
+  .compare-grid,
+  .mrow {
     grid-template-columns: 1fr;
   }
   .logo-grid {

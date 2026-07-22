@@ -42,7 +42,7 @@ export default function KontaktPage() {
             <div className="choice">
               <span className="lbl">Option 02</span>
               <h3>Ich möchte den Betreuungsbedarf einschätzen lassen</h3>
-              <p>Wenige Angaben zu Ihrem Unternehmen genügen – Sie erhalten eine kostenlose ärztliche Ersteinschätzung.</p>
+              <p>Wenige Angaben zu Ihrem Unternehmen genügen – Sie erhalten eine unverbindliche Einschätzung Ihres Betreuungsbedarfs.</p>
               <div className="actions">
                 <Link href={routes.betreuungsbedarf} className="btn btn-primary">
                   Betreuungsbedarf kostenlos einschätzen

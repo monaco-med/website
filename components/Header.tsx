@@ -65,6 +65,9 @@ export default function Header() {
             <span className="bars" />
           </summary>
           <div className="mnav-panel">
+            <Link href={cta.href} className="btn btn-primary btn-block mnav-cta">
+              {cta.label}
+            </Link>
             <ul>
               <li className="has-sub">
                 <Link href={routes.leistungen}>Leistungen</Link>

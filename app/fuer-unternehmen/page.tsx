@@ -168,7 +168,7 @@ export default function FuerUnternehmenPage() {
           { n: "01", title: "Feste Ansprechpartner", text: "Direkte Kommunikation statt wechselnder Zuständigkeiten." },
           { n: "02", title: "Persönlich geführt", text: "Ärztlich verantwortlich durch Dr. med. univ. David Manghabati." },
           { n: "03", title: "Digitale Prozesse", text: "Moderne Organisation statt E-Mail-Chaos." },
-          { n: "04", title: "Kurze Reaktionszeiten", text: "Schnelle Rückmeldungen und flexible Terminplanung." },
+          { n: "04", title: "Kurze Reaktionszeiten", text: "Schnelle Rückmeldungen und flexible Terminplanung. Wir melden uns in der Regel innerhalb von 48 Stunden bei Ihnen zurück." },
           { n: "05", title: "Strukturierte Betreuung", text: "Klare Prozesse für HR, Führungskräfte und Mitarbeitende." },
         ]}
       />
