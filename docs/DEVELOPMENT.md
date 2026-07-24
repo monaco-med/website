@@ -266,19 +266,19 @@ detail pages under one overview page. To add a similar detail page:
 These are things a new developer should know are **intentionally
 incomplete**, not bugs:
 
-- **Phone number is inconsistent and unset.** `lib/site.ts` defines
-  `siteConfig.phone` as a placeholder (`"+49 89 000000"`), but that field
-  is currently **unused anywhere in the codebase** — the actual visible
-  placeholder is the literal text `"[Platzhalter]"` in
-  `app/impressum/page.tsx`. When a real phone number is confirmed, decide
-  whether to route it through `siteConfig.phone` (recommended, so it's
-  defined once) and use it in the Impressum page instead of the inline
-  placeholder string.
+- **No phone number is published, by choice.** The Impressum's Kontakt
+  section intentionally lists only an email (`siteConfig.email`) — no
+  phone line. `lib/site.ts` still defines a `siteConfig.phone` placeholder
+  (`"+49 89 000000"`), but it's **unused anywhere in the codebase**; leave
+  it unused unless the practice later decides to publish a number.
 - **Impressum & Datenschutz text is explicitly a draft** — the page itself
-  displays a visible "Entwurf" banner, and several paragraphs contain
-  bracketed placeholders (`[Details vor Launch prüfen]`,
-  `[Kontaktdaten ergänzen]`, `[Anbieter ergänzen]`) pending legal review
-  before this can be considered final.
+  displays a visible "Entwurf" banner, and several paragraphs still contain
+  bracketed placeholders (`[Details vor Launch prüfen]` for the
+  berufsrechtliche Regelungen, `[Kontaktdaten ergänzen]` under
+  Verantwortlicher) pending legal review before this can be considered
+  final. The Hosting paragraph no longer names a specific provider —
+  it points readers to `siteConfig.email` instead of an `[Anbieter
+  ergänzen]` placeholder.
 - **No cookie/consent banner** — intentional, since the site currently uses
   no analytics or marketing cookies (stated explicitly in the Datenschutz
   text). Only needed if analytics is added later.

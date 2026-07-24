@@ -105,7 +105,6 @@ sub-pages), FAQPage JSON-LD (`/faq`), `sitemap.xml`, `robots.txt`.
 Not bugs — see [`docs/DEVELOPMENT.md`](./docs/DEVELOPMENT.md#known-placeholders--open-items)
 for the full explanation of each:
 
-- [ ] Real phone number — currently a placeholder in both `lib/site.ts` (unused) and `app/impressum/page.tsx` (`[Platzhalter]`)
 - [ ] Legal review of Impressum/Datenschutz text (`app/impressum/page.tsx` shows a visible "Entwurf" notice)
 - [ ] Cookie/consent banner — only needed if analytics is added later
 

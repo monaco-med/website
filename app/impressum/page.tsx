@@ -14,13 +14,14 @@ export const metadata: Metadata = {
  * Legal notice & privacy page (`/impressum`) — combined Impressum
  * (§ 5 TMG) and Datenschutzerklärung.
  *
- * NOTE: the visible `draft-note` banner and several `[Platzhalter]` /
- * `[... ergänzen/prüfen]` markers in the source below are not
- * documentation artifacts — they are real, user-facing placeholder
- * content (phone, email, hosting provider, cookie/analytics disclosure,
- * berufsrechtliche Details) that the source text itself flags as pending
- * completion and legal review before launch. Do not treat this page as
- * launch-ready without that review.
+ * NOTE: the visible `draft-note` banner and remaining `[... ergänzen/prüfen]`
+ * markers in the source below are not documentation artifacts — they are
+ * real, user-facing placeholder content (berufsrechtliche Details,
+ * Verantwortlicher contact details, cookie/analytics disclosure) that the
+ * source text itself flags as pending completion and legal review before
+ * launch. Phone and email are now filled in via `siteConfig.email`; there
+ * is intentionally no phone number. Do not treat this page as launch-ready
+ * without that review.
  */
 export default function ImpressumPage() {
   return (
@@ -54,11 +55,7 @@ export default function ImpressumPage() {
               {siteConfig.address.zip} {siteConfig.address.city}
             </p>
             <h3>Kontakt</h3>
-            <p>
-              Telefon: [Platzhalter]
-              <br />
-              E-Mail: [Platzhalter]
-            </p>
+            <p>E-Mail: {siteConfig.email}</p>
             <h3>Berufsbezeichnung und berufsrechtliche Regelungen</h3>
             <p>
               Berufsbezeichnung: Arzt (verliehen in Deutschland). Zuständige Kammer: Bayerische
@@ -77,7 +74,8 @@ export default function ImpressumPage() {
             <h3>Hosting</h3>
             <p>
               Beim Aufruf der Website werden technisch notwendige Daten (z. B. IP-Adresse,
-              Zeitpunkt des Zugriffs) durch den Hosting-Anbieter verarbeitet. [Anbieter ergänzen]
+              Zeitpunkt des Zugriffs) durch den Hosting-Anbieter verarbeitet. Bei Fragen dazu
+              wenden Sie sich bitte an {siteConfig.email}.
             </p>
             <h3>Kontakt- und Anfrageformulare</h3>
             <p>
