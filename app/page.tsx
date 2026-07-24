@@ -86,6 +86,17 @@ const faqItems = [
   },
 ];
 
+/**
+ * Homepage (`/`) — full-page marketing overview of MonacoMed's services,
+ * physician, process and FAQ, each section keyed to an `id` that other
+ * pages deep-link into via `routes.leitung` / `routes.homeFaq`.
+ *
+ * Renders no breadcrumb (this is the site root). The FAQ section reuses
+ * `FaqList` without `jsonLd` — the canonical `FAQPage` structured data
+ * lives on {@link routes.faq} to avoid emitting it twice. Primary CTA
+ * (`Betreuungsbedarf kostenlos einschätzen`) routes to `routes.betreuungsbedarf`;
+ * the secondary CTA (`Rückruf vereinbaren`) routes to `routes.rueckruf`.
+ */
 export default function HomePage() {
   return (
     <>

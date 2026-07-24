@@ -1,11 +1,20 @@
 import Reveal from "@/components/Reveal";
 
+/** A single numbered "Warum MonacoMed?" line item. */
 export type WhyItem = {
   n: string;
   title: string;
   text: string;
 };
 
+/**
+ * "Warum MonacoMed?" section: a numbered list of differentiators rendered
+ * inside a full-width tinted band.
+ *
+ * @param solid - Use the solid dark-green background variant (as on
+ *   `/fuer-unternehmen`) instead of the default lighter tint (as on the
+ *   homepage).
+ */
 export default function WhyLines({
   items,
   solid = false,

@@ -37,6 +37,16 @@ const faqItems = [
   },
 ];
 
+/**
+ * Arbeitsmedizin detail page (`/leistungen/arbeitsmedizin`) — occupational
+ * medicine service page covering betriebsärztliche Betreuung, Vorsorge
+ * types and ASA/Begehungen.
+ *
+ * Emits a 2-level `BreadcrumbJsonLd` (Leistungen → Arbeitsmedizin) matching
+ * the visible `Breadcrumbs`. Two hero CTAs: primary to
+ * `routes.betreuungsbedarf` (company-wide needs assessment), secondary to
+ * `routes.rueckruf` (callback request).
+ */
 export default function ArbeitsmedizinPage() {
   return (
     <>

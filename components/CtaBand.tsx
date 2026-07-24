@@ -1,6 +1,11 @@
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 
+/**
+ * Full-width dark call-to-action banner, used as the closing section of
+ * most content pages (a single primary link, e.g. to `routes.betreuungsbedarf`
+ * or `routes.rueckruf`).
+ */
 export default function CtaBand({
   label,
   title,

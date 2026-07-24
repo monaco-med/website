@@ -15,6 +15,13 @@ export const metadata: Metadata = {
   alternates: { canonical: routes.g26 },
 };
 
+/**
+ * G26 Untersuchung detail page — arbeitsmedizinische Vorsorge und
+ * Eignungsbeurteilung bei Tragen von Atemschutzgeräten. Follows the shared
+ * G-Untersuchungen child template (see `g42/page.tsx` for the full
+ * breakdown); CTAs ("Atemschutzvorsorge anfragen" / "Untersuchungstag
+ * anfragen") route to `routes.rueckruf`.
+ */
 export default function G26Page() {
   return (
     <>

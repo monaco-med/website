@@ -1,5 +1,12 @@
 import Reveal from "@/components/Reveal";
 
+/**
+ * Client/reference company names shown on the homepage. Originally this
+ * section rendered client logo images (hence the component name) — per
+ * client request it now renders names only, styled as a text grid (see
+ * `.ref-grid`/`.ref-cell` in `app/globals.css`). Add or remove a name here
+ * to change the list; no image assets are involved anymore.
+ */
 const references = [
   "Paulaner Brauerei Gruppe",
   "OHB System AG",
@@ -12,6 +19,7 @@ const references = [
   "EMS Electro Medical Systems",
 ];
 
+/** Homepage "Unternehmen, die MonacoMed vertrauen" reference section. */
 export default function LogoWall() {
   return (
     <section id="referenzen">

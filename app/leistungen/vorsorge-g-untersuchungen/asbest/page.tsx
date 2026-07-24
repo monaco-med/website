@@ -15,6 +15,13 @@ export const metadata: Metadata = {
   alternates: { canonical: routes.asbest },
 };
 
+/**
+ * Asbest Vorsorge detail page — arbeitsmedizinische Pflichtvorsorge bei
+ * Tätigkeiten mit Asbestexposition, including nachgehende Vorsorge after
+ * exposure ends. Follows the shared G-Untersuchungen child template (see
+ * `g42/page.tsx` for the full breakdown); CTAs ("Asbestvorsorge anfragen")
+ * route to `routes.rueckruf`.
+ */
 export default function AsbestPage() {
   return (
     <>

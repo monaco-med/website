@@ -10,6 +10,14 @@ export const metadata: Metadata = {
   alternates: { canonical: routes.rueckruf },
 };
 
+/**
+ * Callback-request page (`/rueckruf`) — the landing target for every
+ * "Rückruf vereinbaren" / single-inquiry CTA site-wide (e.g. all
+ * G-Untersuchungen child pages, Bahnmedizin). Uses `CallbackForm`, not
+ * `ContactForm` — a lighter form (concern + preferred callback window)
+ * suited to a quick, specific request rather than the fuller company
+ * needs-assessment intake on `/betreuungsbedarf`.
+ */
 export default function RueckrufPage() {
   return (
     <section className="pad">

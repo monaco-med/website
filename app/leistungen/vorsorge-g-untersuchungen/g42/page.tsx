@@ -15,6 +15,24 @@ export const metadata: Metadata = {
   alternates: { canonical: routes.g42 },
 };
 
+/**
+ * G42 Untersuchung detail page — arbeitsmedizinische Vorsorge bei
+ * Tätigkeiten mit Infektionsgefährdung (Gesundheitswesen, Labore, etc.).
+ *
+ * This is one of eight near-identical G-Untersuchungen child pages
+ * (asbest, g20, g24, g25, g26, g37, g41, g42) under the
+ * `vorsorge-g-untersuchungen` overview. They all follow the same template
+ * inherited from that parent: hero with a 3-level `BreadcrumbJsonLd` +
+ * `Breadcrumbs` (Leistungen → G-Untersuchungen → this exam), 2–4 content
+ * sections built from `CheckList` and/or a `.prose` div, and a closing
+ * `CtaBand`. All eight route their primary CTA(s) to `routes.rueckruf`
+ * (single-exam inquiry), not `routes.betreuungsbedarf` — mirroring the
+ * precedent set by the Bahnmedizin page, since a G-exam request is
+ * typically a specific booking rather than a full company-wide needs
+ * assessment. Reading this one page in depth is enough to understand the
+ * structure of the other seven; their comments only call out what differs
+ * (CTA label and exam topic).
+ */
 export default function G42Page() {
   return (
     <>

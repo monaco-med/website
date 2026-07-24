@@ -11,6 +11,13 @@ export const metadata: Metadata = {
   alternates: { canonical: routes.betreuungsbedarf },
 };
 
+/**
+ * Standalone lead-capture page (`/betreuungsbedarf`) — the dedicated
+ * landing target for every "Betreuungsbedarf kostenlos einschätzen" CTA
+ * site-wide. Reuses the homepage's `#kontakt` section content (same
+ * heading, copy and `ContactForm`) so the CTA always lands on a focused,
+ * distraction-free page rather than scrolling an anchor on `/`.
+ */
 export default function BetreuungsbedarfPage() {
   return (
     <section className="pad kontakt" id="kontakt">

@@ -14,6 +14,18 @@ type RevealProps = {
   delay?: number;
 };
 
+/**
+ * Wraps its children in a `<div>` that fades/slides into view once when
+ * scrolled into the viewport, via GSAP + ScrollTrigger (see `lib/gsap.ts`).
+ * This is the site's only scroll-animation primitive — nearly every
+ * section/list component renders through it.
+ *
+ * Respects `prefers-reduced-motion` (skips the animation, content is shown
+ * immediately) and animates only once per element (`scrollTrigger.once`).
+ * Because it renders a real `<div>` wrapper, `className`/`id`/`style` are
+ * forwarded so it can also serve as that div's styling hook (e.g. a grid
+ * container that itself needs `display: grid`).
+ */
 export default function Reveal({ children, className, id, style, stagger, delay = 0 }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
 

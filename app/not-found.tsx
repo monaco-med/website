@@ -1,3 +1,7 @@
+/**
+ * Next.js file-convention 404 page, rendered for any unmatched route.
+ * Styled via `.notfound` in `app/globals.css`.
+ */
 import Link from "next/link";
 import { routes } from "@/lib/routes";
 

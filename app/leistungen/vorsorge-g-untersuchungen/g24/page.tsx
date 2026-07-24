@@ -15,6 +15,13 @@ export const metadata: Metadata = {
   alternates: { canonical: routes.g24 },
 };
 
+/**
+ * G24 Untersuchung detail page — arbeitsmedizinische Vorsorge bei
+ * Hautbelastungen (Feuchtarbeit, Handschuhe, hautreizende Arbeitsstoffe).
+ * Follows the shared G-Untersuchungen child template (see `g42/page.tsx`
+ * for the full breakdown); CTAs ("G24 Vorsorge anfragen" / "Vorsorgetag
+ * anfragen") route to `routes.rueckruf`.
+ */
 export default function G24Page() {
   return (
     <>

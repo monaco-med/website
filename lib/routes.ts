@@ -1,3 +1,11 @@
+/**
+ * Single source of truth for every internal URL in the site.
+ *
+ * Import this instead of hardcoding path strings in `<Link>`/`redirect()`
+ * calls, so that renaming a route only requires a change here. Keys map
+ * 1:1 to route groups under `app/`; hash-suffixed values (e.g. `leitung`)
+ * point at an anchor on another page rather than a dedicated route.
+ */
 export const routes = {
   home: "/",
   leistungen: "/leistungen",

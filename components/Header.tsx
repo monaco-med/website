@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { routes } from "@/lib/routes";
 
+/** "Leistungen" dropdown entries, shared by the desktop hover menu and the mobile accordion. */
 const leistungenSub = [
   { href: routes.arbeitsmedizin, label: "Arbeitsmedizin" },
   { href: routes.arbeitssicherheit, label: "Arbeitssicherheit" },
@@ -21,6 +22,16 @@ const navItems = [
   { href: routes.kontakt, label: "Kontakt" },
 ];
 
+/**
+ * Site-wide sticky header: desktop nav with a hover dropdown, a mobile
+ * burger menu (native `<details>`, no JS state needed), and a primary CTA
+ * button that's duplicated into the mobile menu panel (the desktop `.hcta`
+ * is hidden below 920px — see `app/globals.css` — since there isn't room
+ * for it next to the burger icon).
+ *
+ * The CTA target adapts to context: on `/betreuungsbedarf` itself it
+ * offers "Rückruf vereinbaren" instead of repeating the page's own form.
+ */
 export default function Header() {
   const pathname = usePathname();
   const isBetreuungsbedarf = pathname === routes.betreuungsbedarf;

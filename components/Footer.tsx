@@ -2,6 +2,7 @@ import Link from "next/link";
 import { routes } from "@/lib/routes";
 import { siteConfig } from "@/lib/site";
 
+/** Site-wide footer link list. Add a route here to surface it in the footer nav. */
 const footLinks = [
   { href: routes.leistungen, label: "Leistungen" },
   { href: routes.arbeitsmedizin, label: "Arbeitsmedizin" },
@@ -16,6 +17,11 @@ const footLinks = [
   { href: routes.kontakt, label: "Kontakt" },
 ];
 
+/**
+ * Site-wide footer, rendered once in the root layout. Note the copyright
+ * year (`© 2026 ...`) is a hardcoded string, not computed — update it
+ * manually when it's out of date.
+ */
 export default function Footer() {
   return (
     <footer>

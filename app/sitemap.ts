@@ -2,6 +2,15 @@ import type { MetadataRoute } from "next";
 import { routes } from "@/lib/routes";
 import { siteConfig } from "@/lib/site";
 
+/**
+ * Generates `/sitemap.xml` (Next.js file-convention route) from the route
+ * map in `lib/routes.ts`.
+ *
+ * New pages must be added to `staticRoutes` manually — routes aren't
+ * discovered automatically. Anchor-only entries in `lib/routes.ts` (e.g.
+ * `leitung`, `homeFaq`) are intentionally omitted since they resolve to a
+ * URL already listed here.
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     routes.home,

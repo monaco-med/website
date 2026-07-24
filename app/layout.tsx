@@ -1,3 +1,11 @@
+/**
+ * Root layout, applied to every route. Owns the three self-hosted Google
+ * Fonts (loaded once here via `next/font/google` and exposed to
+ * `app/globals.css` as CSS variables), the site-wide `<Metadata>` default
+ * (overridden per page via each route's own `export const metadata`), the
+ * Organization JSON-LD structured data, and the persistent `<Header>`/
+ * `<Footer>`.
+ */
 import type { Metadata } from "next";
 import { Archivo, Inter, IBM_Plex_Mono } from "next/font/google";
 import Header from "@/components/Header";
@@ -23,6 +31,7 @@ const plexMono = IBM_Plex_Mono({
   weight: ["400", "500"],
 });
 
+/** Default metadata; individual pages override `title`/`description` via their own `export const metadata`. */
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
@@ -44,6 +53,7 @@ export const metadata: Metadata = {
   },
 };
 
+/** schema.org `MedicalBusiness` structured data, injected on every page via `<script type="application/ld+json">` below. */
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "MedicalBusiness",

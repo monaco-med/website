@@ -7,6 +7,13 @@ import { submitLead } from "@/lib/submitLead";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
+/**
+ * "Betreuungsbedarf einschätzen" lead form, embedded on the homepage and
+ * rendered full-page on `/betreuungsbedarf`. Submits via
+ * `submitLead("betreuungsbedarf", ...)` — see `lib/submitLead.ts` and
+ * `app/api/lead/route.ts` for the request/validation flow, and
+ * `CallbackForm` for the sibling "Rückruf" form.
+ */
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState<string | null>(null);
@@ -18,6 +25,8 @@ export default function ContactForm() {
 
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries()) as Record<string, string>;
+    // The consent checkbox is only required for client-side validation —
+    // its value ("on") isn't a lead field, so it's dropped before sending.
     delete (data as Record<string, unknown>).dsgvo;
 
     setStatus("submitting");

@@ -17,6 +17,18 @@ export const metadata: Metadata = {
   alternates: { canonical: routes.gUntersuchungen },
 };
 
+/**
+ * G-Untersuchungen overview page (`/leistungen/vorsorge-g-untersuchungen`) —
+ * parent/hub page for arbeitsmedizinische Vorsorge & Eignungsuntersuchungen
+ * (G20–G46, Asbest), explaining the legacy "G" naming and linking out to
+ * the eight individual exam detail pages.
+ *
+ * Emits a 2-level `BreadcrumbJsonLd` (Leistungen → this page) — the eight
+ * child exam pages each add a third level pointing back here. As the
+ * company-wide entry point (rather than a single-exam inquiry), both CTAs
+ * on this page route to `routes.betreuungsbedarf`, unlike its children
+ * which route to `routes.rueckruf`.
+ */
 export default function GUntersuchungenPage() {
   return (
     <>

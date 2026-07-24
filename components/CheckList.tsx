@@ -1,5 +1,10 @@
 import Reveal from "@/components/Reveal";
 
+/**
+ * Single-column checklist with a checkmark accent per row, used for
+ * odd-length benefit/coverage lists where the two-column grids
+ * (`PainGrid`, `SectorGrid`) would leave an uneven gap.
+ */
 export default function CheckList({ items }: { items: string[] }) {
   return (
     <Reveal className="check-list" stagger>

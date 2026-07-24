@@ -38,6 +38,16 @@ const faqItems = [
   },
 ];
 
+/**
+ * "Für Unternehmen" page (`/fuer-unternehmen`) — pitches centrally
+ * coordinated arbeitsmedizinische Betreuung for companies with multiple
+ * locations (pain points, solution, process, sectors served).
+ *
+ * Renders no breadcrumb or JSON-LD (top-level marketing page, not part of
+ * the Leistungen hierarchy). Two hero CTAs: primary "Unverbindliche
+ * Anfrage" to `routes.betreuungsbedarf`, secondary "Persönliches
+ * Erstgespräch" to `routes.rueckruf`.
+ */
 export default function FuerUnternehmenPage() {
   return (
     <>

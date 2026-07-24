@@ -34,6 +34,15 @@ const faqItems = [
   },
 ];
 
+/**
+ * Full FAQ page (`/faq`) — the canonical, expanded list of frequently
+ * asked questions (superset of the homepage's shorter teaser list).
+ *
+ * Passes `jsonLd` to `FaqList`, making this the one page on the site that
+ * emits schema.org `FAQPage` structured data — per `FaqList`'s own
+ * doc-comment, only one page should do so to avoid duplicate `FAQPage`
+ * blocks. Closing band CTA routes to `routes.rueckruf`.
+ */
 export default function FaqPage() {
   return (
     <>

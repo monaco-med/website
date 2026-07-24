@@ -1,13 +1,31 @@
+/**
+ * Server-side proxy for lead-form submissions (`ContactForm`, `CallbackForm`
+ * via `lib/submitLead.ts`).
+ *
+ * This route exists so the Google Apps Script URL and shared secret never
+ * reach the browser: the client posts form data here, this route validates
+ * it and adds the secret, then forwards it to the Apps Script web app,
+ * which sends the actual email via `MailApp` (see
+ * `google-apps-script/Code.gs`).
+ */
 import { NextRequest, NextResponse } from "next/server";
 
 const SCRIPT_URL = process.env.GOOGLE_APPS_SCRIPT_URL;
 const SCRIPT_SECRET = process.env.GOOGLE_APPS_SCRIPT_SECRET;
 
+/** Required field names per `LeadType`, enforced before forwarding to the Apps Script. */
 const REQUIRED_FIELDS: Record<string, string[]> = {
   betreuungsbedarf: ["firma", "name", "email"],
   rueckruf: ["name", "email"],
 };
 
+/**
+ * Validates and forwards a lead submission to the Google Apps Script mailer.
+ *
+ * Returns `503` if the required env vars aren't set (see `.env.example`),
+ * `400` for a malformed body, unknown `type`, or missing required fields,
+ * and `502` if the Apps Script request itself fails or is rejected.
+ */
 export async function POST(req: NextRequest) {
   if (!SCRIPT_URL || !SCRIPT_SECRET) {
     return NextResponse.json(

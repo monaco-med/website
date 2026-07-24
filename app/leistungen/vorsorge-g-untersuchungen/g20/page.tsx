@@ -15,6 +15,12 @@ export const metadata: Metadata = {
   alternates: { canonical: routes.g20 },
 };
 
+/**
+ * G20 Untersuchung detail page — arbeitsmedizinische Vorsorge bei
+ * Lärmexposition. Follows the shared G-Untersuchungen child template (see
+ * `g42/page.tsx` for the full breakdown); CTAs ("G20 Vorsorge anfragen" /
+ * "Vorsorgetag anfragen") route to `routes.rueckruf`.
+ */
 export default function G20Page() {
   return (
     <>

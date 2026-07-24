@@ -15,6 +15,13 @@ export const metadata: Metadata = {
   alternates: { canonical: routes.g37 },
 };
 
+/**
+ * G37 Untersuchung detail page — arbeitsmedizinische Angebotsvorsorge bei
+ * Bildschirmarbeit (Seh- und Beratungsanteil). Follows the shared
+ * G-Untersuchungen child template (see `g42/page.tsx` for the full
+ * breakdown); CTAs ("G37 Vorsorge anfragen" / "Vorsorgetag anfragen") route
+ * to `routes.rueckruf`.
+ */
 export default function G37Page() {
   return (
     <>

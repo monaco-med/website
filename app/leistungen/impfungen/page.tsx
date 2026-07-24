@@ -36,6 +36,15 @@ const faqItems = [
   },
 ];
 
+/**
+ * Impfungen detail page (`/leistungen/impfungen`) — on-site vaccination
+ * campaigns (Grippeschutz, reisemedizinisch, tätigkeitsbezogen) from
+ * planning through documentation.
+ *
+ * Emits a 2-level `BreadcrumbJsonLd` (Leistungen → Impfungen im
+ * Unternehmen). Two hero CTAs: primary to `routes.betreuungsbedarf`
+ * ("Impfaktion anfragen"), secondary to `routes.rueckruf`.
+ */
 export default function ImpfungenPage() {
   return (
     <>

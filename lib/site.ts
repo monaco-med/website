@@ -1,3 +1,8 @@
+/**
+ * Site-wide constants used in metadata, JSON-LD structured data, and the
+ * contact page — the single place to update the practice's public-facing
+ * name, address, and contact details.
+ */
 export const siteConfig = {
   name: "MonacoMed",
   url: "https://www.monaco-med.de",

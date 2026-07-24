@@ -49,6 +49,16 @@ const faqItems = [
   },
 ];
 
+/**
+ * Local-SEO landing page (`/betriebsarzt-muenchen`) — targets "Betriebsarzt
+ * München" search intent, covering the practice location, service summary
+ * and area served.
+ *
+ * Emits schema.org `Physician` structured data (`physicianJsonLd`, built
+ * from `siteConfig`) instead of the `BreadcrumbJsonLd` used by service
+ * pages — this page has no breadcrumb trail of its own. Two hero CTAs:
+ * primary to `routes.betreuungsbedarf`, secondary to `routes.rueckruf`.
+ */
 export default function BetriebsarztMuenchenPage() {
   return (
     <>

@@ -17,6 +17,19 @@ export const metadata: Metadata = {
   alternates: { canonical: routes.bahnmedizin },
 };
 
+/**
+ * Bahnmedizin detail page (`/leistungen/bahnmedizin`) — railway fitness
+ * examinations (TfV § 16, VDV 714, EBO, DB Anforderungsgruppen A/B) as an
+ * "ermächtigte Untersuchungsstelle".
+ *
+ * Emits a 2-level `BreadcrumbJsonLd` (Leistungen → Bahnmedizin). Both CTAs
+ * point to a single exam/appointment inquiry — primary to `routes.rueckruf`
+ * ("Termin vereinbaren"), secondary to `routes.kontakt` — rather than the
+ * company-wide `routes.betreuungsbedarf` used by the other service pages,
+ * since Bahnmedizin is typically booked per individual or per exam batch.
+ * This routing choice is the precedent the G-Untersuchungen child pages
+ * follow for their own single-exam CTAs.
+ */
 export default function BahnmedizinPage() {
   return (
     <>

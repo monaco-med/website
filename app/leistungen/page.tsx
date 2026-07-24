@@ -23,6 +23,17 @@ const overview = [
   { id: "07", href: routes.gUntersuchungen, title: "Arbeitsmedizinische Vorsorge & G-Untersuchungen", text: "G25, G37, G41 und weitere Untersuchungen – geplant, durchgeführt und dokumentiert." },
 ];
 
+/**
+ * Services overview/index page (`/leistungen`) — one-page summary of all
+ * seven service areas, each with an anchor section (`#arbeitsmedizin`,
+ * `#digitale-prozesse`, `#vorsorge-g-untersuchungen`, etc.) that
+ * `routes.digitaleProzesse` / `routes.gesundheitsmanagement` deep-link into
+ * from other pages.
+ *
+ * Unlike its child detail pages, this page renders no `Breadcrumbs` or
+ * `BreadcrumbJsonLd` (it sits directly one level below the root). Closing
+ * `CtaBand` routes to `routes.betreuungsbedarf`.
+ */
 export default function LeistungenPage() {
   return (
     <>

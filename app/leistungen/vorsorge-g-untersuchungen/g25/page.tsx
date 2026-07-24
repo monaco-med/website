@@ -15,6 +15,12 @@ export const metadata: Metadata = {
   alternates: { canonical: routes.g25 },
 };
 
+/**
+ * G25 Untersuchung detail page — arbeitsmedizinische Eignungsbeurteilung
+ * für Fahr-, Steuer- und Überwachungstätigkeiten. Follows the shared
+ * G-Untersuchungen child template (see `g42/page.tsx` for the full
+ * breakdown); CTAs ("Untersuchung anfragen") route to `routes.rueckruf`.
+ */
 export default function G25Page() {
   return (
     <>

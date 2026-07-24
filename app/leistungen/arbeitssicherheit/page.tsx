@@ -37,6 +37,16 @@ const faqItems = [
   },
 ];
 
+/**
+ * Arbeitssicherheit detail page (`/leistungen/arbeitssicherheit`) —
+ * occupational safety service page: Fachkraft für Arbeitssicherheit,
+ * Gefährdungsbeurteilung, Unterweisungen and their integration with
+ * Arbeitsmedizin.
+ *
+ * Emits a 2-level `BreadcrumbJsonLd` (Leistungen → Arbeitssicherheit). Two
+ * hero CTAs: primary to `routes.betreuungsbedarf`, secondary to
+ * `routes.rueckruf`.
+ */
 export default function ArbeitssicherheitPage() {
   return (
     <>

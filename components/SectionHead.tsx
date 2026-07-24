@@ -2,6 +2,12 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 
+/**
+ * Standard section heading: optional eyebrow `label`, a `title` (rendered
+ * as the heading level given by `as`), an optional `lead` paragraph, and
+ * an optional right-aligned CTA `action` link — the recurring header
+ * pattern at the top of most content sections.
+ */
 export default function SectionHead({
   label,
   title,

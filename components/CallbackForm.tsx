@@ -7,6 +7,12 @@ import { submitLead } from "@/lib/submitLead";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
+/**
+ * "Rückruf vereinbaren" (request a callback) form, rendered on `/rueckruf`.
+ * Submits via `submitLead("rueckruf", ...)` — see `lib/submitLead.ts` and
+ * `app/api/lead/route.ts` for the request/validation flow, and
+ * `ContactForm` for the sibling "Betreuungsbedarf" form.
+ */
 export default function CallbackForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState<string | null>(null);
@@ -18,6 +24,8 @@ export default function CallbackForm() {
 
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries()) as Record<string, string>;
+    // The consent checkbox is only required for client-side validation —
+    // its value ("on") isn't a lead field, so it's dropped before sending.
     delete (data as Record<string, unknown>).dsgvo;
 
     setStatus("submitting");

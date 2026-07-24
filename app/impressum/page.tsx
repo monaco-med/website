@@ -10,6 +10,18 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+/**
+ * Legal notice & privacy page (`/impressum`) — combined Impressum
+ * (§ 5 TMG) and Datenschutzerklärung.
+ *
+ * NOTE: the visible `draft-note` banner and several `[Platzhalter]` /
+ * `[... ergänzen/prüfen]` markers in the source below are not
+ * documentation artifacts — they are real, user-facing placeholder
+ * content (phone, email, hosting provider, cookie/analytics disclosure,
+ * berufsrechtliche Details) that the source text itself flags as pending
+ * completion and legal review before launch. Do not treat this page as
+ * launch-ready without that review.
+ */
 export default function ImpressumPage() {
   return (
     <>

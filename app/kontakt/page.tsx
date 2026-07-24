@@ -10,6 +10,13 @@ export const metadata: Metadata = {
   alternates: { canonical: routes.kontakt },
 };
 
+/**
+ * Contact hub page (`/kontakt`) — a routing/triage step rather than a form
+ * itself: it asks the visitor which of the two intents applies and sends
+ * them to `routes.rueckruf` (general question / quick callback) or
+ * `routes.betreuungsbedarf` (full needs assessment), plus a link to
+ * `routes.faq`.
+ */
 export default function KontaktPage() {
   return (
     <>

@@ -15,6 +15,12 @@ export const metadata: Metadata = {
   alternates: { canonical: routes.g41 },
 };
 
+/**
+ * G41 Untersuchung detail page — arbeitsmedizinische Eignungsbeurteilung
+ * für Arbeiten mit Absturzgefahr. Follows the shared G-Untersuchungen child
+ * template (see `g42/page.tsx` for the full breakdown); CTAs
+ * ("G41 Untersuchung anfragen") route to `routes.rueckruf`.
+ */
 export default function G41Page() {
   return (
     <>
