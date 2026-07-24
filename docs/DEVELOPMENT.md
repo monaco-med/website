@@ -272,13 +272,12 @@ incomplete**, not bugs:
   (`"+49 89 000000"`), but it's **unused anywhere in the codebase**; leave
   it unused unless the practice later decides to publish a number.
 - **Impressum & Datenschutz text is explicitly a draft** — the page itself
-  displays a visible "Entwurf" banner, and several paragraphs still contain
-  bracketed placeholders (`[Details vor Launch prüfen]` for the
-  berufsrechtliche Regelungen, `[Kontaktdaten ergänzen]` under
-  Verantwortlicher) pending legal review before this can be considered
-  final. The Hosting paragraph no longer names a specific provider —
-  it points readers to `siteConfig.email` instead of an `[Anbieter
-  ergänzen]` placeholder.
+  displays a visible "Entwurf" banner. Only one bracketed placeholder
+  remains, `[Details vor Launch prüfen]` for the berufsrechtliche
+  Regelungen, pending legal review before this can be considered final.
+  The Verantwortlicher and Hosting paragraphs point readers to
+  `siteConfig.email` rather than naming a specific provider or leaving a
+  `[... ergänzen]` marker.
 - **No cookie/consent banner** — intentional, since the site currently uses
   no analytics or marketing cookies (stated explicitly in the Datenschutz
   text). Only needed if analytics is added later.

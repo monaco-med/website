@@ -14,14 +14,13 @@ export const metadata: Metadata = {
  * Legal notice & privacy page (`/impressum`) — combined Impressum
  * (§ 5 TMG) and Datenschutzerklärung.
  *
- * NOTE: the visible `draft-note` banner and remaining `[... ergänzen/prüfen]`
- * markers in the source below are not documentation artifacts — they are
- * real, user-facing placeholder content (berufsrechtliche Details,
- * Verantwortlicher contact details, cookie/analytics disclosure) that the
- * source text itself flags as pending completion and legal review before
- * launch. Phone and email are now filled in via `siteConfig.email`; there
- * is intentionally no phone number. Do not treat this page as launch-ready
- * without that review.
+ * NOTE: the visible `draft-note` banner is still accurate — one real
+ * placeholder remains, `[Details vor Launch prüfen]` under
+ * "Berufsbezeichnung und berufsrechtliche Regelungen", pending legal
+ * review before launch. Contact/responsible-party/hosting/cookie sections
+ * are otherwise filled in via `siteConfig.email`; there is intentionally
+ * no phone number and no cookie-consent banner (no analytics is in use).
+ * Do not treat this page as fully launch-ready without that one review.
  */
 export default function ImpressumPage() {
   return (
@@ -69,7 +68,7 @@ export default function ImpressumPage() {
             <h3>Verantwortlicher</h3>
             <p>
               Verantwortlich für die Datenverarbeitung auf dieser Website ist die oben genannte
-              Praxis. [Kontaktdaten ergänzen]
+              Praxis, erreichbar unter {siteConfig.email}.
             </p>
             <h3>Hosting</h3>
             <p>
@@ -89,10 +88,7 @@ export default function ImpressumPage() {
               zuständigen Aufsichtsbehörde.
             </p>
             <h3>Cookies &amp; Analyse</h3>
-            <p>
-              Diese Website verwendet derzeit keine Analyse- oder Marketing-Cookies. [Bei Einsatz
-              von Analytics: Einwilligungsbanner ergänzen]
-            </p>
+            <p>Diese Website verwendet derzeit keine Analyse- oder Marketing-Cookies.</p>
           </div>
         </div>
       </section>
