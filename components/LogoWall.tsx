@@ -1,14 +1,15 @@
-import Image from "next/image";
 import Reveal from "@/components/Reveal";
 
-const logos = [
-  { src: "/images/logo-betz-chrom.png", alt: "Betz Chrom", w: 304, h: 165 },
-  { src: "/images/logo-deepdrive.png", alt: "DeepDrive", w: 371, h: 136 },
-  { src: "/images/logo-ems.png", alt: "EMS", w: 464, h: 108 },
-  { src: "/images/logo-jobrad-loop.png", alt: "JobRad Loop", w: 200, h: 200 },
-  { src: "/images/logo-o2-surftown.png", alt: "O2 Surftown MUC", w: 560, h: 338 },
-  { src: "/images/logo-torqeedo.png", alt: "Torqeedo", w: 560, h: 126 },
-  { src: "/images/logo-ohb.png", alt: "OHB", w: 420, h: 120 },
+const references = [
+  "Paulaner Brauerei Gruppe",
+  "OHB System AG",
+  "Sumitomo Drive Technologies",
+  "Munich Electrification GmbH",
+  "Torqeedo GmbH",
+  "JobRad Loop",
+  "ASMPT Logistics GmbH",
+  "Roland Berger Stiftung",
+  "EMS Electro Medical Systems",
 ];
 
 export default function LogoWall() {
@@ -26,13 +27,10 @@ export default function LogoWall() {
       </div>
       <div className="refs" style={{ padding: "22px 0" }}>
         <div className="wrap">
-          <Reveal className="logo-grid" stagger>
-            <div className="logo-cell">
-              <span className="logo-word">Paulaner</span>
-            </div>
-            {logos.map((logo) => (
-              <div className="logo-cell" key={logo.src}>
-                <Image src={logo.src} alt={logo.alt} width={logo.w} height={logo.h} />
+          <Reveal className="ref-grid" stagger>
+            {references.map((name) => (
+              <div className="ref-cell" key={name}>
+                <span>{name}</span>
               </div>
             ))}
           </Reveal>
