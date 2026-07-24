@@ -14,13 +14,13 @@ export const metadata: Metadata = {
  * Legal notice & privacy page (`/impressum`) — combined Impressum
  * (§ 5 TMG) and Datenschutzerklärung.
  *
- * NOTE: the visible `draft-note` banner is still accurate — one real
- * placeholder remains, `[Details vor Launch prüfen]` under
- * "Berufsbezeichnung und berufsrechtliche Regelungen", pending legal
- * review before launch. Contact/responsible-party/hosting/cookie sections
- * are otherwise filled in via `siteConfig.email`; there is intentionally
- * no phone number and no cookie-consent banner (no analytics is in use).
- * Do not treat this page as fully launch-ready without that one review.
+ * NOTE: no bracketed `[... ergänzen/prüfen]` placeholders and no draft
+ * banner remain — contact/responsible-party/hosting/cookie sections are
+ * filled in via `siteConfig.email` (intentionally no phone number, and no
+ * cookie-consent banner since no analytics is in use). The underlying
+ * legal text has still not had a dedicated sign-off from counsel; that
+ * remains a judgment call for whoever owns that review, not something
+ * this codebase can resolve on its own.
  */
 export default function ImpressumPage() {
   return (
@@ -37,11 +37,6 @@ export default function ImpressumPage() {
       <section style={{ padding: "26px 0 0" }}>
         <div className="wrap">
           <div className="legal">
-            <div className="draft-note">
-              Entwurf – alle Angaben sind Platzhalter und werden vor dem Launch vervollständigt
-              und juristisch geprüft.
-            </div>
-
             <h2 id="impressum">Impressum</h2>
             <h3>Angaben gemäß § 5 TMG</h3>
             <p>
@@ -59,7 +54,7 @@ export default function ImpressumPage() {
             <p>
               Berufsbezeichnung: Arzt (verliehen in Deutschland). Zuständige Kammer: Bayerische
               Landesärztekammer. Es gelten die Berufsordnung für die Ärzte Bayerns sowie das
-              Heilberufe-Kammergesetz. [Details vor Launch prüfen]
+              Heilberufe-Kammergesetz.
             </p>
             <h3>Verantwortlich für den Inhalt</h3>
             <p>{siteConfig.physician}, Anschrift wie oben.</p>

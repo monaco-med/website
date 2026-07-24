@@ -80,7 +80,7 @@ list. Top-level pages:
 | `/rueckruf` | Callback request form |
 | `/faq` | FAQ |
 | `/kontakt` | Contact chooser |
-| `/impressum` | Impressum & Datenschutz (`#datenschutz`) — draft, pending legal review |
+| `/impressum` | Impressum & Datenschutz (`#datenschutz`) — content filled in, pending legal review |
 
 ## Forms
 
@@ -105,7 +105,7 @@ sub-pages), FAQPage JSON-LD (`/faq`), `sitemap.xml`, `robots.txt`.
 Not bugs — see [`docs/DEVELOPMENT.md`](./docs/DEVELOPMENT.md#known-placeholders--open-items)
 for the full explanation of each:
 
-- [ ] Legal review of Impressum/Datenschutz text (`app/impressum/page.tsx` shows a visible "Entwurf" notice)
+- [ ] Legal review of Impressum/Datenschutz text (`app/impressum/page.tsx` — content is filled in, but not yet reviewed by counsel)
 - [ ] Cookie/consent banner — only needed if analytics is added later
 
 ## Testing

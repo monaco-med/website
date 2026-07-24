@@ -1401,16 +1401,6 @@ section.pad {
   margin-top: 8px;
   max-width: 72ch;
 }
-.draft-note {
-  margin-top: 22px;
-  padding: 13px 17px;
-  border: 1px solid var(--green-br);
-  border-radius: 10px;
-  background: var(--sand);
-  color: var(--green-d);
-  font-size: 13.5px;
-  max-width: 72ch;
-}
 
 /* ─── footer ─── */
 footer {

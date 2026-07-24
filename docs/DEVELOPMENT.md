@@ -271,13 +271,11 @@ incomplete**, not bugs:
   phone line. `lib/site.ts` still defines a `siteConfig.phone` placeholder
   (`"+49 89 000000"`), but it's **unused anywhere in the codebase**; leave
   it unused unless the practice later decides to publish a number.
-- **Impressum & Datenschutz text is explicitly a draft** — the page itself
-  displays a visible "Entwurf" banner. Only one bracketed placeholder
-  remains, `[Details vor Launch prüfen]` for the berufsrechtliche
-  Regelungen, pending legal review before this can be considered final.
-  The Verantwortlicher and Hosting paragraphs point readers to
-  `siteConfig.email` rather than naming a specific provider or leaving a
-  `[... ergänzen]` marker.
+- **Impressum & Datenschutz text has no bracketed placeholders or draft
+  banner left**, but it has still not had a dedicated legal sign-off —
+  treat the underlying text as reviewed-by-engineering, not
+  reviewed-by-counsel. The Verantwortlicher and Hosting paragraphs point
+  readers to `siteConfig.email` rather than naming a specific provider.
 - **No cookie/consent banner** — intentional, since the site currently uses
   no analytics or marketing cookies (stated explicitly in the Datenschutz
   text). Only needed if analytics is added later.
