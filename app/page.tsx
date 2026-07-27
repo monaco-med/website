@@ -95,7 +95,7 @@ const faqItems = [
  * `FaqList` without `jsonLd` — the canonical `FAQPage` structured data
  * lives on {@link routes.faq} to avoid emitting it twice. Primary CTA
  * (`Betreuungsbedarf kostenlos einschätzen`) routes to `routes.betreuungsbedarf`;
- * the secondary CTA (`Rückruf vereinbaren`) routes to `routes.rueckruf`.
+ * the secondary CTA (`Rückruf anfordern`) routes to `routes.rueckruf`.
  */
 export default function HomePage() {
   return (
@@ -106,13 +106,17 @@ export default function HomePage() {
           <div className="grid">
             <Reveal className="main">
               <h1>Betriebliche Gesundheit einfach gut organisiert.</h1>
+              <p className="sub">
+                Betriebsärztliche Betreuung und Arbeitssicherheit für Unternehmen – persönlich
+                betreut und digital organisiert.
+              </p>
               <div className="coverage">München &amp; Bayern als Kerngebiet · weitere Standorte auf Anfrage</div>
               <div className="hero-cta">
                 <Link href={routes.betreuungsbedarf} className="btn btn-primary">
                   Betreuungsbedarf kostenlos einschätzen
                 </Link>
                 <Link href={routes.rueckruf} className="btn btn-ghost">
-                  Rückruf vereinbaren
+                  Rückruf anfordern
                 </Link>
               </div>
             </Reveal>
@@ -156,7 +160,7 @@ export default function HomePage() {
             </div>
             <div className="item">
               <span className="lbl">Erreichbarkeit</span>
-              <b>Kurze Reaktionszeiten</b>
+              <b>Rückmeldung in der Regel innerhalb von 48 Stunden</b>
             </div>
             <div className="item">
               <span className="lbl">Zusammenarbeit</span>

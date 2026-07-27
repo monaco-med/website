@@ -39,7 +39,7 @@ export default function KontaktPage() {
               <p>Zu Leistungen, Abläufen oder der Zusammenarbeit – wir rufen Sie zurück und klären es persönlich.</p>
               <div className="actions">
                 <Link href={routes.rueckruf} className="btn btn-primary">
-                  Rückruf vereinbaren
+                  Rückruf anfordern
                 </Link>
                 <Link href={routes.faq} className="btn btn-ghost">
                   Häufige Fragen ansehen

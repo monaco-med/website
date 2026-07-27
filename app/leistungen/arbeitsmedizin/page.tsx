@@ -72,7 +72,7 @@ export default function ArbeitsmedizinPage() {
                 Betreuungsbedarf kostenlos einschätzen
               </Link>
               <Link href={routes.rueckruf} className="btn btn-ghost">
-                Rückruf vereinbaren
+                Rückruf anfordern
               </Link>
             </div>
           </Reveal>

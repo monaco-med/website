@@ -8,7 +8,7 @@ import { submitLead } from "@/lib/submitLead";
 type Status = "idle" | "submitting" | "success" | "error";
 
 /**
- * "Rückruf vereinbaren" (request a callback) form, rendered on `/rueckruf`.
+ * "Rückruf anfordern" (request a callback) form, rendered on `/rueckruf`.
  * Submits via `submitLead("rueckruf", ...)` — see `lib/submitLead.ts` and
  * `app/api/lead/route.ts` for the request/validation flow, and
  * `ContactForm` for the sibling "Betreuungsbedarf" form.
@@ -63,6 +63,13 @@ export default function CallbackForm() {
         <input id="cb-email" name="email" type="email" required />
       </div>
       <div className="field">
+        <label htmlFor="cb-telefon">Telefonnummer</label>
+        <input id="cb-telefon" name="telefon" type="tel" />
+        <p className="field-hint">
+          Bitte angeben, wenn Sie einen telefonischen Rückruf wünschen.
+        </p>
+      </div>
+      <div className="field">
         <label htmlFor="cb-zeit">Beste Zeit für den Rückruf</label>
         <select id="cb-zeit" name="zeit" defaultValue="9–12 Uhr">
           <option>9–12 Uhr</option>
@@ -75,10 +82,9 @@ export default function CallbackForm() {
         <label htmlFor="cb-dsgvo">
           Ich habe die{" "}
           <Link href={routes.datenschutz} target="_blank">
-            Datenschutzhinweise
+            Datenschutzerklärung
           </Link>{" "}
-          zur Kenntnis genommen und bin mit der Verarbeitung meiner Angaben einverstanden.{" "}
-          <span className="req">*</span>
+          zur Kenntnis genommen. <span className="req">*</span>
         </label>
       </div>
       <button type="submit" className="btn btn-primary btn-block" disabled={status === "submitting"}>

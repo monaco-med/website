@@ -29,7 +29,11 @@ export default function WhyLines({
           className="lbl"
           style={{ fontSize: 16, letterSpacing: ".12em", color: solid ? "#7fc2ab" : undefined }}
         >
-          Warum <span style={{ color: solid ? "#fff" : "var(--green-d)" }}>Monaco</span>Med?
+          Warum{" "}
+          <span className="brand-tight">
+            <span style={{ color: solid ? "#fff" : "var(--green-d)" }}>Monaco</span>Med
+          </span>
+          ?
         </span>
         <Reveal className="why-lines" stagger>
           {items.map((item) => (

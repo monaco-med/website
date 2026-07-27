@@ -271,11 +271,16 @@ incomplete**, not bugs:
   phone line. `lib/site.ts` still defines a `siteConfig.phone` placeholder
   (`"+49 89 000000"`), but it's **unused anywhere in the codebase**; leave
   it unused unless the practice later decides to publish a number.
-- **Impressum & Datenschutz text has no bracketed placeholders or draft
-  banner left**, but it has still not had a dedicated legal sign-off —
-  treat the underlying text as reviewed-by-engineering, not
-  reviewed-by-counsel. The Verantwortlicher and Hosting paragraphs point
-  readers to `siteConfig.email` rather than naming a specific provider.
+- **Impressum & Datenschutz text is client-supplied and must stay verbatim.**
+  It is a legal document — do not reword, condense, or "tidy" it. Only the
+  practice's own name/address/email come from `siteConfig`; the Kammer,
+  Approbationsbehörde, hosting provider and Aufsichtsbehörde are hardcoded
+  because they appear nowhere else in the codebase.
+- **The Datenschutzerklärung names Google Cloud as the hosting provider,
+  but the site is deployed on Vercel.** This came from the client-supplied
+  text and has been flagged back to them; if it isn't corrected, § 2 of the
+  privacy policy names the wrong processor. Worth re-checking before any
+  formal legal sign-off.
 - **No cookie/consent banner** — intentional, since the site currently uses
   no analytics or marketing cookies (stated explicitly in the Datenschutz
   text). Only needed if analytics is added later.

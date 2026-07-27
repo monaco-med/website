@@ -30,13 +30,13 @@ const navItems = [
  * for it next to the burger icon).
  *
  * The CTA target adapts to context: on `/betreuungsbedarf` itself it
- * offers "Rückruf vereinbaren" instead of repeating the page's own form.
+ * offers "Rückruf anfordern" instead of repeating the page's own form.
  */
 export default function Header() {
   const pathname = usePathname();
   const isBetreuungsbedarf = pathname === routes.betreuungsbedarf;
   const cta = isBetreuungsbedarf
-    ? { href: routes.rueckruf, label: "Rückruf vereinbaren" }
+    ? { href: routes.rueckruf, label: "Rückruf anfordern" }
     : { href: routes.betreuungsbedarf, label: "Betreuungsbedarf einschätzen" };
 
   return (

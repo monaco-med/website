@@ -43,8 +43,8 @@ export default function LeistungenPage() {
             <span className="lbl">Leistungen</span>
             <h1>Gesundheit und Arbeitsschutz aus einer Hand</h1>
             <p className="sub">
-              Vier Leistungsbereiche, ein Team, ein System: Arbeitsmedizin, Arbeitssicherheit und
-              Gesundheitsmanagement – digital organisiert und persönlich betreut.
+              Arbeitsmedizin, Arbeitssicherheit und Gesundheitsmanagement – persönlich betreut und
+              digital organisiert.
             </p>
           </Reveal>
         </div>

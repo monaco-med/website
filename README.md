@@ -105,7 +105,7 @@ sub-pages), FAQPage JSON-LD (`/faq`), `sitemap.xml`, `robots.txt`.
 Not bugs — see [`docs/DEVELOPMENT.md`](./docs/DEVELOPMENT.md#known-placeholders--open-items)
 for the full explanation of each:
 
-- [ ] Legal review of Impressum/Datenschutz text (`app/impressum/page.tsx` — content is filled in, but not yet reviewed by counsel)
+- [ ] Datenschutzerklärung § 2 names **Google Cloud** as host, but the site runs on **Vercel** — flagged to the client, needs confirming
 - [ ] Cookie/consent banner — only needed if analytics is added later
 
 ## Testing

@@ -82,7 +82,7 @@ function sendBetreuungsbedarfMail(data) {
 }
 
 /**
- * Verschickt die "Rückruf vereinbaren"-Anfrage (CallbackForm) als E-Mail an
+ * Verschickt die "Rückruf anfordern"-Anfrage (CallbackForm) als E-Mail an
  * TO_EMAIL, mit `replyTo` auf die Absender-Adresse gesetzt.
  *
  * @param {Object} data - Geparster Formular-Body (Feldnamen entsprechen den
@@ -91,11 +91,12 @@ function sendBetreuungsbedarfMail(data) {
 function sendRueckrufMail(data) {
   const subject = "Neuer Rückrufwunsch" + (data.name ? " – " + data.name : "");
   const body = [
-    "Neue Anfrage über das Formular \"Rückruf vereinbaren\"",
+    "Neue Anfrage über das Formular \"Rückruf anfordern\"",
     "",
     "Name: " + (data.name || "-"),
     "Unternehmen: " + (data.unternehmen || "-"),
     "E-Mail: " + (data.email || "-"),
+    "Telefon: " + (data.telefon || "-"),
     "Beste Zeit für den Rückruf: " + (data.zeit || "-"),
     "",
     "Grund des Rückrufwunsches:",

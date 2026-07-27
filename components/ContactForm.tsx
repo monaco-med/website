@@ -113,10 +113,9 @@ export default function ContactForm() {
         <label htmlFor="dsgvo">
           Ich habe die{" "}
           <Link href={routes.datenschutz} target="_blank">
-            Datenschutzhinweise
+            Datenschutzerklärung
           </Link>{" "}
-          zur Kenntnis genommen und bin mit der Verarbeitung meiner Angaben zur Bearbeitung
-          meiner Anfrage einverstanden. <span className="req">*</span>
+          zur Kenntnis genommen. <span className="req">*</span>
         </label>
       </div>
       <button type="submit" className="btn btn-primary btn-block" disabled={status === "submitting"}>

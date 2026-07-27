@@ -69,7 +69,7 @@ export default function FaqPage() {
           <p>Wir beantworten sie gern persönlich – kurz und unverbindlich.</p>
           <div style={{ marginTop: 28 }}>
             <Link href={routes.rueckruf} className="btn btn-light">
-              Rückruf anfragen
+              Rückruf anfordern
             </Link>
           </div>
         </div>

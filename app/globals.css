@@ -19,7 +19,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  overflow-wrap: break-word;
 }
 
 html {
@@ -328,7 +327,10 @@ section.pad {
 .sec-head h2 {
   font-size: clamp(27px, 3vw, 40px);
   color: var(--green-d);
-  max-width: 20ch;
+  /* 20ch can exceed the container on very narrow phones; because .sec-head is
+     a flex column the heading would then shrink-to-fit the longest word and
+     push the page sideways. Cap it so long words wrap instead. */
+  max-width: min(20ch, 100%);
 }
 .sec-head .lead {
   font-size: 16px;
@@ -1067,9 +1069,17 @@ section.pad {
   color: var(--mute);
   text-align: center;
 }
+/* The brand name is set in two colours ("Monaco" + "Med"). Inside the wide-
+   tracked uppercase .lbl/.refs-line styles the colour break plus the extra
+   letter-spacing makes it read as two words ("Monaco Med"), so tighten the
+   tracking here to keep it reading as the single word "MonacoMed". */
+.brand-tight {
+  letter-spacing: 0.01em;
+}
 .refs-line .mm {
   color: var(--green-d);
   font-weight: 500;
+  letter-spacing: 0.01em;
 }
 .refs-line .mm i {
   font-style: normal;
@@ -1211,6 +1221,11 @@ section.pad {
 .field textarea:focus {
   outline: 2px solid var(--green-br);
   border-color: transparent;
+}
+.field-hint {
+  font-size: 12.5px;
+  color: var(--mute);
+  margin-top: 6px;
 }
 .field-check {
   display: flex;
@@ -1401,6 +1416,21 @@ section.pad {
   margin-top: 8px;
   max-width: 72ch;
 }
+.legal ul {
+  margin: 10px 0 0 20px;
+  max-width: 72ch;
+}
+.legal li {
+  font-size: 15px;
+  color: var(--ink-soft);
+  margin-top: 5px;
+}
+.legal .stand {
+  margin-top: 36px;
+  font-family: var(--font-mono), monospace;
+  font-size: 13px;
+  color: var(--mute);
+}
 
 /* ─── footer ─── */
 footer {
@@ -1488,6 +1518,12 @@ footer {
 
 /* ─── responsive ─── */
 @media (max-width: 920px) {
+  /* Long German compounds (e.g. "Tauglichkeitsuntersuchungen") are wider than
+     a phone viewport and would push the page into horizontal scroll. Only
+     break them here — on desktop there is room, so words stay whole. */
+  * {
+    overflow-wrap: break-word;
+  }
   .wrap {
     padding: 0 20px;
   }
@@ -1551,6 +1587,11 @@ footer {
     flex-direction: column;
     align-items: flex-start;
     gap: 14px;
+  }
+  /* align-items: flex-start makes each child shrink-to-fit, so a long word
+     would size its column past the viewport before break-word can apply. */
+  .sec-head > * {
+    max-width: 100%;
   }
   .f-row {
     grid-template-columns: 1fr;
