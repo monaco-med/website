@@ -11,6 +11,12 @@ import { rueckrufDe } from "@/content/de/rueckruf";
 import { rueckrufEn } from "@/content/en/rueckruf";
 import { betreuungsbedarfDe } from "@/content/de/betreuungsbedarf";
 import { betreuungsbedarfEn } from "@/content/en/betreuungsbedarf";
+import { servicePagesDe } from "@/content/de/services";
+import { servicePagesEn } from "@/content/en/services";
+import { betriebsarztMuenchenDe } from "@/content/de/betriebsarzt-muenchen";
+import { betriebsarztMuenchenEn } from "@/content/en/betriebsarzt-muenchen";
+import { fuerUnternehmenDe } from "@/content/de/fuer-unternehmen";
+import { fuerUnternehmenEn } from "@/content/en/fuer-unternehmen";
 
 export const metadata: Metadata = {
   title: "Übersetzungs-Review",
@@ -36,6 +42,12 @@ const PAIRS: { label: string; de: unknown; en: unknown }[] = [
   { label: "Kontakt", de: kontaktDe, en: kontaktEn },
   { label: "Rückruf", de: rueckrufDe, en: rueckrufEn },
   { label: "Betreuungsbedarf", de: betreuungsbedarfDe, en: betreuungsbedarfEn },
+  { label: "Leistung: Arbeitsmedizin", de: servicePagesDe.arbeitsmedizin, en: servicePagesEn.arbeitsmedizin },
+  { label: "Leistung: Arbeitssicherheit", de: servicePagesDe.arbeitssicherheit, en: servicePagesEn.arbeitssicherheit },
+  { label: "Leistung: Bahnmedizin", de: servicePagesDe.bahnmedizin, en: servicePagesEn.bahnmedizin },
+  { label: "Leistung: Impfungen", de: servicePagesDe.impfungen, en: servicePagesEn.impfungen },
+  { label: "Betriebsarzt München", de: betriebsarztMuenchenDe, en: betriebsarztMuenchenEn },
+  { label: "Für Unternehmen", de: fuerUnternehmenDe, en: fuerUnternehmenEn },
 ];
 
 type Row = { path: string; de: string; en: string };
