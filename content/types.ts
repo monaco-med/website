@@ -101,7 +101,7 @@ export interface FaqItemContent {
  * unlike the exam pages these don't follow a strict alternation, so it is
  * stated explicitly rather than derived from position.
  */
-export type ServiceSection =
+export type PageSection =
   | {
       kind: "tiles";
       tone?: "firm" | "sand";
@@ -143,6 +143,17 @@ export type ServiceSection =
       flush?: boolean;
       items: readonly { title: string; text: string }[];
     }
+  /** Two-column band: prose on the left, a list of links on the right. */
+  | {
+      kind: "splitLinks";
+      tone?: "firm" | "sand";
+      flush?: boolean;
+      label?: string;
+      title: string;
+      lead: string;
+      matrixHeading: string;
+      links: readonly NavLink[];
+    }
   /** Two-column band: prose on the left, a `Matrix` table on the right. */
   | {
       kind: "split";
@@ -155,15 +166,20 @@ export type ServiceSection =
       rows: readonly (readonly MatrixCell[])[];
     };
 
-export interface ServicePageContent {
+export interface ContentPageContent {
   meta: PageMeta;
-  /** Breadcrumb leaf and JSON-LD name. */
-  breadcrumb: string;
+  /**
+   * Breadcrumb leaf and JSON-LD name. Omitted on landing pages that sit
+   * outside the Leistungen tree and show an eyebrow label instead.
+   */
+  breadcrumb?: string;
+  /** Eyebrow label above the h1, used when there is no breadcrumb. */
+  heroLabel?: string;
   h1: string;
   tagline: string;
   intro: readonly string[];
   heroCtas: readonly CtaLink[];
-  sections: readonly ServiceSection[];
+  sections: readonly PageSection[];
   cta: CtaBandContent;
 }
 

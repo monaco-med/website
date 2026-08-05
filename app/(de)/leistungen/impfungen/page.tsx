@@ -1,18 +1,18 @@
-import ServicePage, { serviceMetadata } from "@/components/pages/ServicePage";
+import ContentPage, { contentMetadata } from "@/components/pages/ContentPage";
 import { commonDe } from "@/content/de/common";
 import { servicePagesDe } from "@/content/de/services";
 
 const content = servicePagesDe.impfungen;
 
-export const metadata = serviceMetadata(content, "de", "impfungen");
+export const metadata = contentMetadata(content, "de", "impfungen");
 
 /**
- * Impfungen service page. Layout lives in `ServicePage`, shared by all four
+ * Impfungen service page. Layout lives in `ContentPage`, shared by all four
  * service pages; the copy lives in `content/de/services.ts`.
  */
 export default function ImpfungenPage() {
   return (
-    <ServicePage
+    <ContentPage
       locale="de"
       routeKey="impfungen"
       content={content}

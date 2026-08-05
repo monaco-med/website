@@ -1,17 +1,17 @@
 /**
  * German copy for the four service detail pages.
  *
- * All four render through `components/pages/ServicePage.tsx`. Their body
+ * All four render through `components/pages/ContentPage.tsx`. Their body
  * sections are a tagged union, which is what lets pages that look quite
  * different — an exam list here, a steps block there — share one layout.
  *
  * Extracted mechanically from the original page files; no wording changed.
  */
-import type { ServicePageContent } from "@/content/types";
+import type { ContentPageContent } from "@/content/types";
 
 export type ServiceSlug = "arbeitsmedizin" | "arbeitssicherheit" | "bahnmedizin" | "impfungen";
 
-export const servicePagesDe: Record<ServiceSlug, ServicePageContent> = {
+export const servicePagesDe: Record<ServiceSlug, ContentPageContent> = {
   arbeitsmedizin: {
     meta: {
       title: "Arbeitsmedizin & betriebsärztliche Betreuung",

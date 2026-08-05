@@ -9,9 +9,9 @@ import Steps from "@/components/Steps";
 import ExamList from "@/components/ExamList";
 import ReasonGrid from "@/components/ReasonGrid";
 import FaqList from "@/components/FaqList";
-import { Matrix } from "@/components/Matrix";
+import { Matrix, MatrixLinks } from "@/components/Matrix";
 import CtaBand from "@/components/CtaBand";
-import type { MatrixCell, ServicePageContent, ServiceSection } from "@/content/types";
+import type { MatrixCell, ContentPageContent, PageSection } from "@/content/types";
 import type { Locale } from "@/lib/i18n";
 import { localeRoutes, type RouteKey } from "@/lib/routes";
 import { buildAlternates } from "@/lib/seo";
@@ -22,7 +22,7 @@ function renderCell(cell: MatrixCell) {
 }
 
 /** `pad` plus the section's optional background modifier. */
-function sectionClass(section: ServiceSection): string {
+function sectionClass(section: PageSection): string {
   return section.tone ? `pad ${section.tone}` : "pad";
 }
 
@@ -39,32 +39,42 @@ function sectionClass(section: ServiceSection): string {
  * data lives on the FAQ page itself, and duplicate blocks on one page are
  * invalid.
  */
-export default function ServicePage({
+export default function ContentPage({
   locale,
   routeKey,
   content,
   leistungenLabel,
+  jsonLd,
 }: {
   locale: Locale;
   routeKey: RouteKey;
-  content: ServicePageContent;
-  /** First breadcrumb — the services overview page's name. */
-  leistungenLabel: string;
+  content: ContentPageContent;
+  /** First breadcrumb — the services overview page's name. Required when the content sets `breadcrumb`. */
+  leistungenLabel?: string;
+  /**
+   * Structured data for pages that emit something other than a breadcrumb
+   * trail (e.g. the Physician data on the Betriebsarzt landing page).
+   */
+  jsonLd?: React.ReactNode;
 }) {
   const routes = localeRoutes[locale];
 
   return (
     <>
-      <BreadcrumbJsonLd
-        items={[
-          { name: leistungenLabel, path: routes.leistungen },
-          { name: content.breadcrumb, path: routes[routeKey] },
-        ]}
-      />
+      {content.breadcrumb && leistungenLabel && (
+        <BreadcrumbJsonLd
+          items={[
+            { name: leistungenLabel, path: routes.leistungen },
+            { name: content.breadcrumb, path: routes[routeKey] },
+          ]}
+        />
+      )}
+      {jsonLd}
       <section className="hero">
         <div className="wrap">
           <Reveal className="inner">
-            <Breadcrumbs current={content.breadcrumb} />
+            {content.breadcrumb && <Breadcrumbs current={content.breadcrumb} />}
+            {content.heroLabel && <span className="lbl">{content.heroLabel}</span>}
             <h1>{content.h1}</h1>
             <p className="sub-strong">{content.tagline}</p>
             {content.intro.map((paragraph) => (
@@ -90,7 +100,22 @@ export default function ServicePage({
           style={section.flush ? { paddingTop: 0 } : undefined}
         >
           <div className="wrap">
-            {section.kind === "split" ? (
+            {section.kind === "splitLinks" ? (
+              <div className="grid">
+                <Reveal style={{ alignSelf: "center" }}>
+                  {section.label && <span className="lbl">{section.label}</span>}
+                  <h2 style={{ marginTop: 14 }}>{section.title}</h2>
+                  <p className="lead">{section.lead}</p>
+                </Reveal>
+                <MatrixLinks
+                  heading={section.matrixHeading}
+                  items={section.links.map((link) => ({
+                    href: routes[link.key],
+                    label: link.label,
+                  }))}
+                />
+              </div>
+            ) : section.kind === "split" ? (
               <div className="grid">
                 <Reveal style={{ alignSelf: "center" }}>
                   {section.label && <span className="lbl">{section.label}</span>}
@@ -145,8 +170,8 @@ export default function ServicePage({
 }
 
 /** Builds the page `metadata` for a service page from its content module. */
-export function serviceMetadata(
-  content: ServicePageContent,
+export function contentMetadata(
+  content: ContentPageContent,
   locale: Locale,
   routeKey: RouteKey
 ): Metadata {
