@@ -10,9 +10,9 @@ Status key: 🔴 answer needed · 🟡 confirm my choice · ⚪ FYI
 
 ---
 
-## 🔴 1. "Arbeitsmedizinische Vorsorge" → "occupational health screening"
+## ✅ 1. "Arbeitsmedizinische Vorsorge" → "occupational health screening"
 
-**Appears on nearly every page — decide this first, it is a site-wide edit later.**
+**DECIDED (David, Aug 2026): confirmed.** Used site-wide.
 
 | Option | Reads like | Trade-off |
 |---|---|---|
@@ -20,8 +20,8 @@ Status key: 🔴 answer needed · 🟡 confirm my choice · ⚪ FYI
 | health surveillance | the actual UK/HSE legal term | sounds like monitoring employees — poor fit for marketing copy |
 | preventive occupational medical care | most accurate | far too heavy to repeat dozens of times |
 
-I chose readability and search visibility over legal precision, and added one
-clarifying sentence on the overview page. **Is that the right trade for you?**
+Readability and search visibility were chosen over strict legal precision, with
+one clarifying sentence on the G-Untersuchungen overview page.
 
 ## 🔴 2. English URLs
 
@@ -44,13 +44,16 @@ These become public addresses and are expensive to change once indexed.
 | `/kontakt` | `/en/contact` |
 | `/impressum` | `/en/legal-notice` |
 
-## 🔴 3. Google Cloud vs Vercel in the privacy policy
+## ✅ 3. Hosting provider named in the privacy policy
 
-**Blocks the English legal pages.** § 2 of the Datenschutzerklärung names
-**Google Cloud EMEA Limited** as the host. The site actually runs on **Vercel**.
+**DECIDED (David, Aug 2026): Google Cloud stays.** § 2 continues to name Google
+Cloud EMEA Limited, and the English version mirrors it. Closed — no longer
+raised.
 
-Please settle this in the German original first — otherwise we copy a factual
-error about data processing into a second legal document.
+⚪ For the record, so it is not lost: the site is currently served by Vercel, so
+if a data-protection authority or client ever asks, the named processor and the
+actual one differ. David has accepted this; noted here only so nobody
+"discovers" it later and reopens it as a bug.
 
 ## 🔴 4. "German version is legally binding" notice
 
