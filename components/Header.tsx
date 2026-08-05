@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { CommonContent } from "@/content/types";
-import type { Locale } from "@/lib/i18n";
-import { localeRoutes } from "@/lib/routes";
+import { englishLaunched, localeName, type Locale } from "@/lib/i18n";
+import { getCounterpartPath, localeRoutes } from "@/lib/routes";
 
 /**
  * Site-wide sticky header: desktop nav with a hover dropdown, a mobile
@@ -55,6 +55,21 @@ export default function Header({
     </li>
   ));
 
+  // Links to the current page in the other language, falling back to that
+  // language's home page if this page has no counterpart yet. Hidden until
+  // the English site is complete — see `englishLaunched`.
+  const otherLocale: Locale = locale === "de" ? "en" : "de";
+  const switcher = englishLaunched ? (
+    <a
+      className="lang-switch"
+      href={getCounterpartPath(pathname, locale, otherLocale)}
+      lang={otherLocale}
+      hrefLang={otherLocale}
+    >
+      {localeName[otherLocale]}
+    </a>
+  ) : null;
+
   return (
     <header>
       <div className="wrap bar">
@@ -68,6 +83,7 @@ export default function Header({
           </ul>
         </nav>
         <div className="hcta">
+          {switcher}
           <Link href={cta.href} className="btn btn-primary">
             {cta.label}
           </Link>
@@ -83,6 +99,7 @@ export default function Header({
             <ul>
               {leistungenMenu}
               {navLinks}
+              {switcher && <li className="mnav-lang">{switcher}</li>}
             </ul>
           </div>
         </details>
