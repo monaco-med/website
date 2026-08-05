@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Reveal from "@/components/Reveal";
-import { routes } from "@/lib/routes";
+import { buildAlternates } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Impressum & Datenschutz",
   description: "Impressum und Datenschutzerklärung der MonacoMed – Praxis für Arbeitsmedizin in München.",
-  alternates: { canonical: routes.impressum },
+  alternates: buildAlternates("impressum", "de"),
   robots: { index: true, follow: true },
 };
 

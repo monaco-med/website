@@ -9,12 +9,13 @@ import Steps from "@/components/Steps";
 import FaqList from "@/components/FaqList";
 import CtaBand from "@/components/CtaBand";
 import { routes } from "@/lib/routes";
+import { buildAlternates } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Impfungen im Unternehmen – Impfaktionen im Betrieb",
   description:
     "Grippeschutz, reisemedizinische und tätigkeitsbezogene Impfungen direkt im Betrieb – von der Planung bis zur Dokumentation.",
-  alternates: { canonical: routes.impfungen },
+  alternates: buildAlternates("impfungen", "de"),
 };
 
 const faqItems = [

@@ -10,12 +10,13 @@ import Steps from "@/components/Steps";
 import FaqList from "@/components/FaqList";
 import CtaBand from "@/components/CtaBand";
 import { routes } from "@/lib/routes";
+import { buildAlternates } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Arbeitssicherheit & Gefährdungsbeurteilung",
   description:
     "Fachkraft für Arbeitssicherheit, Gefährdungsbeurteilung, Unterweisungen und Begehungen – eng verzahnt mit der Arbeitsmedizin.",
-  alternates: { canonical: routes.arbeitssicherheit },
+  alternates: buildAlternates("arbeitssicherheit", "de"),
 };
 
 const faqItems = [

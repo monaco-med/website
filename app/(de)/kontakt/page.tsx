@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import { routes } from "@/lib/routes";
+import { buildAlternates } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Kontakt",
   description:
     "Allgemeine Frage oder Betreuungsbedarf einschätzen lassen? Sagen Sie uns kurz, worum es geht – wir melden uns persönlich.",
-  alternates: { canonical: routes.kontakt },
+  alternates: buildAlternates("kontakt", "de"),
 };
 
 /**

@@ -10,12 +10,13 @@ import Steps from "@/components/Steps";
 import FaqList from "@/components/FaqList";
 import CtaBand from "@/components/CtaBand";
 import { routes } from "@/lib/routes";
+import { buildAlternates } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Arbeitsmedizin & betriebsärztliche Betreuung",
   description:
     "Betriebsärztliche Betreuung nach ASiG und DGUV V2: Vorsorge, Eignungsuntersuchungen, ASA und Impfaktionen – persönlich betreut, digital organisiert.",
-  alternates: { canonical: routes.arbeitsmedizin },
+  alternates: buildAlternates("arbeitsmedizin", "de"),
 };
 
 const faqItems = [

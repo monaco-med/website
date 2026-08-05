@@ -9,13 +9,14 @@ import FaqList from "@/components/FaqList";
 import LogoWall from "@/components/LogoWall";
 import ContactForm from "@/components/ContactForm";
 import { routes } from "@/lib/routes";
+import { buildAlternates } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 import { commonDe } from "@/content/de/common";
 
 export const metadata: Metadata = {
   title: `${siteConfig.name} – Betriebsarzt & Arbeitsmedizin in München`,
   description: siteConfig.description,
-  alternates: { canonical: routes.home },
+  alternates: buildAlternates("home", "de"),
 };
 
 const services = [

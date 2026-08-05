@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import Reveal from "@/components/Reveal";
 import CallbackForm from "@/components/CallbackForm";
-import { routes } from "@/lib/routes";
+import { buildAlternates } from "@/lib/seo";
 import { commonDe } from "@/content/de/common";
 
 export const metadata: Metadata = {
   title: "Rückruf anfordern",
   description:
     "Hinterlassen Sie Ihr Anliegen und Ihr Wunschzeitfenster – wir rufen Sie zurück. Direkt, persönlich, ohne Callcenter.",
-  alternates: { canonical: routes.rueckruf },
+  alternates: buildAlternates("rueckruf", "de"),
 };
 
 /**

@@ -9,12 +9,13 @@ import CheckList from "@/components/CheckList";
 import ReasonGrid from "@/components/ReasonGrid";
 import CtaBand from "@/components/CtaBand";
 import { routes } from "@/lib/routes";
+import { buildAlternates } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Arbeitsmedizinische Vorsorge & G-Untersuchungen",
   description:
     "G20 bis G46: arbeitsmedizinische Vorsorge und Eignungsuntersuchungen für Unternehmen – in München und als Vorsorgetag direkt bei Ihnen vor Ort.",
-  alternates: { canonical: routes.gUntersuchungen },
+  alternates: buildAlternates("gUntersuchungen", "de"),
 };
 
 /**

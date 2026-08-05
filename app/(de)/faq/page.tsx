@@ -3,12 +3,13 @@ import Link from "next/link";
 import SectionHead from "@/components/SectionHead";
 import FaqList from "@/components/FaqList";
 import { routes } from "@/lib/routes";
+import { buildAlternates } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Häufige Fragen (FAQ)",
   description:
     "Antworten auf die häufigsten Fragen zu Betriebsarzt, Arbeitsmedizin, Arbeitssicherheit und Zusammenarbeit mit MonacoMed.",
-  alternates: { canonical: routes.faq },
+  alternates: buildAlternates("faq", "de"),
 };
 
 const faqItems = [

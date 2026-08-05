@@ -9,12 +9,13 @@ import ReasonGrid from "@/components/ReasonGrid";
 import { Matrix } from "@/components/Matrix";
 import CtaBand from "@/components/CtaBand";
 import { routes } from "@/lib/routes";
+import { buildAlternates } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Bahnmedizin – Tauglichkeitsuntersuchungen TfV, EBO, VDV 714",
   description:
     "Ermächtigte Untersuchungsstelle: Eignungs- und Tauglichkeitsuntersuchungen für Triebfahrzeugführer und Bahnbetrieb – kurzfristige Termine in München.",
-  alternates: { canonical: routes.bahnmedizin },
+  alternates: buildAlternates("bahnmedizin", "de"),
 };
 
 /**

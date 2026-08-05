@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import Reveal from "@/components/Reveal";
 import SectionHead from "@/components/SectionHead";
 import ContactForm from "@/components/ContactForm";
-import { routes } from "@/lib/routes";
+import { buildAlternates } from "@/lib/seo";
 import { commonDe } from "@/content/de/common";
 
 export const metadata: Metadata = {
   title: "Betreuungsbedarf kostenlos einschätzen",
   description:
     "Wenige Angaben genügen: Wir prüfen Ihren arbeitsmedizinischen Betreuungsbedarf und melden uns mit einer kostenlosen ärztlichen Ersteinschätzung.",
-  alternates: { canonical: routes.betreuungsbedarf },
+  alternates: buildAlternates("betreuungsbedarf", "de"),
 };
 
 /**

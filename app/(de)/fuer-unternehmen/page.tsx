@@ -11,12 +11,13 @@ import SectorGrid from "@/components/SectorGrid";
 import FaqList from "@/components/FaqList";
 import CtaBand from "@/components/CtaBand";
 import { routes } from "@/lib/routes";
+import { buildAlternates } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Für Unternehmen – Betreuung mehrerer Standorte",
   description:
     "Arbeitsmedizinische Betreuung für Unternehmen mit mehreren Standorten: zentral koordiniert, digital dokumentiert, mit festen Ansprechpartnern.",
-  alternates: { canonical: routes.fuerUnternehmen },
+  alternates: buildAlternates("fuerUnternehmen", "de"),
 };
 
 const faqItems = [

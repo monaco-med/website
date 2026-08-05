@@ -5,12 +5,13 @@ import Tiles from "@/components/Tiles";
 import Reveal from "@/components/Reveal";
 import CtaBand from "@/components/CtaBand";
 import { routes } from "@/lib/routes";
+import { buildAlternates } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Leistungen – Arbeitsmedizin, Arbeitssicherheit & mehr",
   description:
     "Alle Leistungen von MonacoMed im Überblick: Arbeitsmedizin, Arbeitssicherheit, Bahnmedizin, Impfungen, digitale Prozesse und Gesundheitsmanagement.",
-  alternates: { canonical: routes.leistungen },
+  alternates: buildAlternates("leistungen", "de"),
 };
 
 const overview = [

@@ -7,13 +7,14 @@ import { MatrixLinks } from "@/components/Matrix";
 import FaqList from "@/components/FaqList";
 import CtaBand from "@/components/CtaBand";
 import { routes } from "@/lib/routes";
+import { buildAlternates } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Betriebsarzt München",
   description:
     "Ihr Betriebsarzt in München: Praxis in der Heidemannstraße, Untersuchungstage vor Ort im Betrieb, kurzfristige Termine – fachärztlich geführt.",
-  alternates: { canonical: routes.betriebsarztMuenchen },
+  alternates: buildAlternates("betriebsarztMuenchen", "de"),
 };
 
 const physicianJsonLd = {

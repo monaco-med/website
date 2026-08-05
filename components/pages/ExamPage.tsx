@@ -9,6 +9,7 @@ import CtaBand from "@/components/CtaBand";
 import type { ExamPageContent } from "@/content/types";
 import type { Locale } from "@/lib/i18n";
 import { localeRoutes, type RouteKey } from "@/lib/routes";
+import { buildAlternates } from "@/lib/seo";
 
 /**
  * Shared template for all eight G-Untersuchungen detail pages, in both
@@ -120,6 +121,6 @@ export function examMetadata(
   return {
     title: content.meta.title,
     description: content.meta.description,
-    alternates: { canonical: localeRoutes[locale][routeKey] },
+    alternates: buildAlternates(routeKey, locale),
   };
 }
