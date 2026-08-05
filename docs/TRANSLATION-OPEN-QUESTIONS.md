@@ -55,10 +55,24 @@ if a data-protection authority or client ever asks, the named processor and the
 actual one differ. David has accepted this; noted here only so nobody
 "discovers" it later and reopens it as a bug.
 
-## 🔴 4. "German version is legally binding" notice
+## 🟡 4. "German version is legally binding" notice
 
-Needs your lawyer's wording before the English legal pages can ship. Proposed
-placement: directly under the "Legal notice & privacy" heading.
+Written and shipped — no longer blocking. It sits in a highlighted box directly
+above the first heading on `/en/legal-notice`, and reads:
+
+> Please note: this English text is a translation provided for convenience
+> only. The German version is the legally binding one.
+> If the two versions differ in any way, the German wording prevails. It is
+> available at www.monaco-med.de/impressum.
+
+The English legal page is a *convenience translation*, not a second legal
+document: it mirrors the German block for block, and the German text stays the
+one that counts. Worth a glance from your lawyer at some point, but it does not
+hold up the launch.
+
+⚪ Statute, authority and chamber names are kept in German with an English gloss
+in brackets — "Bayerische Landesärztekammer (Bavarian State Chamber of
+Physicians)" — so they stay findable. Postal addresses are verbatim.
 
 ---
 
@@ -111,10 +125,8 @@ them if you'd prefer.
 organised, centre, programme — the audience is European. Say the word if you
 want US spelling instead.
 
-## ⚪ 11. Not yet translated
+## ⚪ 11. Translation status
 
-Still German-only at the time of writing: the four service pages, the
-G-Untersuchungen overview and its eight exam pages, Für Unternehmen,
-Betriebsarzt München, the Leistungen overview, and both legal pages. Nothing
-English is publicly visible — the whole English tree is `noindex` until it is
-complete.
+All 22 pages are translated — 1,062 text fragments, nothing left in German.
+Nothing English is publicly visible yet: the whole English tree is `noindex`
+until David's review is folded in and `englishLaunched` is switched on.

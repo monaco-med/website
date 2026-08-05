@@ -38,6 +38,7 @@ const PAIRS = [
     exportEn: "examPagesEn",
     pick: slug,
   })),
+  { label: "Impressum & Datenschutz", file: "impressum", exportDe: "impressumDe", exportEn: "impressumEn" },
 ];
 
 /** Evaluates the object literal assigned to `exportName` in a content module. */
@@ -65,6 +66,9 @@ function loadExport(path, exportName) {
   return null;
 }
 
+/** Structural keys that carry no prose and are never reviewed. */
+const SKIP = ["key", "ctaKey", "variant", "kind", "tone", "flush", "id", "anchor"];
+
 /** Walks the German side and looks up the same path in English, so gaps stay visible. */
 function flatten(de, en, path = [], out = []) {
   if (typeof de === "string") {
@@ -77,8 +81,19 @@ function flatten(de, en, path = [], out = []) {
   }
   if (de && typeof de === "object") {
     for (const [key, value] of Object.entries(de)) {
-      if (["key", "ctaKey", "variant", "kind", "tone", "flush", "id", "anchor"].includes(key)) continue;
+      if (SKIP.includes(key)) continue;
       flatten(value, en && typeof en === "object" ? en[key] : undefined, [...path, key], out);
+    }
+    // Keys that exist only in English still need a review row — the legal
+    // page's precedence notice has no German counterpart by design. Walk them
+    // with English on both sides, then blank the German cell.
+    if (en && typeof en === "object" && !Array.isArray(en)) {
+      for (const [key, value] of Object.entries(en)) {
+        if (key in de || SKIP.includes(key)) continue;
+        const start = out.length;
+        flatten(value, value, [...path, key], out);
+        for (let i = start; i < out.length; i++) out[i].de = "";
+      }
     }
   }
   return out;
@@ -131,6 +146,7 @@ const html = `<!doctype html>
   td.de { color:var(--soft); width:41%; }
   td.en { color:var(--ink); width:32%; }
   td.missing { color:#b3402f; font-style:italic; }
+  td.only { color:var(--mute); font-style:italic; }
   td.fix { width:26%; padding:4px; }
   .fix textarea { width:100%; min-height:52px; border:1px solid var(--line); border-radius:6px; padding:6px 8px;
     font:inherit; font-size:13px; color:var(--ink); background:#fffdf7; resize:vertical; }
@@ -183,7 +199,11 @@ const html = `<!doctype html>
     <tbody>
       ${g.rows
         .map(
-          (r) => `<tr data-path="${esc(r.path)}"><td class="p" title="${esc(r.path)}">${esc(r.path.split("/")[1] || r.path)}</td><td class="de">${esc(r.de)}</td>${
+          (r) => `<tr data-path="${esc(r.path)}"><td class="p" title="${esc(r.path)}">${esc(r.path.split("/")[1] || r.path)}</td>${
+            r.de.trim()
+              ? `<td class="de">${esc(r.de)}</td>`
+              : `<td class="de only">— nur in der englischen Fassung —</td>`
+          }${
             r.en.trim()
               ? `<td class="en">${esc(r.en)}</td>`
               : `<td class="en missing">— noch nicht übersetzt —</td>`

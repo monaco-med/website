@@ -313,6 +313,15 @@ export interface LegalPageContent {
   meta: PageMeta;
   label: string;
   h1: string;
+  /**
+   * Precedence notice rendered above `blocks`, one paragraph line each.
+   *
+   * Only the English page sets this — it states that the German text is the
+   * legally binding one. Deliberately kept out of `blocks` so that both
+   * locales' block lists stay index-aligned: the review file and
+   * `scripts/apply-corrections.mjs` pair German and English by position.
+   */
+  notice?: readonly string[];
   blocks: readonly LegalBlock[];
 }
 

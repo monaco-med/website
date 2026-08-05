@@ -47,6 +47,16 @@ export default function LegalPage({
       <section style={{ padding: "26px 0 0" }}>
         <div className="wrap">
           <div className="legal">
+            {content.notice && (
+              <p className="notice">
+                {content.notice.map((line, index) => (
+                  <Fragment key={index}>
+                    {index > 0 && <br />}
+                    {fill(line)}
+                  </Fragment>
+                ))}
+              </p>
+            )}
             {content.blocks.map((block, index) => {
               switch (block.kind) {
                 case "h2":
@@ -67,7 +77,7 @@ export default function LegalPage({
                   );
                 case "p":
                   return (
-                    <p key={index} className={block.variant === "stand" ? "stand" : undefined}>
+                    <p key={index} className={block.variant}>
                       {block.lines.map((line, lineIndex) => (
                         <Fragment key={lineIndex}>
                           {lineIndex > 0 && <br />}

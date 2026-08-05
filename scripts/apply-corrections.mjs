@@ -43,6 +43,7 @@ const MODULES = [
   { file: "leistungen", exportName: "leistungenEn" },
   { file: "g-untersuchungen", exportName: "gUntersuchungenEn" },
   { file: "exams", exportName: "examPagesEn", keyed: true },
+  { file: "impressum", exportName: "impressumEn" },
 ];
 
 /** Advances past a string literal starting at `i`. */
