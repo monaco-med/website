@@ -107,6 +107,8 @@ export type PageSection =
       tone?: "firm" | "sand";
       title: string;
       lead?: string;
+      /** Lead-in line between the heading and the grid. */
+      intro?: string;
       /** Set on a section that should sit flush against the one above it. */
       flush?: boolean;
       items: readonly TileItemContent[];
@@ -142,6 +144,31 @@ export type PageSection =
       lead?: string;
       flush?: boolean;
       items: readonly { title: string; text: string }[];
+    }
+  /** Problem statements, as a two-column grid. */
+  | {
+      kind: "painGrid";
+      tone?: "firm" | "sand";
+      flush?: boolean;
+      title: string;
+      lead?: string;
+      intro?: string;
+      items: readonly string[];
+      /** Closing aside under the grid, in the mono "// ..." style. */
+      close?: string;
+    }
+  /** Industry tags under a bare eyebrow label — no section heading. */
+  | {
+      kind: "sectorGrid";
+      tone?: "firm" | "sand";
+      flush?: boolean;
+      label: string;
+      items: readonly string[];
+    }
+  /** The full-width "Warum MonacoMed?" band. Renders its own section wrapper. */
+  | {
+      kind: "whyLines";
+      items: readonly { n: string; title: string; text: string }[];
     }
   /** Two-column band: prose on the left, a list of links on the right. */
   | {

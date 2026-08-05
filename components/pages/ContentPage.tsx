@@ -11,6 +11,9 @@ import ReasonGrid from "@/components/ReasonGrid";
 import FaqList from "@/components/FaqList";
 import { Matrix, MatrixLinks } from "@/components/Matrix";
 import CtaBand from "@/components/CtaBand";
+import PainGrid from "@/components/PainGrid";
+import SectorGrid from "@/components/SectorGrid";
+import WhyLines from "@/components/WhyLines";
 import type { MatrixCell, ContentPageContent, PageSection } from "@/content/types";
 import type { Locale } from "@/lib/i18n";
 import { localeRoutes, type RouteKey } from "@/lib/routes";
@@ -21,8 +24,13 @@ function renderCell(cell: MatrixCell) {
   return typeof cell === "string" ? cell : <b>{cell.bold}</b>;
 }
 
-/** `pad` plus the section's optional background modifier. */
-function sectionClass(section: PageSection): string {
+/**
+ * `pad` plus the section's optional background modifier.
+ *
+ * Excludes `whyLines`, which renders its own full-width band rather than
+ * sitting inside a `pad` section.
+ */
+function sectionClass(section: Exclude<PageSection, { kind: "whyLines" }>): string {
   return section.tone ? `pad ${section.tone}` : "pad";
 }
 
@@ -93,14 +101,32 @@ export default function ContentPage({
         </div>
       </section>
 
-      {content.sections.map((section) => (
+      {content.sections.map((section, index) =>
+        section.kind === "whyLines" ? (
+          <WhyLines key={`why-${index}`} solid items={[...section.items]} />
+        ) : (
         <section
           className={sectionClass(section)}
-          key={section.title}
+          key={section.kind === "sectorGrid" ? section.label : section.title}
           style={section.flush ? { paddingTop: 0 } : undefined}
         >
           <div className="wrap">
-            {section.kind === "splitLinks" ? (
+            {section.kind === "sectorGrid" ? (
+              <>
+                <span className="lbl">{section.label}</span>
+                <SectorGrid
+                  style={{ marginTop: 16, maxWidth: 760 }}
+                  items={[...section.items]}
+                />
+              </>
+            ) : section.kind === "painGrid" ? (
+              <>
+                <SectionHead title={section.title} lead={section.lead} />
+                {section.intro && <p className="pain-intro">{section.intro}</p>}
+                <PainGrid items={[...section.items]} />
+                {section.close && <p className="pain-close">{section.close}</p>}
+              </>
+            ) : section.kind === "splitLinks" ? (
               <div className="grid">
                 <Reveal style={{ alignSelf: "center" }}>
                   {section.label && <span className="lbl">{section.label}</span>}
@@ -132,6 +158,9 @@ export default function ContentPage({
             ) : (
               <>
                 <SectionHead title={section.title} lead={section.lead} />
+                {section.kind === "tiles" && section.intro && (
+                  <p className="pain-intro">{section.intro}</p>
+                )}
                 {section.kind === "tiles" && (
                   <Tiles
                     items={section.items.map((item) => ({
@@ -156,7 +185,8 @@ export default function ContentPage({
             )}
           </div>
         </section>
-      ))}
+        )
+      )}
 
       <CtaBand
         label={content.cta.label}
