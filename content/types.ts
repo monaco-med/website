@@ -57,6 +57,69 @@ export interface NavLink {
   label: string;
 }
 
+/** A call-to-action button whose target resolves per locale. */
+export interface CtaLink extends NavLink {
+  variant: "primary" | "ghost" | "light";
+}
+
+/** Closing call-to-action band. `ctaKey` resolves against the locale's routes. */
+export interface CtaBandContent {
+  label: string;
+  title: string;
+  text: string;
+  ctaKey: RouteKey;
+  ctaLabel: string;
+}
+
+export interface FaqItemContent {
+  q: string;
+  a: string;
+}
+
+/** Callback-request page: heading block above the `CallbackForm`. */
+export interface CallbackPageContent {
+  meta: PageMeta;
+  label: string;
+  h1: string;
+  lead: string;
+}
+
+/** Needs-assessment page: heading block plus the contact aside beside the form. */
+export interface LeadPageContent {
+  meta: PageMeta;
+  h1: string;
+  lead: string;
+  sideTitle: string;
+  addressLabel: string;
+  onSiteLabel: string;
+  onSiteValue: string;
+}
+
+/** Contact hub: a triage step offering one route per visitor intent. */
+export interface ContactHubContent {
+  meta: PageMeta;
+  label: string;
+  h1: string;
+  sub: string;
+  choices: readonly {
+    label: string;
+    title: string;
+    text: string;
+    actions: readonly CtaLink[];
+  }[];
+  sideNote: string;
+}
+
+export interface FaqPageContent {
+  meta: PageMeta;
+  label: string;
+  h1: string;
+  lead: string;
+  items: readonly FaqItemContent[];
+  backLabel: string;
+  cta: { title: string; text: string; ctaLabel: string };
+}
+
 export interface ContactFormContent {
   firma: string;
   name: string;
