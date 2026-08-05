@@ -1,4 +1,4 @@
-import type { Locale } from "@/lib/i18n";
+import { hreflang, type Locale } from "@/lib/i18n";
 import { localeRoutes } from "@/lib/routes";
 import { siteConfig } from "@/lib/site";
 
@@ -13,6 +13,7 @@ export default function PhysicianJsonLd({ locale }: { locale: Locale }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Physician",
+    inLanguage: hreflang[locale],
     name: siteConfig.name,
     medicalSpecialty: "Occupational Medicine",
     physician: siteConfig.physician,

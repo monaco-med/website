@@ -1,4 +1,5 @@
 import Reveal from "@/components/Reveal";
+import { hreflang, type Locale } from "@/lib/i18n";
 
 /** A single FAQ question/answer pair. */
 export type FaqItem = {
@@ -13,11 +14,24 @@ export type FaqItem = {
  * @param jsonLd - When true, also emits schema.org `FAQPage` structured
  *   data for these items. Only one FAQ block per page should set this —
  *   duplicate `FAQPage` blocks on one page are invalid.
+ * @param locale - Language the questions are written in; tags the emitted
+ *   structured data so the German and English FAQ pages aren't read as
+ *   competing copies of one another.
  */
-export default function FaqList({ items, jsonLd = false }: { items: FaqItem[]; jsonLd?: boolean }) {
+export default function FaqList({
+  items,
+  jsonLd = false,
+  locale = "de",
+}: {
+  items: FaqItem[];
+  jsonLd?: boolean;
+  /** Tags the emitted FAQPage with its language. */
+  locale?: Locale;
+}) {
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    inLanguage: hreflang[locale],
     mainEntity: items.map((item) => ({
       "@type": "Question",
       name: item.q,

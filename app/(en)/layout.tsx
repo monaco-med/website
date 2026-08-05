@@ -18,9 +18,7 @@ import OrganizationJsonLd from "@/components/OrganizationJsonLd";
 import { fontVariables } from "@/lib/fonts";
 import { htmlLang, openGraphLocale } from "@/lib/i18n";
 import { siteConfig } from "@/lib/site";
-// TODO(T13): swap for content/en/common.ts. The English tree is noindex and
-// unlinked until launch, so German chrome here is visible to nobody but us.
-import { commonDe } from "@/content/de/common";
+import { commonEn } from "@/content/en/common";
 import "../globals.css";
 
 const englishTitle = `${siteConfig.name} – Occupational Health & Workplace Safety in Munich`;
@@ -59,9 +57,9 @@ export default function EnglishRootLayout({
     <html lang={htmlLang.en} className={fontVariables}>
       <body>
         <OrganizationJsonLd />
-        <Header locale="en" content={commonDe} />
+        <Header locale="en" content={commonEn} />
         {children}
-        <Footer locale="en" content={commonDe} />
+        <Footer locale="en" content={commonEn} />
       </body>
     </html>
   );

@@ -27,7 +27,7 @@ export default function FaqPage({
       <section className="pad">
         <div className="wrap">
           <SectionHead as="h1" label={content.label} title={content.h1} lead={content.lead} />
-          <FaqList items={[...content.items]} jsonLd />
+          <FaqList items={[...content.items]} jsonLd locale={locale} />
           <div style={{ marginTop: 30 }}>
             <Link href={routes.home} className="btn btn-ghost">
               {content.backLabel}
