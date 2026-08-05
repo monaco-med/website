@@ -145,6 +145,28 @@ export type PageSection =
       flush?: boolean;
       items: readonly { title: string; text: string }[];
     }
+  /** Single-column checklist, optionally followed by a standalone CTA button. */
+  | {
+      kind: "checkList";
+      tone?: "firm" | "sand";
+      flush?: boolean;
+      title: string;
+      lead?: string;
+      intro?: string;
+      items: readonly string[];
+      note?: string;
+      cta?: CtaLink;
+    }
+  /** Two cards contrasting a pair of concepts. */
+  | {
+      kind: "compare";
+      tone?: "firm" | "sand";
+      flush?: boolean;
+      title: string;
+      lead?: string;
+      cards: readonly { title: string; paragraphs: readonly string[] }[];
+      note?: string;
+    }
   /** Problem statements, as a two-column grid. */
   | {
       kind: "painGrid";

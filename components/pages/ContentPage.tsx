@@ -11,6 +11,7 @@ import ReasonGrid from "@/components/ReasonGrid";
 import FaqList from "@/components/FaqList";
 import { Matrix, MatrixLinks } from "@/components/Matrix";
 import CtaBand from "@/components/CtaBand";
+import CheckList from "@/components/CheckList";
 import PainGrid from "@/components/PainGrid";
 import SectorGrid from "@/components/SectorGrid";
 import WhyLines from "@/components/WhyLines";
@@ -111,7 +112,47 @@ export default function ContentPage({
           style={section.flush ? { paddingTop: 0 } : undefined}
         >
           <div className="wrap">
-            {section.kind === "sectorGrid" ? (
+            {section.kind === "checkList" ? (
+              <>
+                <SectionHead title={section.title} lead={section.lead} />
+                {section.intro && <p className="pain-intro">{section.intro}</p>}
+                <CheckList items={[...section.items]} />
+                {section.note && (
+                  <p style={{ marginTop: 20, fontSize: 15.5, color: "var(--ink-soft)" }}>
+                    {section.note}
+                  </p>
+                )}
+                {section.cta && (
+                  <div style={{ marginTop: 20 }}>
+                    <Link
+                      href={routes[section.cta.key]}
+                      className={`btn btn-${section.cta.variant}`}
+                    >
+                      {section.cta.label}
+                    </Link>
+                  </div>
+                )}
+              </>
+            ) : section.kind === "compare" ? (
+              <>
+                <SectionHead title={section.title} lead={section.lead} />
+                <Reveal className="compare-grid" stagger>
+                  {section.cards.map((card) => (
+                    <div className="tile" key={card.title}>
+                      <h4>{card.title}</h4>
+                      {card.paragraphs.map((paragraph) => (
+                        <p key={paragraph}>{paragraph}</p>
+                      ))}
+                    </div>
+                  ))}
+                </Reveal>
+                {section.note && (
+                  <p style={{ marginTop: 20, fontSize: 15.5, color: "var(--ink-soft)" }}>
+                    {section.note}
+                  </p>
+                )}
+              </>
+            ) : section.kind === "sectorGrid" ? (
               <>
                 <span className="lbl">{section.label}</span>
                 <SectorGrid
