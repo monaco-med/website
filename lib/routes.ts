@@ -15,6 +15,7 @@ export const anchors = {
     digitaleProzesse: "digitale-prozesse",
     gesundheitsmanagement: "gesundheitsmanagement",
     datenschutz: "datenschutz",
+    impressum: "impressum",
   },
   en: {
     leitung: "medical-director",
@@ -22,6 +23,7 @@ export const anchors = {
     digitaleProzesse: "digital-processes",
     gesundheitsmanagement: "health-management",
     datenschutz: "privacy",
+    impressum: "legal-notice",
   },
 } as const;
 

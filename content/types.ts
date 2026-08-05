@@ -293,6 +293,29 @@ export interface FaqPageContent {
   cta: { title: string; text: string; ctaLabel: string };
 }
 
+/**
+ * One block of the legal page. It is a flat run of headings, paragraphs and
+ * lists rather than a component composition, so the English version can mirror
+ * it structure-for-structure.
+ *
+ * Paragraph `lines` render separated by <br />, which is how the addresses are
+ * laid out. Text may contain `{{name}}`, `{{physician}}`, `{{email}}`,
+ * `{{street}}`, `{{zip}}` and `{{city}}` placeholders, filled from `siteConfig`
+ * so the practice's own details are never duplicated into the copy.
+ */
+export type LegalBlock =
+  | { kind: "h2"; text: string; anchor: "impressum" | "datenschutz" }
+  | { kind: "h3"; text: string }
+  | { kind: "p"; lines: readonly string[]; variant?: "stand" }
+  | { kind: "list"; items: readonly string[] };
+
+export interface LegalPageContent {
+  meta: PageMeta;
+  label: string;
+  h1: string;
+  blocks: readonly LegalBlock[];
+}
+
 export interface ContactFormContent {
   firma: string;
   name: string;
