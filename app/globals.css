@@ -1618,3 +1618,50 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* ─── internal translation review (T20a, removed at launch) ─── */
+.review-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 16px;
+}
+.review-grid > div {
+  background: var(--panel);
+  padding: 10px 12px;
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+.review-head {
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--green-br);
+}
+.review-path {
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  color: var(--mute);
+  word-break: break-all;
+}
+.review-de {
+  color: var(--ink-soft);
+}
+.review-en {
+  color: var(--ink);
+}
+.review-missing {
+  color: #b3402f;
+  font-family: var(--font-mono), monospace;
+  font-size: 12px;
+}
+@media (max-width: 920px) {
+  .review-grid {
+    grid-template-columns: 1fr;
+  }
+}
