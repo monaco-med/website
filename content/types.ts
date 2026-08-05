@@ -105,6 +105,12 @@ export type PageSection =
   | {
       kind: "tiles";
       tone?: "firm" | "sand";
+      /** Anchor id, when the section is a deep-link target. */
+      id?: string;
+      /** Eyebrow label above the heading. */
+      label?: string;
+      /** Right-aligned link beside the heading. */
+      action?: CtaLink;
       title: string;
       lead?: string;
       /** Lead-in line between the heading and the grid. */
@@ -215,8 +221,18 @@ export type PageSection =
       rows: readonly (readonly MatrixCell[])[];
     };
 
+/** A row in the services index list at the top of the overview page. */
+export interface IndexRow {
+  id: string;
+  key: RouteKey;
+  title: string;
+  text: string;
+}
+
 export interface ContentPageContent {
   meta: PageMeta;
+  /** Optional index list rendered between the hero and the body sections. */
+  index?: { rows: readonly IndexRow[]; moreLabel: string };
   /**
    * Breadcrumb leaf and JSON-LD name. Omitted on landing pages that sit
    * outside the Leistungen tree and show an eyebrow label instead.
@@ -225,7 +241,8 @@ export interface ContentPageContent {
   /** Eyebrow label above the h1, used when there is no breadcrumb. */
   heroLabel?: string;
   h1: string;
-  tagline: string;
+  /** Bold standfirst under the h1. Omit on pages that don't have one. */
+  tagline?: string;
   intro: readonly string[];
   heroCtas: readonly CtaLink[];
   sections: readonly PageSection[];

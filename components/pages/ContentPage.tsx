@@ -85,7 +85,7 @@ export default function ContentPage({
             {content.breadcrumb && <Breadcrumbs current={content.breadcrumb} />}
             {content.heroLabel && <span className="lbl">{content.heroLabel}</span>}
             <h1>{content.h1}</h1>
-            <p className="sub-strong">{content.tagline}</p>
+            {content.tagline && <p className="sub-strong">{content.tagline}</p>}
             {content.intro.map((paragraph) => (
               <p className="sub" key={paragraph}>
                 {paragraph}
@@ -102,6 +102,23 @@ export default function ContentPage({
         </div>
       </section>
 
+      {content.index && (
+        <section style={{ padding: "64px 0 20px" }}>
+          <div className="wrap">
+            <Reveal className="ix" stagger>
+              {content.index.rows.map((row) => (
+                <Link className="ix-row" href={routes[row.key]} key={row.id}>
+                  <span className="ix-id">{row.id}</span>
+                  <h3>{row.title}</h3>
+                  <p>{row.text}</p>
+                  <span className="ix-more">{content.index!.moreLabel}</span>
+                </Link>
+              ))}
+            </Reveal>
+          </div>
+        </section>
+      )}
+
       {content.sections.map((section, index) =>
         section.kind === "whyLines" ? (
           <WhyLines key={`why-${index}`} solid items={[...section.items]} />
@@ -109,6 +126,7 @@ export default function ContentPage({
         <section
           className={sectionClass(section)}
           key={section.kind === "sectorGrid" ? section.label : section.title}
+          id={section.kind === "tiles" ? section.id : undefined}
           style={section.flush ? { paddingTop: 0 } : undefined}
         >
           <div className="wrap">
@@ -198,7 +216,20 @@ export default function ContentPage({
               </div>
             ) : (
               <>
-                <SectionHead title={section.title} lead={section.lead} />
+                <SectionHead
+                  title={section.title}
+                  lead={section.lead}
+                  label={section.kind === "tiles" ? section.label : undefined}
+                  action={
+                    section.kind === "tiles" && section.action
+                      ? {
+                          href: routes[section.action.key],
+                          label: section.action.label,
+                          variant: section.action.variant as "primary" | "ghost",
+                        }
+                      : undefined
+                  }
+                />
                 {section.kind === "tiles" && section.intro && (
                   <p className="pain-intro">{section.intro}</p>
                 )}
