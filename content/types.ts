@@ -316,6 +316,54 @@ export interface LegalPageContent {
   blocks: readonly LegalBlock[];
 }
 
+/** Homepage copy. Bespoke — the homepage shares no template with other pages. */
+export interface HomePageContent {
+  meta: PageMeta;
+  h1: string;
+  /** Sub-headline under the h1. */
+  sub: string;
+  /** Coverage strip under the sub-headline. */
+  coverage: string;
+  heroCtas: readonly CtaLink[];
+  /** Numbered assurances in the hero's right-hand rail. */
+  rail: readonly { n: string; text: string }[];
+  /** Four-item trust band under the hero. */
+  trust: readonly { label: string; value: string }[];
+  services: {
+    label: string;
+    title: string;
+    action: CtaLink;
+    moreLabel: string;
+    items: readonly { id: string; key: RouteKey; title: string; text: string }[];
+  };
+  leitung: {
+    label: string;
+    title: string;
+    name: string;
+    /** Qualification lines, rendered separated by <br />. */
+    quals: readonly string[];
+    bio: string;
+    photoAlt: string;
+  };
+  steps: { title: string; lead: string; items: readonly { n: string; title: string; text: string }[] };
+  why: readonly { n: string; title: string; text: string }[];
+  teaser: { label: string; title: string; text: string; cta: CtaLink };
+  faq: {
+    title: string;
+    lead: string;
+    items: readonly FaqItemContent[];
+    allLabel: string;
+  };
+  contact: {
+    title: string;
+    lead: string;
+    sideTitle: string;
+    addressLabel: string;
+    onSiteLabel: string;
+    onSiteValue: string;
+  };
+}
+
 export interface ContactFormContent {
   firma: string;
   name: string;
