@@ -11,6 +11,46 @@
  */
 import type { RouteKey } from "@/lib/routes";
 
+/** Per-page `<Metadata>` copy. Canonical/alternates are derived from the route key. */
+export interface PageMeta {
+  title: string;
+  description: string;
+}
+
+/** The eight G-Untersuchungen detail pages, which all share one template. */
+export type ExamSlug = "g25" | "g26" | "g37" | "g41" | "g42" | "asbest" | "g20" | "g24";
+
+/**
+ * One body section of an exam page. Sections render in array order and
+ * alternate background shading by position, so reordering them is purely a
+ * content decision.
+ */
+export type ExamSection =
+  | {
+      kind: "checklist";
+      title: string;
+      /** Sits beside the heading, in the `SectionHead`. */
+      lead?: string;
+      /** Lead-in line between the heading and the list. */
+      intro?: string;
+      items: readonly string[];
+      /** Qualifying sentence rendered under the list. */
+      note?: string;
+    }
+  | { kind: "prose"; title: string; paragraphs: readonly string[] };
+
+export interface ExamPageContent {
+  meta: PageMeta;
+  /** Doubles as the breadcrumb leaf and the JSON-LD name. */
+  h1: string;
+  /** Bold standfirst under the h1. */
+  tagline: string;
+  intro: readonly string[];
+  heroCta: string;
+  sections: readonly ExamSection[];
+  cta: { label: string; title: string; text: string; ctaLabel: string };
+}
+
 export interface NavLink {
   /** Resolved against the current locale's route table. */
   key: RouteKey;
