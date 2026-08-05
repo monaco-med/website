@@ -51,6 +51,19 @@ export interface ExamPageContent {
   cta: { label: string; title: string; text: string; ctaLabel: string };
 }
 
+/**
+ * A tile body. Most are plain text; some embed a single inline link, which is
+ * modelled explicitly so the link target can resolve per locale rather than
+ * being baked into the copy.
+ */
+export interface TileItemContent {
+  title: string;
+  text: string;
+  link?: { key: RouteKey; label: string };
+  /** Text following the inline link, e.g. a closing full stop. */
+  textAfter?: string;
+}
+
 export interface NavLink {
   /** Resolved against the current locale's route table. */
   key: RouteKey;
@@ -71,9 +84,87 @@ export interface CtaBandContent {
   ctaLabel: string;
 }
 
+/**
+ * A cell in a `Matrix` row. Most are plain text; the left-hand cell of a
+ * comparison row is usually emphasised, which is modelled here rather than
+ * embedding markup in the copy.
+ */
+export type MatrixCell = string | { bold: string };
+
 export interface FaqItemContent {
   q: string;
   a: string;
+}
+
+/**
+ * One body section of a service page. `tone` selects the band background;
+ * unlike the exam pages these don't follow a strict alternation, so it is
+ * stated explicitly rather than derived from position.
+ */
+export type ServiceSection =
+  | {
+      kind: "tiles";
+      tone?: "firm" | "sand";
+      title: string;
+      lead?: string;
+      /** Set on a section that should sit flush against the one above it. */
+      flush?: boolean;
+      items: readonly TileItemContent[];
+    }
+  | {
+      kind: "steps";
+      tone?: "firm" | "sand";
+      title: string;
+      lead?: string;
+      flush?: boolean;
+      items: readonly { n: string; title: string; text: string }[];
+    }
+  | {
+      kind: "faq";
+      tone?: "firm" | "sand";
+      title: string;
+      lead?: string;
+      flush?: boolean;
+      items: readonly FaqItemContent[];
+    }
+  | {
+      kind: "examList";
+      tone?: "firm" | "sand";
+      title: string;
+      lead?: string;
+      flush?: boolean;
+      items: readonly { n: string; title: string; text: string }[];
+    }
+  | {
+      kind: "reasons";
+      tone?: "firm" | "sand";
+      title: string;
+      lead?: string;
+      flush?: boolean;
+      items: readonly { title: string; text: string }[];
+    }
+  /** Two-column band: prose on the left, a `Matrix` table on the right. */
+  | {
+      kind: "split";
+      tone?: "firm" | "sand";
+      flush?: boolean;
+      label?: string;
+      title: string;
+      lead: string;
+      matrixHeading: string;
+      rows: readonly (readonly MatrixCell[])[];
+    };
+
+export interface ServicePageContent {
+  meta: PageMeta;
+  /** Breadcrumb leaf and JSON-LD name. */
+  breadcrumb: string;
+  h1: string;
+  tagline: string;
+  intro: readonly string[];
+  heroCtas: readonly CtaLink[];
+  sections: readonly ServiceSection[];
+  cta: CtaBandContent;
 }
 
 /** Callback-request page: heading block above the `CallbackForm`. */
