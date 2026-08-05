@@ -2,25 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { routes } from "@/lib/routes";
-
-/** "Leistungen" dropdown entries, shared by the desktop hover menu and the mobile accordion. */
-const leistungenSub = [
-  { href: routes.arbeitsmedizin, label: "Arbeitsmedizin" },
-  { href: routes.arbeitssicherheit, label: "Arbeitssicherheit" },
-  { href: routes.bahnmedizin, label: "Bahnmedizin" },
-  { href: routes.impfungen, label: "Impfungen im Unternehmen" },
-  { href: routes.gUntersuchungen, label: "Vorsorge & G-Untersuchungen" },
-  { href: routes.digitaleProzesse, label: "Digitale Prozesse" },
-  { href: routes.gesundheitsmanagement, label: "Gesundheitsmanagement" },
-];
-
-const navItems = [
-  { href: routes.fuerUnternehmen, label: "Für Unternehmen" },
-  { href: routes.leitung, label: "Ärztliche Leitung" },
-  { href: routes.faq, label: "FAQ" },
-  { href: routes.kontakt, label: "Kontakt" },
-];
+import type { CommonContent } from "@/content/types";
+import type { Locale } from "@/lib/i18n";
+import { localeRoutes } from "@/lib/routes";
 
 /**
  * Site-wide sticky header: desktop nav with a hover dropdown, a mobile
@@ -29,15 +13,47 @@ const navItems = [
  * is hidden below 920px — see `app/globals.css` — since there isn't room
  * for it next to the burger icon).
  *
- * The CTA target adapts to context: on `/betreuungsbedarf` itself it
- * offers "Rückruf anfordern" instead of repeating the page's own form.
+ * Labels come from the locale's `common` content and link targets are
+ * resolved from that locale's route table, so the same component serves both
+ * languages. The CTA target adapts to context: on the Betreuungsbedarf page
+ * itself it offers a callback instead of repeating the page's own form.
  */
-export default function Header() {
+export default function Header({
+  locale,
+  content,
+}: {
+  locale: Locale;
+  content: CommonContent;
+}) {
   const pathname = usePathname();
+  const routes = localeRoutes[locale];
+  const { header } = content;
+
   const isBetreuungsbedarf = pathname === routes.betreuungsbedarf;
   const cta = isBetreuungsbedarf
-    ? { href: routes.rueckruf, label: "Rückruf anfordern" }
-    : { href: routes.betreuungsbedarf, label: "Betreuungsbedarf einschätzen" };
+    ? { href: routes.rueckruf, label: header.ctaRueckruf }
+    : { href: routes.betreuungsbedarf, label: header.ctaBetreuungsbedarf };
+
+  const leistungenMenu = (
+    <li className="has-sub">
+      <Link href={routes.leistungen}>{header.leistungen}</Link>
+      <div className="subwrap">
+        <div className="subpanel">
+          {header.leistungenSub.map((item) => (
+            <Link key={item.key} href={routes[item.key]}>
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </li>
+  );
+
+  const navLinks = header.navItems.map((item) => (
+    <li key={item.key}>
+      <Link href={routes[item.key]}>{item.label}</Link>
+    </li>
+  ));
 
   return (
     <header>
@@ -47,23 +63,8 @@ export default function Header() {
         </Link>
         <nav>
           <ul>
-            <li className="has-sub">
-              <Link href={routes.leistungen}>Leistungen</Link>
-              <div className="subwrap">
-                <div className="subpanel">
-                  {leistungenSub.map((item) => (
-                    <Link key={item.href} href={item.href}>
-                      {item.label}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </li>
-            {navItems.map((item) => (
-              <li key={item.href}>
-                <Link href={item.href}>{item.label}</Link>
-              </li>
-            ))}
+            {leistungenMenu}
+            {navLinks}
           </ul>
         </nav>
         <div className="hcta">
@@ -72,7 +73,7 @@ export default function Header() {
           </Link>
         </div>
         <details className="mnav">
-          <summary aria-label="Menü öffnen">
+          <summary aria-label={header.menuOpen}>
             <span className="bars" />
           </summary>
           <div className="mnav-panel">
@@ -80,23 +81,8 @@ export default function Header() {
               {cta.label}
             </Link>
             <ul>
-              <li className="has-sub">
-                <Link href={routes.leistungen}>Leistungen</Link>
-                <div className="subwrap">
-                  <div className="subpanel">
-                    {leistungenSub.map((item) => (
-                      <Link key={item.href} href={item.href}>
-                        {item.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              </li>
-              {navItems.map((item) => (
-                <li key={item.href}>
-                  <Link href={item.href}>{item.label}</Link>
-                </li>
-              ))}
+              {leistungenMenu}
+              {navLinks}
             </ul>
           </div>
         </details>

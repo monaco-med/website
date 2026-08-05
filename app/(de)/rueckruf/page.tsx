@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Reveal from "@/components/Reveal";
 import CallbackForm from "@/components/CallbackForm";
 import { routes } from "@/lib/routes";
+import { commonDe } from "@/content/de/common";
 
 export const metadata: Metadata = {
   title: "Rückruf anfordern",
@@ -29,7 +30,7 @@ export default function RueckrufPage() {
             <p>Hinterlassen Sie uns kurz Ihr Anliegen und wann es am besten passt — wir rufen zurück.</p>
           </Reveal>
           <Reveal>
-            <CallbackForm />
+            <CallbackForm locale="de" content={commonDe} />
           </Reveal>
         </div>
       </div>

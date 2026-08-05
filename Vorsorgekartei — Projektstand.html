@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!-- saved from url=(0085)file:///Users/ozkatz/Documents/David%20website/Vorsorgekartei/PROJEKTSTAND_DAVID.html -->
+<html lang="de"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vorsorgekartei — Projektstand</title>
+<style>
+  :root{
+    --blau:#1d4e89; --blau-hell:#eaf1fa; --amber:#9a5b00; --amber-hell:#fbf0dc;
+    --rand:#d7dce3; --grau:#5b6470; --text:#1c222b; --tint:#f6f8fb;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-print-color-adjust:exact; print-color-adjust:exact;}
+  body{
+    font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--text); margin:0; background:#eef1f5; line-height:1.5; font-size:14px;
+  }
+  .blatt{
+    max-width:820px; margin:24px auto; background:#fff; padding:34px 40px 30px;
+    box-shadow:0 2px 14px rgba(20,40,70,.12); border-radius:6px;
+  }
+  header{border-bottom:3px solid var(--blau); padding-bottom:14px; margin-bottom:16px;}
+  .kopfzeile{display:flex; align-items:center; gap:12px; flex-wrap:wrap;}
+  h1{font-size:22px; color:var(--blau); margin:0; letter-spacing:-.2px;}
+  .pill{
+    background:var(--amber-hell); color:var(--amber); border:1px solid #e6c896;
+    font-size:11.5px; font-weight:700; padding:3px 10px; border-radius:20px;
+    text-transform:uppercase; letter-spacing:.5px;
+  }
+  .unter{color:var(--grau); font-size:12.5px; margin:6px 0 0;}
+  .lead{font-size:13.3px; margin:14px 0 18px; color:#2b323c;}
+  .lead b{color:var(--text);}
+  h2{
+    font-size:15px; color:var(--blau); margin:20px 0 4px; display:flex;
+    align-items:center; gap:9px;
+  }
+  h2 .num{
+    background:var(--blau); color:#fff; width:22px; height:22px; border-radius:50%;
+    display:inline-flex; align-items:center; justify-content:center; font-size:12px;
+    flex:0 0 auto;
+  }
+  .sublabel{color:var(--grau); font-size:11.8px; font-style:italic; margin:0 0 9px 31px;}
+  .fertig{
+    display:grid; grid-template-columns:1fr 1fr; gap:6px 26px; margin:0;
+    list-style:none; padding:0;
+  }
+  .fertig li{position:relative; padding-left:20px; font-size:12.5px; break-inside:avoid;}
+  .fertig li::before{
+    content:"●"; position:absolute; left:0; top:0; color:var(--blau); font-size:10px; top:2px;
+  }
+  .fertig b{color:var(--text);}
+  .fertig em{color:var(--grau); font-style:italic;}
+  table{width:100%; border-collapse:collapse; margin:2px 0 4px; font-size:12.6px;}
+  th,td{text-align:left; padding:7px 10px; border-bottom:1px solid var(--rand); vertical-align:top;}
+  th{background:var(--tint); color:var(--grau); font-weight:600; font-size:11.5px;
+     text-transform:uppercase; letter-spacing:.4px;}
+  td.h{text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums;}
+  tr.betont td{background:#fcfdff;}
+  tr.summe td{
+    background:var(--blau-hell); font-weight:700; border-bottom:none;
+    border-top:2px solid var(--blau); font-size:13.2px;
+  }
+  .horizont{display:flex; gap:16px; margin:14px 0 4px;}
+  .karte{
+    flex:1; background:var(--blau-hell); border:1px solid #cfe0f2; border-radius:6px;
+    padding:11px 14px;
+  }
+  .karte .k{font-size:11.3px; color:var(--grau); text-transform:uppercase;
+     letter-spacing:.4px; margin-bottom:3px;}
+  .karte .w{font-size:17px; font-weight:700; color:var(--blau);}
+  .klaeren{margin:4px 0 0; padding-left:18px; font-size:12.6px; color:#2b323c;}
+  .klaeren li{margin:3px 0; break-inside:avoid;}
+  .fuss{
+    margin-top:18px; padding-top:12px; border-top:1px solid var(--rand);
+    color:var(--grau); font-size:11.3px; font-style:italic;
+  }
+  @media print{
+    body{background:#fff; font-size:10.5pt;}
+    .blatt{box-shadow:none; margin:0; max-width:none; padding:0; border-radius:0;}
+    h2{break-after:avoid;} table,.horizont,.karte,.fertig li{break-inside:avoid;}
+  }
+  @page{size:A4; margin:15mm;}
+</style>
+</head>
+<body>
+<div class="blatt">
+  <header>
+    <div class="kopfzeile">
+      <h1>Vorsorgekartei — Projektstand &amp; Restaufwand</h1>
+      <span class="pill">In Arbeit</span>
+    </div>
+    <p class="unter">Stand: 16.07.2026 · Grundlage: V1-Featureliste</p>
+  </header>
+
+  <p class="lead">
+    Das Grundgerüst von V1 ist gebaut — inklusive des Kernstücks (Fristen-Engine)
+    und des Excel-Imports. Diese Teile sind implementiert und durch automatisierte
+    Tests abgesichert, jedoch <b>noch nicht von mir im Detail geprüft und noch
+    nicht gemeinsam abgenommen</b>. V1 ist damit <b>in Arbeit</b>: das Fundament
+    steht, die eigenständige Prüfung, der Feinschliff und die Fertigstellung
+    stehen noch aus.
+  </p>
+
+  <h2><span class="num">1</span>Bereits aufgebaut</h2>
+  <p class="sublabel">implementiert und mit automatisierten Tests abgesichert — meine eigene Prüfung und die gemeinsame Abnahme stehen noch aus</p>
+  <ul class="fertig">
+    <li><b>Sicherer Zugang:</b> Login mit verpflichtender Zwei-Faktor-Authentifizierung, Sperre nach Fehlversuchen, Session-Timeout, Benutzerverwaltung, geführte Ersteinrichtung.</li>
+    <li><b>Mandantenfähige Datenbasis</b> mit lückenlosem, unveränderlichem Änderungsprotokoll (Audit-Log).</li>
+    <li><b>Stammdaten:</b> Firmen, Standorte, Abteilungen, Ansprechpartner und Mitarbeiter inkl. Tätigkeit, Status und Dublettenerkennung.</li>
+    <li><b>Vorsorgearten</b> mit Doppelbezeichnung (G-Nummer + DGUV-Name), Kategorien, Intervallen — inkl. Import deines Regelwerks (11 Arten).</li>
+    <li><b>Fristen-Engine (Kernstück):</b> automatische Fälligkeit, Status und Ampel; Erst-/Folgevorsorge; Ablehnung mit Wiedervorlage; ärztliche Übersteuerung. <em>Grundlage steht; weitere Evaluierung &amp; Nacharbeit nötig.</em></li>
+    <li><b>Dashboard</b> (fällig / bald fällig / überfällig über alle Firmen) und Mitarbeiter-Historie je Vorsorgeart.</li>
+    <li><b>Excel-Import von Mitarbeiterlisten</b> mit flexibler Spaltenzuordnung und Vorschau (neu / aktualisiert / nicht mehr enthalten).</li>
+  </ul>
+
+  <h2><span class="num">2</span>Noch offen bis zur vollständigen V1</h2>
+  <table>
+    <thead><tr><th>Arbeitspaket</th><th class="h">geschätzter Aufwand</th></tr></thead>
+    <tbody>
+      <tr class="betont"><td><b>Eigene Einarbeitung &amp; Prüfung:</b> tiefes Verständnis aller Funktionen, gemeinsam erstellte manuelle Test-Drehbücher je Phase &amp; Edge-Case, eigenständiges Durchtesten</td><td class="h">20–30 h</td></tr>
+      <tr><td>Historien-Import (Vorsorge-Verläufe je Mitarbeiter) + arbeitgebersichere Excel-/CSV-Exporte</td><td class="h">12–18 h</td></tr>
+      <tr><td>Weitere Ansichten: „Firma X – nächste 90 Tage", Tagesliste für Untersuchungstage, Massenaktionen</td><td class="h">8–12 h</td></tr>
+      <tr><td>Betrieb &amp; Hosting: Cloud in DE/EU, TLS, automatische Backups + Wiederherstellung, Staging, CI</td><td class="h">18–26 h</td></tr>
+      <tr><td>Gemeinsame Abnahme (ca. 10 Beispielfälle) &amp; Härtung</td><td class="h">12–18 h</td></tr>
+      <tr><td>Fristen-Engine-Nacharbeit &amp; fachliche Feinheiten nach gemeinsamer Entscheidung</td><td class="h">6–10 h</td></tr>
+      <tr class="summe"><td>Summe Restaufwand</td><td class="h">rund 76–114 h</td></tr>
+    </tbody>
+  </table>
+
+  <div class="horizont">
+    <div class="karte">
+      <div class="k">Geschätzter Restaufwand</div>
+      <div class="w">~ 76–114 h</div>
+    </div>
+    <div class="karte">
+      <div class="k">Zeithorizont bis zur abgenommenen V1</div>
+      <div class="w">~ 5–7 Wochen</div>
+    </div>
+  </div>
+
+  <h2><span class="num">3</span>Noch gemeinsam zu klären</h2>
+  <ul class="klaeren">
+    <li><b>Gemeinsame Frist</b> bei mehreren Anlässen je Mitarbeiter (Vorschlag: auf die kürzeste Frist ausrichten).</li>
+    <li><b>Nachgehende Vorsorge</b> nach Austritt (Sichtbarkeit trotz Archivierung).</li>
+    <li><b>Ablehnungs-Wiedervorlage</b> einheitlich oder je Firma · <b>Bescheinigungs-Upload</b> in V1 oder V1.5.</li>
+    <li><b>Sichtbarkeit „abgelehnt"</b> für Arbeitgeber (mit Datenschutzbeauftragtem).</li>
+  </ul>
+
+  <p class="fuss">
+    Diese Punkte ändern den Umfang nur geringfügig und sind in der Schätzung oben
+    mit dem Standard-Vorschlag bereits berücksichtigt. Zeithorizont bei ca. 16 h/Woche.
+  </p>
+</div>
+
+
+</body></html>

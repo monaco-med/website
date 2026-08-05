@@ -10,6 +10,7 @@ import LogoWall from "@/components/LogoWall";
 import ContactForm from "@/components/ContactForm";
 import { routes } from "@/lib/routes";
 import { siteConfig } from "@/lib/site";
+import { commonDe } from "@/content/de/common";
 
 export const metadata: Metadata = {
   title: `${siteConfig.name} – Betriebsarzt & Arbeitsmedizin in München`,
@@ -284,7 +285,7 @@ export default function HomePage() {
           />
           <div className="grid">
             <Reveal>
-              <ContactForm />
+              <ContactForm locale="de" content={commonDe} />
             </Reveal>
             <Reveal className="contact-side">
               <h3>Direkt erreichbar</h3>

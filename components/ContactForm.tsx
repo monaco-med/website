@@ -2,21 +2,37 @@
 
 import { useState, type FormEvent } from "react";
 import Link from "next/link";
-import { routes } from "@/lib/routes";
+import type { CommonContent } from "@/content/types";
+import type { Locale } from "@/lib/i18n";
+import { localeRoutes } from "@/lib/routes";
 import { submitLead } from "@/lib/submitLead";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
 /**
  * "Betreuungsbedarf einschätzen" lead form, embedded on the homepage and
- * rendered full-page on `/betreuungsbedarf`. Submits via
+ * rendered full-page on the Betreuungsbedarf route. Submits via
  * `submitLead("betreuungsbedarf", ...)` — see `lib/submitLead.ts` and
  * `app/api/lead/route.ts` for the request/validation flow, and
- * `CallbackForm` for the sibling "Rückruf" form.
+ * `CallbackForm` for the sibling callback form.
+ *
+ * Field `name` attributes are intentionally German in both locales: they are
+ * the data keys the Google Apps Script mailer reads (`google-apps-script/Code.gs`),
+ * so renaming them would silently drop fields out of the notification email.
+ * Only the visible labels are translated.
  */
-export default function ContactForm() {
+export default function ContactForm({
+  locale,
+  content,
+}: {
+  locale: Locale;
+  content: CommonContent;
+}) {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState<string | null>(null);
+  const { contact, submitting, unknownError, consentBefore, consentLinkLabel, consentAfter } =
+    content.forms;
+  const routes = localeRoutes[locale];
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -37,7 +53,7 @@ export default function ContactForm() {
       form.reset();
     } catch (err) {
       setStatus("error");
-      setError(err instanceof Error ? err.message : "Unbekannter Fehler.");
+      setError(err instanceof Error ? err.message : unknownError);
     }
   }
 
@@ -46,92 +62,85 @@ export default function ContactForm() {
       <div className="f-row">
         <div className="field">
           <label htmlFor="firma">
-            Firma <span className="req">*</span>
+            {contact.firma} <span className="req">*</span>
           </label>
           <input id="firma" name="firma" type="text" required />
         </div>
         <div className="field">
           <label htmlFor="name">
-            Name <span className="req">*</span>
+            {contact.name} <span className="req">*</span>
           </label>
           <input id="name" name="name" type="text" required />
         </div>
       </div>
       <div className="f-row">
         <div className="field">
-          <label htmlFor="funktion">Funktion</label>
-          <select id="funktion" name="funktion" defaultValue="Geschäftsführung">
-            <option>Geschäftsführung</option>
-            <option>HR / Personal</option>
-            <option>Arbeitsschutz</option>
-            <option>Fachkraft für Arbeitssicherheit</option>
-            <option>Betriebsrat</option>
+          <label htmlFor="funktion">{contact.funktion}</label>
+          <select id="funktion" name="funktion" defaultValue={contact.funktionOptions[0]}>
+            {contact.funktionOptions.map((option) => (
+              <option key={option}>{option}</option>
+            ))}
           </select>
         </div>
         <div className="field">
           <label htmlFor="email">
-            E-Mail <span className="req">*</span>
+            {contact.email} <span className="req">*</span>
           </label>
           <input id="email" name="email" type="email" required />
         </div>
       </div>
       <div className="f-row">
         <div className="field">
-          <label htmlFor="telefon">Telefon</label>
+          <label htmlFor="telefon">{contact.telefon}</label>
           <input id="telefon" name="telefon" type="tel" />
         </div>
         <div className="field">
-          <label htmlFor="mitarbeiterzahl">Anzahl der Mitarbeitenden</label>
-          <select id="mitarbeiterzahl" name="mitarbeiterzahl" defaultValue="1–49">
-            <option>1–49</option>
-            <option>50–199</option>
-            <option>200–499</option>
-            <option>500+</option>
+          <label htmlFor="mitarbeiterzahl">{contact.mitarbeiterzahl}</label>
+          <select
+            id="mitarbeiterzahl"
+            name="mitarbeiterzahl"
+            defaultValue={contact.mitarbeiterzahlOptions[0]}
+          >
+            {contact.mitarbeiterzahlOptions.map((option) => (
+              <option key={option}>{option}</option>
+            ))}
           </select>
         </div>
       </div>
       <div className="f-row">
         <div className="field">
-          <label htmlFor="standort">Standort(e)</label>
+          <label htmlFor="standort">{contact.standort}</label>
           <input id="standort" name="standort" type="text" />
         </div>
         <div className="field">
-          <label htmlFor="start">Gewünschter Start</label>
-          <input id="start" name="start" type="text" placeholder="z. B. Q3 2026" />
+          <label htmlFor="start">{contact.start}</label>
+          <input id="start" name="start" type="text" placeholder={contact.startPlaceholder} />
         </div>
       </div>
       <div className="field">
-        <label htmlFor="leistung">Gewünschte Leistung</label>
+        <label htmlFor="leistung">{contact.leistung}</label>
         <input id="leistung" name="leistung" type="text" />
       </div>
       <div className="field">
-        <label htmlFor="nachricht">Nachricht / Rückrufwunsch</label>
+        <label htmlFor="nachricht">{contact.nachricht}</label>
         <textarea id="nachricht" name="nachricht" rows={3} />
       </div>
       <div className="field-check">
         <input id="dsgvo" name="dsgvo" type="checkbox" required />
         <label htmlFor="dsgvo">
-          Ich habe die{" "}
+          {consentBefore}{" "}
           <Link href={routes.datenschutz} target="_blank">
-            Datenschutzerklärung
+            {consentLinkLabel}
           </Link>{" "}
-          zur Kenntnis genommen. <span className="req">*</span>
+          {consentAfter} <span className="req">*</span>
         </label>
       </div>
       <button type="submit" className="btn btn-primary btn-block" disabled={status === "submitting"}>
-        {status === "submitting" ? "Wird gesendet…" : "Anfrage senden"}
+        {status === "submitting" ? submitting : contact.submit}
       </button>
-      {status === "success" && (
-        <div className="form-danke">
-          Vielen Dank – Ihre Anfrage ist eingegangen. Wir melden uns kurzfristig.
-        </div>
-      )}
+      {status === "success" && <div className="form-danke">{contact.success}</div>}
       {status === "error" && <p className="error-text">{error}</p>}
-      <p className="helper">
-        {
-          "// Ihre Anfrage wird direkt ärztlich geprüft. Sie sprechen von Anfang an mit einem fachlichen Ansprechpartner – ohne Umwege über Vertrieb oder Callcenter."
-        }
-      </p>
+      <p className="helper">{contact.helper}</p>
     </form>
   );
 }

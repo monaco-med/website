@@ -1,28 +1,35 @@
 import Link from "next/link";
-import { routes } from "@/lib/routes";
+import type { CommonContent } from "@/content/types";
+import type { Locale } from "@/lib/i18n";
+import { localeRoutes } from "@/lib/routes";
 import { siteConfig } from "@/lib/site";
 
-/** Site-wide footer link list. Add a route here to surface it in the footer nav. */
-const footLinks = [
-  { href: routes.leistungen, label: "Leistungen" },
-  { href: routes.arbeitsmedizin, label: "Arbeitsmedizin" },
-  { href: routes.arbeitssicherheit, label: "Arbeitssicherheit" },
-  { href: routes.bahnmedizin, label: "Bahnmedizin" },
-  { href: routes.impfungen, label: "Impfungen" },
-  { href: routes.gUntersuchungen, label: "Vorsorge & G-Untersuchungen" },
-  { href: routes.betriebsarztMuenchen, label: "Betriebsarzt München" },
-  { href: routes.fuerUnternehmen, label: "Für Unternehmen" },
-  { href: routes.leitung, label: "Ärztliche Leitung" },
-  { href: routes.faq, label: "FAQ" },
-  { href: routes.kontakt, label: "Kontakt" },
-];
+const legalLinkStyle = {
+  color: "inherit",
+  textDecoration: "underline",
+  textUnderlineOffset: 2,
+} as const;
 
 /**
- * Site-wide footer, rendered once in the root layout. Note the copyright
- * year (`© 2026 ...`) is a hardcoded string, not computed — update it
- * manually when it's out of date.
+ * Site-wide footer, rendered once per locale from that locale's root layout.
+ *
+ * Link labels come from the locale's `common` content; targets resolve through
+ * that locale's route table. The address and physician name come from
+ * `siteConfig` — they are the same in both languages.
+ *
+ * Note the copyright year is a hardcoded literal, not computed — update it
+ * manually when it goes stale.
  */
-export default function Footer() {
+export default function Footer({
+  locale,
+  content,
+}: {
+  locale: Locale;
+  content: CommonContent;
+}) {
+  const routes = localeRoutes[locale];
+  const { footer } = content;
+
   return (
     <footer>
       <div className="wrap">
@@ -31,8 +38,8 @@ export default function Footer() {
             Monaco<i>Med</i>
           </div>
           <div className="foot-links">
-            {footLinks.map((item) => (
-              <Link key={item.href} href={item.href}>
+            {footer.links.map((item) => (
+              <Link key={`${item.key}-${item.label}`} href={routes[item.key]}>
                 {item.label}
               </Link>
             ))}
@@ -42,16 +49,16 @@ export default function Footer() {
           <span>
             {siteConfig.address.street} · {siteConfig.address.zip}{" "}
             {siteConfig.address.city} ·{" "}
-            <Link href={routes.impressum} style={{ color: "inherit", textDecoration: "underline", textUnderlineOffset: 2 }}>
-              Impressum
+            <Link href={routes.impressum} style={legalLinkStyle}>
+              {footer.impressum}
             </Link>{" "}
             ·{" "}
-            <Link href={routes.datenschutz} style={{ color: "inherit", textDecoration: "underline", textUnderlineOffset: 2 }}>
-              Datenschutz
+            <Link href={routes.datenschutz} style={legalLinkStyle}>
+              {footer.datenschutz}
             </Link>{" "}
             ·{" "}
-            <Link href={routes.datenschutz} style={{ color: "inherit", textDecoration: "underline", textUnderlineOffset: 2 }}>
-              Cookies
+            <Link href={routes.datenschutz} style={legalLinkStyle}>
+              {footer.cookies}
             </Link>
           </span>
           <span>© 2026 {siteConfig.physician}</span>

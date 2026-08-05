@@ -17,6 +17,7 @@ import OrganizationJsonLd from "@/components/OrganizationJsonLd";
 import { fontVariables } from "@/lib/fonts";
 import { htmlLang, openGraphLocale } from "@/lib/i18n";
 import { siteConfig } from "@/lib/site";
+import { commonDe } from "@/content/de/common";
 import "../globals.css";
 
 /** Default metadata; individual pages override `title`/`description` via their own `export const metadata`. */
@@ -50,9 +51,9 @@ export default function GermanRootLayout({
     <html lang={htmlLang.de} className={fontVariables}>
       <body>
         <OrganizationJsonLd />
-        <Header />
+        <Header locale="de" content={commonDe} />
         {children}
-        <Footer />
+        <Footer locale="de" content={commonDe} />
       </body>
     </html>
   );
