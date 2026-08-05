@@ -7,8 +7,11 @@
  * it and adds the secret, then forwards it to the Apps Script web app,
  * which sends the actual email via `MailApp` (see
  * `google-apps-script/Code.gs`).
+ *
+ * Errors are returned in the language the visitor filled the form in.
  */
 import { NextRequest, NextResponse } from "next/server";
+import { isLocale, type Locale } from "@/lib/i18n";
 
 const SCRIPT_URL = process.env.GOOGLE_APPS_SCRIPT_URL;
 const SCRIPT_SECRET = process.env.GOOGLE_APPS_SCRIPT_SECRET;
@@ -19,6 +22,23 @@ const REQUIRED_FIELDS: Record<string, string[]> = {
   rueckruf: ["name", "email"],
 };
 
+const MESSAGES = {
+  de: {
+    notConfigured: "Formular ist derzeit nicht konfiguriert.",
+    invalidRequest: "Ungültige Anfrage.",
+    unknownType: "Unbekannter Formulartyp.",
+    missingFields: (fields: string[]) => `Pflichtfelder fehlen: ${fields.join(", ")}`,
+    mailFailed: "E-Mail-Versand fehlgeschlagen.",
+  },
+  en: {
+    notConfigured: "The form is currently unavailable.",
+    invalidRequest: "Invalid request.",
+    unknownType: "Unknown form type.",
+    missingFields: (fields: string[]) => `Required fields are missing: ${fields.join(", ")}`,
+    mailFailed: "The message could not be sent.",
+  },
+} satisfies Record<Locale, unknown>;
+
 /**
  * Validates and forwards a lead submission to the Google Apps Script mailer.
  *
@@ -27,31 +47,35 @@ const REQUIRED_FIELDS: Record<string, string[]> = {
  * and `502` if the Apps Script request itself fails or is rejected.
  */
 export async function POST(req: NextRequest) {
-  if (!SCRIPT_URL || !SCRIPT_SECRET) {
-    return NextResponse.json(
-      { ok: false, error: "Formular ist derzeit nicht konfiguriert." },
-      { status: 503 }
-    );
-  }
-
-  let body: Record<string, unknown>;
+  let body: Record<string, unknown> = {};
   try {
     body = await req.json();
   } catch {
-    return NextResponse.json({ ok: false, error: "Ungültige Anfrage." }, { status: 400 });
+    // Fall through — an unreadable body is reported below, in German, since
+    // we have no reliable locale to read from it.
+  }
+
+  const rawLocale = typeof body.locale === "string" ? body.locale : "";
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : "de";
+  const t = MESSAGES[locale];
+
+  if (!SCRIPT_URL || !SCRIPT_SECRET) {
+    return NextResponse.json({ ok: false, error: t.notConfigured }, { status: 503 });
   }
 
   const type = typeof body.type === "string" ? body.type : "";
+  if (!type) {
+    return NextResponse.json({ ok: false, error: t.invalidRequest }, { status: 400 });
+  }
+
   const required = REQUIRED_FIELDS[type];
   if (!required) {
-    return NextResponse.json({ ok: false, error: "Unbekannter Formulartyp." }, { status: 400 });
+    return NextResponse.json({ ok: false, error: t.unknownType }, { status: 400 });
   }
+
   const missing = required.filter((field) => !String(body[field] ?? "").trim());
   if (missing.length > 0) {
-    return NextResponse.json(
-      { ok: false, error: `Pflichtfelder fehlen: ${missing.join(", ")}` },
-      { status: 400 }
-    );
+    return NextResponse.json({ ok: false, error: t.missingFields(missing) }, { status: 400 });
   }
 
   try {
@@ -64,17 +88,11 @@ export async function POST(req: NextRequest) {
 
     const json = await scriptRes.json();
     if (!scriptRes.ok || !json.ok) {
-      return NextResponse.json(
-        { ok: false, error: json.error || "E-Mail-Versand fehlgeschlagen." },
-        { status: 502 }
-      );
+      return NextResponse.json({ ok: false, error: json.error || t.mailFailed }, { status: 502 });
     }
 
     return NextResponse.json({ ok: true });
   } catch {
-    return NextResponse.json(
-      { ok: false, error: "E-Mail-Versand fehlgeschlagen." },
-      { status: 502 }
-    );
+    return NextResponse.json({ ok: false, error: t.mailFailed }, { status: 502 });
   }
 }

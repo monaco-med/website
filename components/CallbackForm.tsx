@@ -45,7 +45,7 @@ export default function CallbackForm({
     setStatus("submitting");
     setError(null);
     try {
-      await submitLead("rueckruf", data);
+      await submitLead("rueckruf", data, locale);
       setStatus("success");
       form.reset();
     } catch (err) {

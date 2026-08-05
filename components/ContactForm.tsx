@@ -48,7 +48,7 @@ export default function ContactForm({
     setStatus("submitting");
     setError(null);
     try {
-      await submitLead("betreuungsbedarf", data);
+      await submitLead("betreuungsbedarf", data, locale);
       setStatus("success");
       form.reset();
     } catch (err) {

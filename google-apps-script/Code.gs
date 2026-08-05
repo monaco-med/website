@@ -15,6 +15,14 @@ const TO_EMAIL = "info@monaco-med.de";
 // Eigenen Wert einsetzen (z. B. via: node -e "console.log(crypto.randomUUID())").
 const SHARED_SECRET = "REPLACE_ME_WITH_A_LONG_RANDOM_STRING";
 
+// Anzeigename der Sprache, in der das Formular ausgefüllt wurde.
+const SPRACHEN = { de: "Deutsch", en: "Englisch" };
+
+/** Sprache der Anfrage als Klartext, für die Betreff-/Textzeile. */
+function spracheLabel(data) {
+  return SPRACHEN[data.locale] || SPRACHEN.de;
+}
+
 /**
  * Web-App-Einstiegspunkt: wird bei jedem POST an die deployte Apps-Script-URL
  * aufgerufen (siehe app/api/lead/route.ts). Prüft das Shared Secret, leitet
@@ -59,6 +67,8 @@ function sendBetreuungsbedarfMail(data) {
   const body = [
     "Neue Anfrage über das Formular \"Betreuungsbedarf kostenlos einschätzen\"",
     "",
+    "Sprache der Anfrage: " + spracheLabel(data),
+    "",
     "Firma: " + (data.firma || "-"),
     "Name: " + (data.name || "-"),
     "Funktion: " + (data.funktion || "-"),
@@ -92,6 +102,8 @@ function sendRueckrufMail(data) {
   const subject = "Neuer Rückrufwunsch" + (data.name ? " – " + data.name : "");
   const body = [
     "Neue Anfrage über das Formular \"Rückruf anfordern\"",
+    "",
+    "Sprache der Anfrage: " + spracheLabel(data),
     "",
     "Name: " + (data.name || "-"),
     "Unternehmen: " + (data.unternehmen || "-"),
