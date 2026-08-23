@@ -39,24 +39,35 @@ than a term swapped.
 
 ## 🔴 2. English URLs
 
-These become public addresses and are expensive to change once indexed.
+Realigned to the terminology David chose in review round 1 — the copy no longer
+says "workplace safety", "railway medicine", "screening" or "company doctor", so
+four URL families were renamed to match. Free to do now: the English tree is
+`noindex` and nothing is indexed. **Confirm this list before go-live** — after
+that, changing a URL costs redirects and ranking.
 
 | German | English |
 |---|---|
 | `/leistungen` | `/en/services` |
 | `/leistungen/arbeitsmedizin` | `/en/services/occupational-health` |
-| `/leistungen/arbeitssicherheit` | `/en/services/workplace-safety` |
-| `/leistungen/bahnmedizin` | `/en/services/railway-medicine` |
+| `/leistungen/arbeitssicherheit` | `/en/services/occupational-safety` ← renamed |
+| `/leistungen/bahnmedizin` | `/en/services/railway-occupational-medicine` ← renamed |
 | `/leistungen/impfungen` | `/en/services/workplace-vaccinations` |
-| `/leistungen/vorsorge-g-untersuchungen` | `/en/services/occupational-health-screenings` |
+| `/leistungen/vorsorge-g-untersuchungen` | `/en/services/occupational-health-care` ← renamed |
 | `…/g20` … `…/g42` | unchanged (G-codes kept) |
 | `…/asbest` | `…/asbestos` |
-| `/betriebsarzt-muenchen` | `/en/company-doctor-munich` |
+| `/betriebsarzt-muenchen` | `/en/occupational-physician-munich` ← renamed |
 | `/fuer-unternehmen` | `/en/for-companies` |
 | `/betreuungsbedarf` | `/en/assess-your-needs` |
 | `/rueckruf` | `/en/request-a-callback` |
 | `/kontakt` | `/en/contact` |
 | `/impressum` | `/en/legal-notice` |
+
+⚠️ **One of these is a genuine trade-off, and it is David's call.**
+`company-doctor-munich` → `occupational-physician-munich` gains consistency with
+the copy but loses search volume: "company doctor" is what people type into
+Google, "occupational physician" is what the profession calls itself. Since no
+page says "company doctor" any more, the rename is the consistent choice — but
+keeping the old slug would be defensible purely on search grounds.
 
 ## ✅ 3. Hosting provider named in the privacy policy
 
@@ -90,18 +101,12 @@ Physicians)" — so they stay findable. Postal addresses are verbatim.
 
 ---
 
-## 🟡 5. Terms I'd like you to sanction
+## ✅ 5. Terms — settled in review round 1
 
-| German | My English | Why I hesitated |
-|---|---|---|
-| Betriebsarzt | company doctor | "occupational physician" is more correct, but far less searched |
-| Betreuung | support | "care" reads clinical; this is a service relationship |
-| Fachkraft für Arbeitssicherheit | occupational safety specialist | no exact UK/US equivalent exists |
-| Angebotsvorsorge | offered screening | clumsy in English, but "optional" wrongly implies the employee initiates it |
-| Wunschvorsorge | screening on request | same problem in reverse |
-| Ermächtigte Untersuchungsstelle | authorised examination centre | "accredited" would imply a different legal status |
-| Vorsorgekataster | screening register | "cadastre" is a false friend — it means land registry |
-| ASA-Sitzung | occupational safety committee (ASA) | kept the German abbreviation after glossing it |
+Every term on the earlier "please sanction" list has been decided by David and
+applied site-wide. The current agreed set lives in
+[`TRANSLATION-GLOSSARY.md`](./TRANSLATION-GLOSSARY.md); the reversals are
+summarised under point 1 above. Nothing outstanding here.
 
 ## 🟡 6. Headline rewritten rather than translated
 

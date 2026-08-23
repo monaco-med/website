@@ -55,7 +55,7 @@ export const leistungenEn: ContentPageContent = {
     {
       kind: "tiles",
       tone: "sand",
-      id: "workplace-safety",
+      id: "occupational-safety",
       label: "Service area 02",
       title: "Occupational safety",
       action: { key: "arbeitssicherheit", label: "Learn more", variant: "ghost" },
@@ -69,7 +69,7 @@ export const leistungenEn: ContentPageContent = {
     },
     {
       kind: "tiles",
-      id: "railway-medicine",
+      id: "railway-occupational-medicine",
       label: "Service area 03",
       title: "Railway occupational medicine",
       action: { key: "bahnmedizin", label: "Learn more", variant: "ghost" },
@@ -125,7 +125,7 @@ export const leistungenEn: ContentPageContent = {
     },
     {
       kind: "tiles",
-      id: "occupational-health-screenings",
+      id: "occupational-health-care",
       label: "Service area 07",
       title: "Preventive occupational health care & g examinations",
       action: { key: "gUntersuchungen", label: "Learn more", variant: "ghost" },
