@@ -61,7 +61,7 @@ export const homeEn: HomePageContent = {
       { n: "Step 01", title: "Send an enquiry", text: "A few details are enough: your company, number of employees, location and what you need." },
       { n: "Step 02", title: "Get clarity", text: "We assess your needs and recommend the level of support that is right for your company." },
       { n: "Step 03", title: "Get a quote", text: "You receive a clear proposal – easy to understand, tailored to your needs and without unnecessary complexity." },
-      { n: "Step 04", title: "Get going", text: "Once you give us the go-ahead, we organise the rest: appointments, occupational health surveillance, occupational health and safety committee meetings, workplace inspections, occupational safety and digital processes." },
+      { n: "Step 04", title: "Get going", text: "Once you give us the go-ahead, we organise the rest: appointments, preventive occupational health care, occupational health and safety committee meetings, workplace inspections, occupational safety and digital processes." },
     ],
   },
   why: [

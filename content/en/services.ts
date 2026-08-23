@@ -4,9 +4,10 @@ import type { ServiceSlug } from "@/content/de/services";
 /**
  * English copy for the four service detail pages.
  *
- * Terminology follows `docs/TRANSLATION-GLOSSARY.md`. Statute names (ASiG,
- * DGUV Vorschrift 2, ArbMedVV, TfV, EBO, VDV 714) stay German with an English
- * gloss on first use — translating them makes them impossible to look up.
+ * Terminology follows `docs/TRANSLATION-GLOSSARY.md`. Statute abbreviations
+ * (ASiG, ArbMedVV, TfV, EBO, VDV 714) stay German — translating them makes
+ * them impossible to look up. "DGUV Vorschrift 2" is the one exception: the
+ * client's review settled on the English "DGUV Regulation 2" throughout.
  */
 export const servicePagesEn: Record<ServiceSlug, ContentPageContent> = {
   arbeitsmedizin: {
@@ -17,7 +18,7 @@ export const servicePagesEn: Record<ServiceSlug, ContentPageContent> = {
     },
     breadcrumb: "Occupational medicine",
     h1: "Occupational health support that works in practice.",
-    tagline: "Under ASiG and DGUV Vorschrift 2 – personally led, digitally organised.",
+    tagline: "Under ASiG and DGUV Regulation 2 – personally led, digitally organised.",
     intro: [
       "From ongoing occupational health services to individual preventive occupational health appointments, MonacoMed provides comprehensive occupational health support for your company – with a dedicated physician, digital appointment scheduling and complete documentation.",
     ],
@@ -71,7 +72,7 @@ export const servicePagesEn: Record<ServiceSlug, ContentPageContent> = {
       {
         kind: "faq",
         tone: "sand",
-        title: "Frequently Asked Questions about Occupational Health",
+        title: "Frequently asked questions about occupational health",
         items: [
           { q: "When does a company need an occupational physician?", a: "In principle, occupational health support is required from the first employee onwards. The exact form and scope of support are determined by DGUV Regulation 2 and depend on the industry, workplace hazards and number of employees. We help you determine the appropriate level of support." },
           { q: "Do examinations take place on-site or at your practice?", a: "Both are possible. For teams, we organise examination days directly on-site at your company; individual appointments take place at our practice in Munich." },
@@ -144,7 +145,7 @@ export const servicePagesEn: Record<ServiceSlug, ContentPageContent> = {
       {
         kind: "faq",
         tone: "sand",
-        title: "Frequently Asked Questions about Occupational Safety",
+        title: "Frequently asked questions about occupational safety",
         items: [
           { q: "When is an occupational safety specialist required?", a: "As with occupational health services, companies with employees are generally required to obtain support from an occupational safety specialist. The exact form and scope of support are determined by DGUV Regulation 2 and depend on the industry, workplace hazards and size of the company." },
           { q: "We already have an occupational safety specialist – can we still work with MonacoMed?", a: "Yes. We work closely with your existing occupational safety specialist and coordinate our occupational health services accordingly. If required, we can also provide the full range of occupational safety services." },
@@ -206,7 +207,7 @@ export const servicePagesEn: Record<ServiceSlug, ContentPageContent> = {
         kind: "reasons",
         title: "Why MonacoMed?",
         items: [
-          { title: "An authorised examination centre", text: "For the railway sector – medical fitness assessments in accordance with applicable requirements." },
+          { title: "A recognised examination centre", text: "For the railway sector – medical fitness assessments in accordance with applicable requirements." },
           { title: "Specialist-led assessments", text: "Physician-led, with dedicated contacts." },
           { title: "Short-notice appointments", text: "Fast appointment scheduling for individuals and groups alike." },
           { title: "Digital appointment scheduling", text: "Book online, with digital reminders and certificates." },

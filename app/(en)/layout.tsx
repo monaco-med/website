@@ -6,24 +6,24 @@
  * page load, since crossing root layouts is not a client-side transition.
  * That is acceptable for a language switch.
  *
- * The English tree is `noindex` until the translation is complete — David's
- * requirement is that English goes live only as a finished whole, so this
- * enforces it in code rather than by discipline. Removing it is the final
- * launch step (T22).
+ * The English tree is `noindex` until the translation is complete — the client
+ * requires English to go live only as a finished whole, so this enforces it in
+ * code rather than by discipline. It is gated on `englishLaunched`, the same
+ * flag that gates hreflang and the sitemap, so launch (T22) is one flag flip.
  */
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import OrganizationJsonLd from "@/components/OrganizationJsonLd";
 import { fontVariables } from "@/lib/fonts";
-import { htmlLang, openGraphLocale } from "@/lib/i18n";
+import { englishLaunched, htmlLang, openGraphLocale } from "@/lib/i18n";
 import { siteConfig } from "@/lib/site";
 import { commonEn } from "@/content/en/common";
 import "../globals.css";
 
-const englishTitle = `${siteConfig.name} – Occupational Health & Workplace Safety in Munich`;
+const englishTitle = `${siteConfig.name} – Occupational health & occupational medicine in Munich`;
 const englishDescription =
-  "Occupational health, workplace safety and health management for companies in Munich – digitally organised, personally led by a physician.";
+  "Occupational health, occupational safety and health management for companies in Munich – digitally organised, with personal physician-led care.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -32,8 +32,11 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: englishDescription,
-  // Keep the whole English tree out of search results until launch.
-  robots: { index: false, follow: false },
+  // Keeps the whole English tree out of search results until launch. Gated on
+  // the same flag as hreflang and the sitemap, so flipping `englishLaunched`
+  // is genuinely the only launch step — hardcoding this would have shipped 44
+  // sitemap entries while every English page still said noindex.
+  robots: englishLaunched ? { index: true, follow: true } : { index: false, follow: false },
   openGraph: {
     type: "website",
     locale: openGraphLocale.en,

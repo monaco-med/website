@@ -51,7 +51,7 @@ use the short form.
 | Term | First use | Thereafter |
 |---|---|---|
 | ASiG | the German Occupational Safety Act (ASiG) | ASiG |
-| DGUV Vorschrift 2 | DGUV Regulation 2 | DGUV Vorschrift 2 |
+| DGUV Vorschrift 2 | DGUV Regulation 2 | DGUV Regulation 2 — the client's review settled on the English form throughout, unlike the other statutes |
 | ArbMedVV | the German Ordinance on Occupational Health Care (ArbMedVV) | ArbMedVV |
 | TfV (§ 16) | the German Train Driver Licensing Ordinance (TfV) | TfV |
 | EBO | the German Railway Construction and Operating Regulations (EBO) | EBO |
@@ -97,7 +97,7 @@ Note the knock-on effect: *Pflicht-/Angebots-/Wunschvorsorge* became
   "Occupational Health and Safety from a Single Provider". This matches the
   German side, so the two languages look like one site. Capitals survive only
   for proper nouns (MonacoMed, Munich, Deutsche Bahn), statute names and their
-  glossed English forms (DGUV Vorschrift 2, the German Railway Construction and
+  glossed English forms (DGUV Regulation 2, the German Railway Construction and
   Operating Regulations), G-codes, and the first word after a dash or colon.
 - Use **British spelling** (organised, centre, programme) — the audience is
   European.
