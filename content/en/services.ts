@@ -11,7 +11,7 @@ import type { ServiceSlug } from "@/content/de/services";
 export const servicePagesEn: Record<ServiceSlug, ContentPageContent> = {
   arbeitsmedizin: {
     meta: {
-      title: "Occupational Medicine & Occupational Health Services",
+      title: "Occupational medicine & occupational health services",
       description:
         "Occupational health services in accordance with ASiG and DGUV Regulation 2: preventive occupational health care, fitness-for-work assessments, occupational health and safety committee meetings and workplace vaccination programmes – personally managed and digitally organised.",
     },
@@ -31,10 +31,10 @@ export const servicePagesEn: Record<ServiceSlug, ContentPageContent> = {
         title: "What the support covers",
         lead: "All occupational health services – planned, delivered and documented.",
         items: [
-          { title: "Occupational Health Services", text: "In accordance with ASiG and DGUV Regulation 2 – with scheduled on-site hours and a dedicated contact." },
-          { title: "Preventive Occupational Health Care", text: "Mandatory, optional and elective health care – clearly organised." },
+          { title: "Occupational health services", text: "In accordance with ASiG and DGUV Regulation 2 – with scheduled on-site hours and a dedicated contact." },
+          { title: "Preventive occupational health care", text: "Mandatory, optional and elective health care – clearly organised." },
           { title: "Fitness-for-work assessments", text: "Where specifically required, clearly separated from preventive occupational health care." },
-          { title: "Occupational Health and Safety Committee Meetings & Workplace Inspections", text: "Participation, documentation and practical recommendations." },
+          { title: "Occupational health and safety committee meetings & workplace inspections", text: "Participation, documentation and practical recommendations." },
           { title: "Return-to-work management & maternity protection", text: "Occupational health advice for practical workplace solutions." },
           {
             title: "Vaccination sessions",
@@ -90,12 +90,12 @@ export const servicePagesEn: Record<ServiceSlug, ContentPageContent> = {
   },
   arbeitssicherheit: {
     meta: {
-      title: "Occupational Safety & Risk Assessment",
+      title: "Occupational safety & risk assessment",
       description:
         "Occupational safety specialist, risk assessments, safety training and workplace inspections – closely integrated with occupational health.",
     },
-    breadcrumb: "Occupational Safety",
-    h1: "Occupational Safety, Closely Integrated with Occupational Health",
+    breadcrumb: "Occupational safety",
+    h1: "Occupational safety, closely integrated with occupational health",
     tagline: "Occupational safety services in accordance with ASiG and DGUV Regulation 2.",
     intro: [
       "At MonacoMed, the occupational safety specialist and occupational physician work closely together – with coordinated recommendations, clear responsibilities and shared, audit-ready documentation.",
@@ -112,30 +112,30 @@ export const servicePagesEn: Record<ServiceSlug, ContentPageContent> = {
         items: [
           { title: "Occupational safety specialist", text: "Occupational safety services and advice in accordance with ASiG." },
           { title: "Risk assessment", text: "Preparation, review and updating, action planning and documentation." },
-          { title: "Safety Training", text: "Practical, easy to understand and tailored to your workplace." },
+          { title: "Safety training", text: "Practical, easy to understand and tailored to your workplace." },
           { title: "Fire safety", text: "Safety instruction and hands-on training directly on-site." },
-          { title: "Occupational Health and Safety Committee Meetings & Workplace Inspections", text: "Organisation, participation and practical recommendations." },
-          { title: "Action Tracking", text: "Open items are tracked systematically – so nothing gets overlooked." },
+          { title: "Occupational health and safety committee meetings & workplace inspections", text: "Organisation, participation and practical recommendations." },
+          { title: "Action tracking", text: "Open items are tracked systematically – so nothing gets overlooked." },
         ],
       },
       {
         kind: "split",
         tone: "firm",
-        label: "From a Single Provider",
-        title: "Why Occupational Health and Safety Belong Together",
+        label: "From a single provider",
+        title: "Why occupational health and safety belong together",
         lead: "Cooperation between the occupational physician and the occupational safety specialist is required by law – at MonacoMed, both services are provided by one team.",
-        matrixHeading: "The Result",
+        matrixHeading: "The result",
         rows: [
-          ["Consistent Recommendations", "Coordinated Actions"],
-          ["Less Back-and-Forth", "Clear Responsibilities"],
-          ["Shared, Audit-Ready Documentation"],
+          ["Consistent recommendations", "Coordinated actions"],
+          ["Less back-and-forth", "Clear responsibilities"],
+          ["Shared, audit-ready documentation"],
         ],
       },
       {
         kind: "steps",
-        title: "How We Get Started",
+        title: "How we get started",
         items: [
-          { n: "01", title: "Initial Assessment", text: "We review workplaces, work activities and existing documentation." },
+          { n: "01", title: "Initial assessment", text: "We review workplaces, work activities and existing documentation." },
           { n: "02", title: "Risk assessment", text: "Assess risks, define appropriate actions and prioritise them." },
           { n: "03", title: "Implementation", text: "Safety training, workplace inspections and occupational health and safety committee meetings as part of ongoing operations." },
           { n: "04", title: "Follow-Up", text: "Track actions digitally and keep documentation up to date." },
@@ -149,26 +149,26 @@ export const servicePagesEn: Record<ServiceSlug, ContentPageContent> = {
           { q: "When is an occupational safety specialist required?", a: "As with occupational health services, companies with employees are generally required to obtain support from an occupational safety specialist. The exact form and scope of support are determined by DGUV Regulation 2 and depend on the industry, workplace hazards and size of the company." },
           { q: "We already have an occupational safety specialist – can we still work with MonacoMed?", a: "Yes. We work closely with your existing occupational safety specialist and coordinate our occupational health services accordingly. If required, we can also provide the full range of occupational safety services." },
           { q: "How often are workplace inspections carried out?", a: "This depends on the workplace hazards and the size of your company. We define an appropriate schedule as part of the service plan and document every workplace inspection with practical recommendations." },
-          { q: "Do you also organise Occupational Health and Safety Committee meetings?", a: "Yes. We organise Occupational Health and Safety Committee meetings, participate in them and systematically follow up on decisions and outstanding actions." },
+          { q: "Do you also organise occupational health and safety committee meetings?", a: "Yes. We organise occupational health and safety committee meetings, participate in them and systematically follow up on decisions and outstanding actions." },
         ],
       },
     ],
     cta: {
       label: "Contact",
-      title: "Let’s Determine the Support You Need",
+      title: "Let’s determine the support you need",
       text: "A few details are all we need. Your enquiry is reviewed directly by our professional team – with no sales department or call centre.",
       ctaKey: "betreuungsbedarf",
-      ctaLabel: "Get a Free Assessment of Your Support Needs",
+      ctaLabel: "Get a free assessment of your support needs",
     },
   },
   bahnmedizin: {
     meta: {
-      title: "Railway Occupational Medicine – Medical Fitness Assessments under TfV, EBO & VDV 714",
+      title: "Railway occupational medicine – medical fitness assessments under TfV, EBO & VDV 714",
       description:
         "Recognised examination centre for medical fitness assessments for train drivers and other railway personnel – short-notice appointments in Munich.",
     },
-    breadcrumb: "Railway Occupational Medicine",
-    h1: "Medical Fitness Assessments for Railway Operations",
+    breadcrumb: "Railway occupational medicine",
+    h1: "Medical fitness assessments for railway operations",
     tagline: "Recognised examination centre – specialist-led, structured and available at short notice.",
     intro: [
       "MonacoMed provides medical fitness assessments for employees working in railway operations – in accordance with applicable railway regulations, with clear processes and short waiting times for appointments.",
@@ -180,21 +180,21 @@ export const servicePagesEn: Record<ServiceSlug, ContentPageContent> = {
     sections: [
       {
         kind: "examList",
-        title: "Our Medical Fitness Assessments",
+        title: "Our medical fitness assessments",
         lead: "In accordance with applicable railway regulations and corporate guidelines.",
         items: [
           { n: "01", title: "Medical fitness assessments for train drivers by a physician recognised under § 16 of the Train Driver Licensing Ordinance (TfV)", text: "Medical fitness assessments for train drivers in accordance with statutory requirements." },
-          { n: "02", title: "Medical Fitness Assessments under VDV Recommendation 714", text: "Medical fitness assessments for employees in public transport and railway operations in accordance with the applicable requirements." },
-          { n: "03", title: "Medical Fitness Assessments under the German Railway Construction and Operating Regulations (EBO)", text: "Medical fitness assessments for safety-critical roles in railway operations." },
-          { n: "04", title: "Medical Fitness Assessments under Deutsche Bahn AG Requirement Groups A and B", text: "Assessments are carried out in accordance with the applicable corporate guidelines." },
-          { n: "05", title: "Medical Fitness Assessments for Other Safety-Critical Roles", text: "Including track safety personnel (SiPo) and other employees subject to specific medical fitness requirements." },
+          { n: "02", title: "Medical fitness assessments under VDV Recommendation 714", text: "Medical fitness assessments for employees in public transport and railway operations in accordance with the applicable requirements." },
+          { n: "03", title: "Medical fitness assessments under the German Railway Construction and Operating Regulations (EBO)", text: "Medical fitness assessments for safety-critical roles in railway operations." },
+          { n: "04", title: "Medical fitness assessments under Deutsche Bahn AG requirement groups A and B", text: "Assessments are carried out in accordance with the applicable corporate guidelines." },
+          { n: "05", title: "Medical fitness assessments for other safety-critical roles", text: "Including track safety personnel (SiPo) and other employees subject to specific medical fitness requirements." },
         ],
       },
       {
         kind: "split",
         tone: "firm",
         label: "For companies and individuals",
-        title: "Individual Appointments or Group Assessments",
+        title: "Individual appointments or group assessments",
         lead: "Appointments can be arranged for individuals as well as larger groups.",
         matrixHeading: "Who we work with",
         rows: [
@@ -207,16 +207,16 @@ export const servicePagesEn: Record<ServiceSlug, ContentPageContent> = {
         title: "Why MonacoMed?",
         items: [
           { title: "An authorised examination centre", text: "For the railway sector – medical fitness assessments in accordance with applicable requirements." },
-          { title: "Specialist-Led Assessments", text: "Physician-led, with dedicated contacts." },
-          { title: "Short-Notice Appointments", text: "Fast appointment scheduling for individuals and groups alike." },
-          { title: "Digital Appointment Scheduling", text: "Book online, with digital reminders and certificates." },
-          { title: "Clear and Efficient Processes", text: "A structured process from registration through to certification." },
+          { title: "Specialist-led assessments", text: "Physician-led, with dedicated contacts." },
+          { title: "Short-notice appointments", text: "Fast appointment scheduling for individuals and groups alike." },
+          { title: "Digital appointment scheduling", text: "Book online, with digital reminders and certificates." },
+          { title: "Clear and efficient processes", text: "A structured process from registration through to certification." },
         ],
       },
     ],
     cta: {
       label: "Book an appointment",
-      title: "Which Medical Fitness Assessment Do You Need?",
+      title: "Which medical fitness assessment do you need?",
       text: "We are happy to advise you on which medical fitness assessment is required for your role and arrange an appointment promptly.",
       ctaKey: "rueckruf",
       ctaLabel: "Book an appointment",
@@ -224,18 +224,18 @@ export const servicePagesEn: Record<ServiceSlug, ContentPageContent> = {
   },
   impfungen: {
     meta: {
-      title: "Workplace Vaccinations – On-Site Vaccination Programmes",
+      title: "Workplace vaccinations – On-site vaccination programmes",
       description:
         "Flu, travel and work-related vaccinations directly at your workplace – from planning through to documentation.",
     },
     breadcrumb: "Workplace vaccinations",
-    h1: "On-Site Workplace Vaccinations",
+    h1: "On-site workplace vaccinations",
     tagline: "From planning through to documentation – delivered by a physician.",
     intro: [
       "Seasonal flu vaccinations, travel medicine advice before business trips or work-related vaccinations: MonacoMed organises vaccination days directly at your workplace – including medical information, consent and documentation.",
     ],
     heroCtas: [
-      { key: "betreuungsbedarf", label: "Enquire About Workplace Vaccinations", variant: "primary" },
+      { key: "betreuungsbedarf", label: "Enquire about workplace vaccinations", variant: "primary" },
       { key: "rueckruf", label: "Request a callback", variant: "ghost" },
     ],
     sections: [
@@ -252,18 +252,18 @@ export const servicePagesEn: Record<ServiceSlug, ContentPageContent> = {
       {
         kind: "steps",
         flush: true,
-        title: "How a Workplace Vaccination Day Works",
+        title: "How a workplace vaccination day works",
         items: [
-          { n: "01", title: "Requirements & Scheduling", text: "We plan the scope and schedule together – tailored to your locations." },
-          { n: "02", title: "Registration & Medical Information", text: "Employees register online and receive all relevant information digitally in advance." },
-          { n: "03", title: "On-Site Vaccination Day", text: "Vaccinations are provided directly at your workplace – minimising time away from work for your team." },
+          { n: "01", title: "Requirements & scheduling", text: "We plan the scope and schedule together – tailored to your locations." },
+          { n: "02", title: "Registration & medical information", text: "Employees register online and receive all relevant information digitally in advance." },
+          { n: "03", title: "On-site vaccination day", text: "Vaccinations are provided directly at your workplace – minimising time away from work for your team." },
           { n: "04", title: "Documentation", text: "Documentation for employees, with digital reminders when booster vaccinations are due." },
         ],
       },
       {
         kind: "faq",
         tone: "sand",
-        title: "Frequently Asked Questions About Workplace Vaccinations",
+        title: "Frequently asked questions about workplace vaccinations",
         items: [
           { q: "How many employees are needed for an on-site vaccination day?", a: "Smaller teams are also possible – we tailor the scope and format to your needs. Alternatively, employees can attend individual appointments at our practice." },
           { q: "How much lead time do we need?", a: "Flu vaccination programmes are best planned early for the autumn season, while travel vaccinations may require several weeks depending on the destination." },
@@ -274,10 +274,10 @@ export const servicePagesEn: Record<ServiceSlug, ContentPageContent> = {
     ],
     cta: {
       label: "Contact",
-      title: "Let’s Plan Your Next Workplace Vaccination Programme",
+      title: "Let’s plan your next workplace vaccination programme",
       text: "A few details are all we need. Your enquiry is reviewed directly by a physician – with no sales department or call centre.",
       ctaKey: "betreuungsbedarf",
-      ctaLabel: "Make a No-Obligation Enquiry",
+      ctaLabel: "Make a no-obligation enquiry",
     },
   },
 };

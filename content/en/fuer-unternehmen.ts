@@ -3,7 +3,7 @@ import type { ContentPageContent } from "@/content/types";
 /** English copy for the "For companies" multi-site pitch page. */
 export const fuerUnternehmenEn: ContentPageContent = {
   meta: {
-    title: "For Companies – Multi-Site Occupational Health Support",
+    title: "For companies – Multi-site occupational health support",
     description:
       "Occupational health support for companies with multiple locations – centrally coordinated, digitally documented and managed by dedicated contacts.",
   },
@@ -20,7 +20,7 @@ export const fuerUnternehmenEn: ContentPageContent = {
   sections: [
     {
       kind: "painGrid",
-      title: "When Coordination Becomes a Challenge",
+      title: "When coordination becomes a challenge",
       lead: "Every additional location increases the coordination required.",
       intro: "You may recognise some of these challenges:",
       items: [
@@ -37,23 +37,23 @@ export const fuerUnternehmenEn: ContentPageContent = {
       kind: "split",
       tone: "firm",
       label: "Our approach",
-      title: "Coordinated Occupational Health Support Across All Locations",
+      title: "Coordinated occupational health support across all locations",
       lead: "MonacoMed coordinates your occupational health services across all locations.",
-      matrixHeading: "Our Approach Includes",
+      matrixHeading: "Our approach includes",
       rows: [
-        ["Central medical responsibility", "Dedicated Contacts"],
-        ["Digital Appointment Scheduling", "Digital Management of Preventive Occupational Health Care"],
-        ["Coordinated Examination Days", "Close Coordination with HR and Your Occupational Safety Specialist"],
+        ["Central medical responsibility", "Dedicated contacts"],
+        ["Digital appointment scheduling", "Digital management of preventive occupational health care"],
+        ["Coordinated examination days", "Close coordination with HR and your occupational safety specialist"],
         ["Consistent documentation", "Clear processes across all locations"],
       ],
     },
     {
       kind: "steps",
-      title: "How We Work Together",
+      title: "How we work together",
       items: [
         { n: "01", title: "Getting to know you", text: "We talk through your company, your locations and what you need." },
         { n: "02", title: "A support plan", text: "Together, we develop a structured occupational health support plan." },
-        { n: "03", title: "Coordination", text: "We coordinate examination days, preventive occupational health care, Occupational Health and Safety Committee meetings and workplace inspections." },
+        { n: "03", title: "Coordination", text: "We coordinate examination days, preventive occupational health care, occupational health and safety committee meetings and workplace inspections." },
         { n: "04", title: "Ongoing support", text: "With dedicated contacts, digital processes and direct communication." },
       ],
     },
@@ -65,20 +65,20 @@ export const fuerUnternehmenEn: ContentPageContent = {
       intro: "That is why we use:",
       items: [
         { title: "Online appointment booking", text: "Employees book their own appointments online." },
-        { title: "Digital Occupational Health Management", text: "Keep track of due dates and preventive occupational health care at all times." },
+        { title: "Digital occupational health management", text: "Keep track of due dates and preventive occupational health care at all times." },
         { title: "Automatic reminders", text: "Fewer missed appointments and less administrative work." },
-        { title: "Short-Notice Team Appointments", text: "Larger examination days can also be scheduled flexibly." },
-        { title: "Digital Collaboration", text: "Secure document transfer and straightforward coordination with HR." },
+        { title: "Short-notice team appointments", text: "Larger examination days can also be scheduled flexibly." },
+        { title: "Digital collaboration", text: "Secure document transfer and straightforward coordination with HR." },
       ],
     },
     {
       kind: "split",
       tone: "firm",
-      title: "Occupational Health and Occupational Safety from a Single Provider",
+      title: "Occupational health and occupational safety from a single provider",
       lead: "The occupational physician and occupational safety specialist work closely together.",
-      matrixHeading: "The Result",
+      matrixHeading: "The result",
       rows: [
-        ["Consistent recommendations", "Coordinated Actions"],
+        ["Consistent recommendations", "Coordinated actions"],
         ["Less back-and-forth", "Clear responsibilities"],
         ["Efficient implementation"],
       ],
@@ -86,22 +86,22 @@ export const fuerUnternehmenEn: ContentPageContent = {
     {
       kind: "whyLines",
       items: [
-        { n: "01", title: "Dedicated Contacts", text: "Direct communication instead of constantly changing contacts." },
+        { n: "01", title: "Dedicated contacts", text: "Direct communication instead of constantly changing contacts." },
         { n: "02", title: "Personally led", text: "Medical responsibility rests personally with Dr. med. univ. David Manghabati." },
         { n: "03", title: "Digital processes", text: "Modern digital organisation instead of email chaos." },
-        { n: "04", title: "Fast Response Times", text: "Fast responses and flexible appointment scheduling. We usually respond within 48 hours." },
+        { n: "04", title: "Fast response times", text: "Fast responses and flexible appointment scheduling. We usually respond within 48 hours." },
         { n: "05", title: "Structured support", text: "Clear processes for HR, managers and employees." },
       ],
     },
     {
       kind: "sectorGrid",
-      label: "Suitable For",
+      label: "Suitable for",
       items: [
         "Companies with multiple locations",
         "Branch networks",
         "Manufacturing companies",
         "Logistics companies",
-        "Industrial Companies",
+        "Industrial companies",
         "Service companies",
         "Public administration",
         "Technology companies",
@@ -110,7 +110,7 @@ export const fuerUnternehmenEn: ContentPageContent = {
     {
       kind: "faq",
       tone: "sand",
-      title: "Frequently Asked Questions",
+      title: "Frequently asked questions",
       items: [
         { q: "Can you support multiple locations?", a: "Yes. Examination days and ongoing occupational health services are coordinated across all your locations." },
         { q: "Do all employees need to travel to Munich?", a: "No. Depending on the service required, examinations can take place directly at your locations or at our practice in Munich." },
@@ -121,9 +121,9 @@ export const fuerUnternehmenEn: ContentPageContent = {
   ],
   cta: {
     label: "Contact",
-    title: "Personal Support Instead of a Call Centre",
+    title: "Personal support instead of a call centre",
     text: "Your enquiry is reviewed directly by a physician. From the outset, you speak with a dedicated professional contact rather than a sales department or hotline.",
     ctaKey: "betreuungsbedarf",
-    ctaLabel: "Get in Touch – No Obligation",
+    ctaLabel: "Get in touch – No obligation",
   },
 };

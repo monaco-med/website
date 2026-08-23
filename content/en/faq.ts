@@ -8,7 +8,7 @@ export const faqEn: FaqPageContent = {
       "Answers to frequently asked questions about occupational physicians, occupational health, occupational safety and working with MonacoMed.",
   },
   label: "FAQ",
-  h1: "Frequently Asked Questions Before Getting Started",
+  h1: "Frequently asked questions before getting started",
   lead: "Clear answers to the questions decision-makers ask most often.",
   items: [
     {
@@ -17,7 +17,7 @@ export const faqEn: FaqPageContent = {
     },
     {
       q: "Does MonacoMed also provide occupational safety services?",
-      a: "Yes. MonacoMed combines occupational health and occupational safety – with an occupational physician, occupational safety specialist, Occupational Health and Safety Committee meetings, workplace inspections and risk assessments.",
+      a: "Yes. MonacoMed combines occupational health and occupational safety – with an occupational physician, occupational safety specialist, occupational health and safety committee meetings, workplace inspections and risk assessments.",
     },
     {
       q: "Can appointments be organised digitally?",

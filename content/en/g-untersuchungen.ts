@@ -8,12 +8,12 @@ import type { ContentPageContent } from "@/content/types";
  */
 export const gUntersuchungenEn: ContentPageContent = {
   meta: {
-    title: "Preventive Occupational Health Care & G Examinations",
+    title: "Preventive occupational health care & g examinations",
     description:
       "G20 to G46: preventive occupational health care and medical fitness assessments for companies – in Munich or during on-site occupational health days at your workplace.",
   },
-  breadcrumb: "Preventive Occupational Health Care & G Examinations",
-  h1: "Preventive Occupational Health Care & G Examinations",
+  breadcrumb: "Preventive occupational health care & g examinations",
+  h1: "Preventive occupational health care & G examinations",
   tagline: "Occupational health examinations and assessments for companies – in Munich or directly at your workplace",
   intro: [
     "G25, G26, G37 and G42: many types of preventive occupational health care and medical examinations are still commonly known by their former G designations.",
@@ -40,7 +40,7 @@ export const gUntersuchungenEn: ContentPageContent = {
           link: { key: "g24", label: "Find out more →" },
         },
         {
-          title: "G25 – Driving, Control and Monitoring Activities",
+          title: "G25 – Driving, control and monitoring activities",
           text: "Medical fitness assessment for activities where the safe driving, operation or monitoring of vehicles, machinery or equipment is particularly important",
           link: { key: "g25", label: "Find out more →" },
         },
@@ -54,7 +54,7 @@ export const gUntersuchungenEn: ContentPageContent = {
           text: "Occupational health advice and medical assessment for work involving significant heat exposure.",
         },
         {
-          title: "G31 – Work in Hyperbaric Conditions",
+          title: "G31 – Work in hyperbaric conditions",
           text: "Occupational health examinations for work under increased pressure, for example certain diving or compressed-air activities.",
         },
         {
@@ -67,7 +67,7 @@ export const gUntersuchungenEn: ContentPageContent = {
           link: { key: "g37", label: "Find out more →" },
         },
         {
-          title: "G41 – Work at Height",
+          title: "G41 – Work at height",
           text: "Medical fitness assessment for work involving a particular risk of falling, where health limitations could pose a significant risk to the employee or others.",
           link: { key: "g41", label: "Find out more →" },
         },
@@ -81,7 +81,7 @@ export const gUntersuchungenEn: ContentPageContent = {
           text: "Preventive occupational health care and advice for work involving particular physical strain on the musculoskeletal system.",
         },
         {
-          title: "Asbestos – Preventive Occupational Health Care for Asbestos Exposure",
+          title: "Asbestos – Preventive occupational health care for asbestos exposure",
           text: "Mandatory preventive occupational health care for work involving asbestos – including post-exposure preventive occupational health care.",
           link: { key: "asbest", label: "Find out more →" },
         },
@@ -90,7 +90,7 @@ export const gUntersuchungenEn: ContentPageContent = {
     {
       kind: "checkList",
       tone: "sand",
-      title: "Further Preventive Occupational Health Care and Medical Assessments",
+      title: "Further preventive occupational health care and medical assessments",
       lead: "In addition to the most frequently requested services, we provide the full range of preventive occupational health care and medical fitness assessments.",
       intro: "These include preventive occupational health care and medical assessments for:",
       items: [
@@ -113,10 +113,10 @@ export const gUntersuchungenEn: ContentPageContent = {
     },
     {
       kind: "compare",
-      title: "Preventive Occupational Health Care or Medical Fitness Assessment – What Is the Difference?",
+      title: "Preventive occupational health care or medical fitness assessment – What is the difference?",
       cards: [
         {
-          title: "Preventive Occupational Health Care",
+          title: "Preventive occupational health care",
           paragraphs: [
             "Preventive occupational health care is designed to protect employees’ health and provide individual advice on the potential health effects of their work.",
             "Depending on the workplace hazards, this may take the form of mandatory, optional or elective health care.",
@@ -124,7 +124,7 @@ export const gUntersuchungenEn: ContentPageContent = {
           ],
         },
         {
-          title: "Medical Fitness Assessment",
+          title: "Medical fitness assessment",
           paragraphs: [
             "A medical fitness assessment determines whether an employee meets the health requirements for a specific activity.",
             "This can be particularly relevant for safety-critical activities, for example driving or operating vehicles or working where there is a particular risk of falling.",
@@ -136,7 +136,7 @@ export const gUntersuchungenEn: ContentPageContent = {
     {
       kind: "checkList",
       tone: "sand",
-      title: "On-Site Occupational Health Days",
+      title: "On-site occupational health days",
       lead: "For larger groups of employees, we organise preventive occupational health care and medical assessments directly at your workplace.",
       intro: "We coordinate the following with you in advance:",
       items: [
@@ -150,13 +150,13 @@ export const gUntersuchungenEn: ContentPageContent = {
     },
     {
       kind: "reasons",
-      title: "Preventive Occupational Health Care, Simply Organised",
+      title: "Preventive occupational health care, simply organised",
       items: [
-        { title: "Dedicated Contacts", text: "Direct communication and clear responsibilities." },
-        { title: "On-Site at Your Workplace", text: "Preventive occupational health care and medical examination days directly at your workplace." },
+        { title: "Dedicated contacts", text: "Direct communication and clear responsibilities." },
+        { title: "On-site at your workplace", text: "Preventive occupational health care and medical examination days directly at your workplace." },
         { title: "Digital scheduling", text: "Structured processes and straightforward booking." },
         { title: "Multiple locations", text: "Central coordination, including support across several sites." },
-        { title: "Fast Response Times", text: "We usually respond within 48 hours." },
+        { title: "Fast response times", text: "We usually respond within 48 hours." },
       ],
     },
   ],

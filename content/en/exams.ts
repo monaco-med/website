@@ -21,7 +21,7 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
         "G25 examination in Munich: medical fitness assessment for driving, operating and monitoring activities – at our practice or directly at your workplace.",
     },
     h1: "G25 examination Munich",
-    tagline: "Driving, Operating and Monitoring Activities",
+    tagline: "Driving, operating and monitoring activities",
     intro: [
       "The G25 examination is one of the best-known medical fitness assessments in occupational health. It is relevant for employees who drive vehicles, operate machinery or monitor safety-critical equipment.",
       "Although “G25” is no longer the official designation, many companies still use the term when looking for a medical fitness assessment.",
@@ -31,7 +31,7 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
     sections: [
       {
         kind: "checklist",
-        title: "Who May Need a G25 Examination?",
+        title: "Who may need a G25 examination?",
         lead: "A medical fitness assessment may be appropriate or required by the employer for activities such as:",
         items: [
           "operating industrial trucks and forklifts",
@@ -44,7 +44,7 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
       },
       {
         kind: "prose",
-        title: "What Does the G25 Examination Include?",
+        title: "What does the G25 examination include?",
         paragraphs: [
           "The type and scope of the examination depend on the activity and the individual requirements. Depending on the reason for the assessment, it may include a medical history, physical examination and tests of vision and hearing.",
         ],
@@ -52,7 +52,7 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
     ],
     cta: {
       label: "Contact",
-      title: "G25 Examinations Directly at Your Workplace",
+      title: "G25 examinations directly at your workplace",
       text: "If several employees require an assessment, we can organise examination days directly at your workplace. This allows the examinations to be integrated efficiently into day-to-day operations while reducing time away from work. We usually respond within 48 hours.",
       ctaLabel: "Request an examination",
     },
@@ -64,7 +64,7 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
         "G26 examination in Munich: preventive occupational health care and medical fitness assessments for employees who wear respiratory protective equipment at work.",
     },
     h1: "G26 examination Munich",
-    tagline: "Preventive Occupational Health Care and Medical Fitness Assessment for Respiratory Protective Equipment",
+    tagline: "Preventive occupational health care and medical fitness assessment for respiratory protective equipment",
     intro: [
       "The G26 examination applies to employees who wear respiratory protective equipment at work.",
       "The former designation “G26” has been replaced by the current DGUV Recommendations for Occupational Health Advice and Examinations. Depending on the type of respiratory protective equipment, the work involved and the legal basis, preventive occupational health care and medical fitness assessment may both be relevant.",
@@ -74,7 +74,7 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
     sections: [
       {
         kind: "checklist",
-        title: "Who May Need a G26 Examination?",
+        title: "Who may need a G26 examination?",
         lead: "An occupational health assessment may apply, for example, to employees who:",
         items: [
           "wear filtering devices or respiratory masks",
@@ -107,17 +107,17 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
         "G37 examination in Munich: preventive occupational health care for display screen work – including advice, vision testing and on-site organisation.",
     },
     h1: "G37 examination Munich",
-    tagline: "Preventive Occupational Health Care for Display Screen Work",
+    tagline: "Preventive occupational health care for display screen work",
     intro: [
       "The G37 examination is preventive occupational health care for employees who regularly work with display screen equipment.",
       "Today, it is provided as optional preventive occupational health care for display screen work. The focus is on individual advice, particularly regarding symptoms and health concerns related to display screen work.",
       "MonacoMed organises preventive occupational health care for display screen work for companies in Munich and, by arrangement, directly at your workplace.",
     ],
-    heroCta: "Enquire About G37 Preventive Health Care",
+    heroCta: "Enquire about G37 preventive health care",
     sections: [
       {
         kind: "checklist",
-        title: "What Does G37 Preventive Health Care Include?",
+        title: "What does G37 preventive health care include?",
         lead: "The appointment includes occupational health advice and an appropriate examination of the eyes and vision.",
         intro: "The following aspects may be considered, among others:",
         items: [
@@ -151,7 +151,7 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
         "G41 examination in Munich: medical fitness assessment for work involving a risk of falling – available in Munich and directly at your workplace.",
     },
     h1: "G41 examination Munich",
-    tagline: "Medical Fitness Assessment for Work at Height",
+    tagline: "Medical fitness assessment for work at height",
     intro: [
       "The G41 examination is frequently requested in connection with work carrying a particular risk of falling.",
       "Although “G41” is no longer the current official designation, a medical fitness assessment for work at height may still be appropriate or required where there is a suitable legal basis or a justified occupational reason.",
@@ -161,7 +161,7 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
     sections: [
       {
         kind: "checklist",
-        title: "Which Activities May Require a Medical Fitness Assessment?",
+        title: "Which activities may require a medical fitness assessment?",
         lead: "For example, work:",
         items: [
           "on roofs",
@@ -175,7 +175,7 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
       },
       {
         kind: "prose",
-        title: "What Does the Examination Assess?",
+        title: "What does the examination assess?",
         paragraphs: [
           "The assessment is based on the medical requirements of the specific activity. Depending on the circumstances, it may include a medical history, physical examination and further tests where required.",
           "The aim is to assess whether the employee is medically fit for the intended activity.",
@@ -196,7 +196,7 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
         "G42 examination in Munich: preventive occupational health care for work involving infection risks – for healthcare, laboratories and other occupational settings, including on-site services.",
     },
     h1: "G42 examination Munich",
-    tagline: "Preventive Occupational Health Care for Work Involving Infection Risks",
+    tagline: "Preventive occupational health care for work involving infection risks",
     intro: [
       "The G42 examination applies to employees whose work may expose them to an increased risk of infection from biological agents.",
       "Typical settings include healthcare, medical facilities and laboratories, as well as other work involving regular contact with biological agents.",
@@ -221,7 +221,7 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
       },
       {
         kind: "prose",
-        title: "What Does G42 Preventive Health Care Include?",
+        title: "What does G42 preventive health care include?",
         paragraphs: [
           "The focus is on individual occupational health advice and on assessing the infection risk associated with the work.",
           "Depending on the activity, this covers possible infection risks, routes of transmission and suitable protective measures.",
@@ -231,28 +231,28 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
     ],
     cta: {
       label: "Contact",
-      title: "G42 Preventive Health Care and Vaccinations at Your Workplace",
+      title: "G42 preventive health care and vaccinations at your workplace",
       text: "Where several employees are involved, we can organise appointments and vaccinations together at your site. That combines preventive occupational health care, vaccination status checks and workplace vaccination efficiently. As a rule we come back to you within 48 hours.",
       ctaLabel: "Enquire about an on-site occupational health day",
     },
   },
   asbest: {
     meta: {
-      title: "Asbestos Preventive Occupational Health Care Munich",
+      title: "Asbestos preventive occupational health care Munich",
       description:
         "Preventive occupational health care for work involving asbestos for companies in Munich – including post-exposure health care after exposure has ended.",
     },
-    h1: "Asbestos Preventive Occupational Health Care Munich",
-    tagline: "Preventive Occupational Health Care for Work Involving Asbestos",
+    h1: "Asbestos preventive occupational health care Munich",
+    tagline: "Preventive occupational health care for work involving asbestos",
     intro: [
       "Work involving asbestos can expose employees to harmful asbestos fibres. Exposure can still occur today, particularly during demolition, refurbishment and maintenance work on older buildings and plant.",
       "Where work involves exposure to asbestos, mandatory preventive occupational health care must be arranged. MonacoMed provides this service for companies in Munich and, by arrangement, directly at your workplace.",
     ],
-    heroCta: "Enquire About Asbestos Health Care",
+    heroCta: "Enquire about asbestos health care",
     sections: [
       {
         kind: "checklist",
-        title: "Who May Need Asbestos Preventive Occupational Health Care?",
+        title: "Who may need asbestos preventive occupational health care?",
         lead: "Preventive occupational health care may be relevant in particular for employees who may come into contact with asbestos-containing materials, for example during:",
         items: [
           "demolition work",
@@ -282,7 +282,7 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
     ],
     cta: {
       label: "Contact",
-      title: "Asbestos Preventive Occupational Health Care for Companies",
+      title: "Asbestos preventive occupational health care for companies",
       text: "We support companies in determining the appropriate occupational health requirements and arranging the necessary preventive occupational health care. For several employees, appointments can be coordinated and grouped together by arrangement. We usually respond within 48 hours.",
       ctaLabel: "Enquire about asbestos health care",
     },
@@ -294,17 +294,17 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
         "G20 examination (DGUV Recommendation “Noise”) in Munich: preventive occupational health care for noise exposure – for companies and, by arrangement, directly on-site.",
     },
     h1: "G20 examination Munich",
-    tagline: "Preventive Occupational Health Care for Noise Exposure",
+    tagline: "Preventive occupational health care for noise exposure",
     intro: [
       "The G20 examination applies to employees exposed to significant noise at work.",
       "The former designation “G20” has been replaced by the current DGUV Recommendation “Noise”. However, the term G20 is still widely used in occupational health practice and when searching for this type of preventive occupational health care.",
       "MonacoMed provides preventive occupational health care for noise exposure for companies in Munich and, by arrangement, directly at your workplace.",
     ],
-    heroCta: "Enquire About G20 Preventive Health Care",
+    heroCta: "Enquire about G20 preventive health care",
     sections: [
       {
         kind: "prose",
-        title: "When Is Preventive Occupational Health Care Required for Noise Exposure?",
+        title: "When is preventive occupational health care required for noise exposure?",
         paragraphs: [
           "Depending on the level of occupational noise exposure, optional or mandatory preventive occupational health care may be required.",
           "At or above the lower exposure action value of 80 dB(A), optional health care must generally be offered. At or above the upper exposure action value of 85 dB(A), mandatory health care must be arranged.",
@@ -312,7 +312,7 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
       },
       {
         kind: "checklist",
-        title: "What Does G20 Preventive Health Care Include?",
+        title: "What does G20 preventive health care include?",
         lead: "The focus is on occupational health advice on hearing protection and the employee’s individual noise exposure.",
         intro: "Depending on the reason for the preventive health care, the following aspects may be considered:",
         items: [
@@ -328,9 +328,9 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
     ],
     cta: {
       label: "Contact",
-      title: "G20 Preventive Health Care Directly at Your Workplace",
+      title: "G20 preventive health care directly at your workplace",
       text: "If several employees are exposed to noise, we can organise the preventive occupational health care directly at your workplace. We coordinate the number of employees, any examinations required and the practical arrangements with you in advance. This allows even larger occupational health days to be integrated efficiently into your day-to-day operations. We usually respond to enquiries within 48 hours.",
-      ctaLabel: "Enquire About an On-Site Occupational Health Day",
+      ctaLabel: "Enquire about an on-site occupational health day",
     },
   },
   g24: {
@@ -350,7 +350,7 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
     sections: [
       {
         kind: "checklist",
-        title: "Who May Need G24 Preventive Health Care?",
+        title: "Who may need G24 preventive health care?",
         lead: "Preventive occupational health care may be relevant in particular for work involving increased skin exposure, for example:",
         items: [
           "wet work",
@@ -364,7 +364,7 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
       },
       {
         kind: "checklist",
-        title: "What Does G24 Preventive Health Care Include?",
+        title: "What does G24 preventive health care include?",
         lead: "The focus is on individual advice about skin health and on identifying work-related skin problems early.",
         intro: "Depending on the reason for the preventive health care, the following are considered among others:",
         items: [
@@ -378,7 +378,7 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
       },
       {
         kind: "prose",
-        title: "Preventing Work-Related Skin Conditions",
+        title: "Preventing work-related skin conditions",
         paragraphs: [
           "Work-related skin conditions can develop gradually. Early occupational health advice and appropriate protective measures can help prevent symptoms or stop existing problems from worsening.",
           "Preventive occupational health care complements the technical and organisational protective measures in place at the workplace.",

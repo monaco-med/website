@@ -17,12 +17,12 @@ export const kontaktEn: ContactHubContent = {
       text: "Questions about our services, processes or working together? We will call you back and discuss them personally.",
       actions: [
         { key: "rueckruf", label: "Request a callback", variant: "primary" },
-        { key: "faq", label: "View Frequently Asked Questions", variant: "ghost" },
+        { key: "faq", label: "View frequently asked questions", variant: "ghost" },
       ],
     },
     {
       label: "Option 02",
-      title: "Assess My Company’s Support Needs",
+      title: "Assess my company’s support needs",
       text: "Tell us a few details about your company, and we’ll provide a no-obligation assessment of the support you need.",
       actions: [
         { key: "betreuungsbedarf", label: "Assess your requirements", variant: "primary" },

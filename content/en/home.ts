@@ -8,7 +8,7 @@ import type { HomePageContent } from "@/content/types";
  */
 export const homeEn: HomePageContent = {
   meta: {
-    title: "MonacoMed – Occupational Health & Occupational Medicine in Munich",
+    title: "MonacoMed – Occupational health & occupational medicine in Munich",
     description:
       "Occupational health, occupational safety and health management for companies in Munich – digitally organised, with personal physician-led care",
   },
@@ -83,7 +83,7 @@ export const homeEn: HomePageContent = {
     allLabel: "See all questions",
     items: [
       { q: "Does my company need an occupational physician?", a: "Employers are required to ensure appropriate occupational health support. The exact form and scope depend on the number of employees, their work activities and workplace hazards. We help you determine what your company needs." },
-      { q: "Does MonacoMed also provide occupational safety services?", a: "Yes. MonacoMed combines occupational health and occupational safety – with an occupational physician, occupational safety specialist, Occupational Health and Safety Committee meetings, workplace inspections and risk assessments." },
+      { q: "Does MonacoMed also provide occupational safety services?", a: "Yes. MonacoMed combines occupational health and occupational safety – with an occupational physician, occupational safety specialist, occupational health and safety committee meetings, workplace inspections and risk assessments." },
       { q: "Can appointments be organised digitally?", a: "Yes. Employees can book appointments online themselves. This reduces the administrative burden on HR while maintaining full oversight." },
     ],
   },

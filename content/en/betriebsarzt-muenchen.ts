@@ -3,18 +3,18 @@ import type { ContentPageContent } from "@/content/types";
 /** English copy for the company-doctor-in-Munich landing page. */
 export const betriebsarztMuenchenEn: ContentPageContent = {
   meta: {
-    title: "Occupational Physician Munich",
+    title: "Occupational physician Munich",
     description:
       "Your occupational physician in Munich: practice on Heidemannstraße, on-site examination days and short-notice appointments – specialist-led and personally delivered.",
   },
-  heroLabel: "Occupational Physician Munich",
-  h1: "Your Occupational Physician in Munich",
+  heroLabel: "Occupational physician Munich",
+  h1: "Your occupational physician in Munich",
   tagline: "Based in Munich – with on-site services directly at your workplace.",
   intro: [
     "MonacoMed provides occupational health services for companies in Munich and across Bavaria – from our practice at Heidemannstraße 38 and through on-site examination days at your workplace. Additional locations are available on request.",
   ],
   heroCtas: [
-    { key: "betreuungsbedarf", label: "Get a Free Assessment of Your Support Needs", variant: "primary" },
+    { key: "betreuungsbedarf", label: "Get a free assessment of your support needs", variant: "primary" },
     { key: "rueckruf", label: "Request a callback", variant: "ghost" },
   ],
   sections: [
@@ -24,15 +24,15 @@ export const betriebsarztMuenchenEn: ContentPageContent = {
       lead: "A local occupational physician in Munich – accessible, responsive and personal rather than an anonymous large-scale provider.",
       items: [
         {
-          title: "Local and Accessible",
+          title: "Local and accessible",
           text: "Our practice is located in northern Munich, with on-site services throughout the city and surrounding area – easy to reach and quickly on-site when needed.",
         },
         {
-          title: "On-Site or at Our Practice",
+          title: "On-site or at our practice",
           text: "On-site examination days at your company or individual appointments at our practice – whichever works best for you.",
         },
         {
-          title: "Dedicated Physician",
+          title: "Dedicated physician",
           text: "Physician-led by Dr. med. univ. David Manghabati – with personal medical support rather than an anonymous hotline.",
         },
       ],
@@ -41,19 +41,19 @@ export const betriebsarztMuenchenEn: ContentPageContent = {
       kind: "splitLinks",
       tone: "firm",
       label: "Services",
-      title: "Everything from a Single Provider",
+      title: "Everything from a single provider",
       lead: "Occupational health, occupational safety and health management – coordinated by one team and documented in one system.",
       matrixHeading: "At a glance",
       links: [
-        { key: "arbeitsmedizin", label: "Occupational Health & Preventive Occupational Health Care" },
-        { key: "arbeitssicherheit", label: "Occupational Safety & Risk Assessment" },
+        { key: "arbeitsmedizin", label: "Occupational health & preventive occupational health care" },
+        { key: "arbeitssicherheit", label: "Occupational safety & risk assessment" },
         { key: "impfungen", label: "Workplace vaccinations" },
-        { key: "fuerUnternehmen", label: "Multi-Site Occupational Health Support" },
+        { key: "fuerUnternehmen", label: "Multi-site occupational health support" },
       ],
     },
     {
       kind: "faq",
-      title: "Frequently Asked Questions About Our Munich Location",
+      title: "Frequently asked questions about our Munich location",
       items: [
         {
           q: "Do you only support companies in Munich?",
@@ -72,9 +72,9 @@ export const betriebsarztMuenchenEn: ContentPageContent = {
   ],
   cta: {
     label: "Contact",
-    title: "Let’s Talk About Your Occupational Health Needs",
+    title: "Let’s talk about your occupational health needs",
     text: "A few details are all we need. Your enquiry is reviewed directly by a physician – with no sales department or call centre.",
     ctaKey: "betreuungsbedarf",
-    ctaLabel: "Get a Free Assessment of Your Support Needs",
+    ctaLabel: "Get a free assessment of your support needs",
   },
 };

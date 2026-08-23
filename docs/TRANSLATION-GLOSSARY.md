@@ -92,6 +92,13 @@ Note the knock-on effect: *Pflicht-/Angebots-/Wunschvorsorge* became
   German is formal *Sie*; English marketing copy should not read stiff.
 - Keep sentences short. The German copy is already plain; do not add formality
   that isn't there.
+- **Sentence case for every heading**, h1 through tile titles, matrix cells and
+  button labels: "Occupational health and safety from a single provider", not
+  "Occupational Health and Safety from a Single Provider". This matches the
+  German side, so the two languages look like one site. Capitals survive only
+  for proper nouns (MonacoMed, Munich, Deutsche Bahn), statute names and their
+  glossed English forms (DGUV Vorschrift 2, the German Railway Construction and
+  Operating Regulations), G-codes, and the first word after a dash or colon.
 - Use **British spelling** (organised, centre, programme) — the audience is
   European.
 - Numerals and units stay as-is (48 hours, 1–49 employees).
