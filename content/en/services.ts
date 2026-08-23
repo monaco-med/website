@@ -144,7 +144,7 @@ export const servicePagesEn: Record<ServiceSlug, ContentPageContent> = {
       {
         kind: "faq",
         tone: "sand",
-        title: "Asked Questions about Occupational Safety",
+        title: "Frequently Asked Questions about Occupational Safety",
         items: [
           { q: "When is an occupational safety specialist required?", a: "As with occupational health services, companies with employees are generally required to obtain support from an occupational safety specialist. The exact form and scope of support are determined by DGUV Regulation 2 and depend on the industry, workplace hazards and size of the company." },
           { q: "We already have an occupational safety specialist – can we still work with MonacoMed?", a: "Yes. We work closely with your existing occupational safety specialist and coordinate our occupational health services accordingly. If required, we can also provide the full range of occupational safety services." },

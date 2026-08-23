@@ -54,7 +54,7 @@ export const gUntersuchungenEn: ContentPageContent = {
           text: "Occupational health advice and medical assessment for work involving significant heat exposure.",
         },
         {
-          title: "G 31 - Work in Hyperbaric Conditions",
+          title: "G31 – Work in Hyperbaric Conditions",
           text: "Occupational health examinations for work under increased pressure, for example certain diving or compressed-air activities.",
         },
         {

@@ -11,7 +11,7 @@ export const fuerUnternehmenEn: ContentPageContent = {
   h1: "Occupational health for companies with multiple locations",
   tagline: "Centrally coordinated, instead of endless site-by-site arrangements.",
   intro: [
-    "hether you have two branches or locations across Germany, MonacoMed organises your occupational health services centrally, digitally and with dedicated contacts. This ensures consistent processes while keeping the administrative burden on HR low.",
+    "Whether you have two branches or locations across Germany, MonacoMed organises your occupational health services centrally, digitally and with dedicated contacts. This ensures consistent processes while keeping the administrative burden on HR low.",
   ],
   heroCtas: [
     { key: "betreuungsbedarf", label: "Make a no-obligation enquiry", variant: "primary" },
@@ -114,7 +114,7 @@ export const fuerUnternehmenEn: ContentPageContent = {
       items: [
         { q: "Can you support multiple locations?", a: "Yes. Examination days and ongoing occupational health services are coordinated across all your locations." },
         { q: "Do all employees need to travel to Munich?", a: "No. Depending on the service required, examinations can take place directly at your locations or at our practice in Munich." },
-        { q: "Do you work with our existing occupational safety specialist?", a: "Yes. We work closely with your existing occupational safety specialist. If required, we can also provide the full range of occupational safety services" },
+        { q: "Do you work with our existing occupational safety specialist?", a: "Yes. We work closely with your existing occupational safety specialist. If required, we can also provide the full range of occupational safety services." },
         { q: "How do we get started?", a: "Following an initial consultation, we develop a structured support plan and coordinate the next steps with your designated contacts." },
       ],
     },
