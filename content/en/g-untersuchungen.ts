@@ -19,7 +19,7 @@ export const gUntersuchungenEn: ContentPageContent = {
     "G25, G26, G37 and G42: many types of preventive occupational health care and medical examinations are still commonly known by their former G designations.",
     "Today, a clear distinction is made between preventive occupational health care and medical fitness assessments. The former G principles have been replaced by the DGUV Recommendations for Occupational Health Advice and Examinations.",
     "MonacoMed provides companies with the full range of preventive occupational health care and medical fitness assessments. We help you determine which type of assessment or occupational health care is appropriate and organise everything efficiently – as an individual appointment, during an occupational health day or directly at your workplace.",
-    "A note on wording: throughout this site, “screening” covers advice and prevention as well as examination, matching the German “arbeitsmedizinische Vorsorge”.",
+    "A note on wording: “preventive occupational health care” renders the German “arbeitsmedizinische Vorsorge”, which covers advice and prevention as well as examination. The former G designations are no longer official, but remain in everyday use.",
   ],
   heroCtas: [
     { key: "betreuungsbedarf", label: "Assess your requirements", variant: "primary" },
@@ -27,7 +27,7 @@ export const gUntersuchungenEn: ContentPageContent = {
   sections: [
     {
       kind: "tiles",
-      title: "Frequently requested G-examinations",
+      title: "Frequently requested G examinations",
       items: [
         {
           title: "G20 – Noise",
@@ -120,7 +120,7 @@ export const gUntersuchungenEn: ContentPageContent = {
           paragraphs: [
             "Preventive occupational health care is designed to protect employees’ health and provide individual advice on the potential health effects of their work.",
             "Depending on the workplace hazards, this may take the form of mandatory, optional or elective health care.",
-            "Medical findings and diagnoses are not disclosed to the employer. After the screening, the employer receives a certificate of attendance.",
+            "Medical findings and diagnoses are not disclosed to the employer. After the appointment, the employer receives a certificate of attendance.",
           ],
         },
         {
@@ -146,7 +146,7 @@ export const gUntersuchungenEn: ContentPageContent = {
         "which rooms are needed on site, and",
         "how appointments will be scheduled.",
       ],
-      note: "That way even larger screening and examination days fit efficiently into your normal operations.",
+      note: "That way even larger occupational health days fit efficiently into your normal operations.",
     },
     {
       kind: "reasons",
@@ -162,7 +162,7 @@ export const gUntersuchungenEn: ContentPageContent = {
   ],
   cta: {
     label: "Contact",
-    title: "Looking for a particular G-examination?",
+    title: "Looking for a particular G examination?",
     text: "Whether you need G25, G26, G37, G41, G42 or another occupational health assessment, we help you determine what is appropriate and organise the right preventive occupational health care or medical assessment for your employees. Simply send us the work activity, number of employees and your location. We usually respond within 48 hours.",
     ctaKey: "betreuungsbedarf",
     ctaLabel: "Assess your requirements",

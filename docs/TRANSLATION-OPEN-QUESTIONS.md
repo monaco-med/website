@@ -10,18 +10,32 @@ Status key: 🔴 answer needed · 🟡 confirm my choice · ⚪ FYI
 
 ---
 
-## ✅ 1. "Arbeitsmedizinische Vorsorge" → "occupational health screening"
+## ✅ 1. "Arbeitsmedizinische Vorsorge" → **preventive occupational health care**
 
-**DECIDED (David, Aug 2026): confirmed.** Used site-wide.
+**SUPERSEDED (David, review round 1, Aug 2026).** He reversed the earlier choice
+of "occupational health screening" across 95 fields, and the site now says
+**preventive occupational health care** everywhere. Short form inside a
+paragraph: "preventive health care". The word "screening" no longer appears.
 
-| Option | Reads like | Trade-off |
-|---|---|---|
-| occupational health screening *(my choice)* | plain, searchable | "screening" implies looking *for* disease; Vorsorge is broader |
-| health surveillance | the actual UK/HSE legal term | sounds like monitoring employees — poor fit for marketing copy |
-| preventive occupational medical care | most accurate | far too heavy to repeat dozens of times |
+| Option | Verdict |
+|---|---|
+| occupational health screening | drafted, then reversed — "screening" implies looking *for* disease |
+| health surveillance | rejected — sounds like monitoring employees |
+| **preventive occupational health care** | **chosen** — accurate, unambiguous, at the cost of length |
 
-Readability and search visibility were chosen over strict legal precision, with
-one clarifying sentence on the G-Untersuchungen overview page.
+Knock-on: *Pflicht-/Angebots-/Wunschvorsorge* is now **mandatory / optional /
+elective health care**. Also reversed in the same round: Betriebsarzt →
+**occupational physician**, Arbeitssicherheit → **occupational safety**,
+Bahnmedizin → **railway occupational medicine**, Ermächtigte Untersuchungsstelle
+→ **recognised examination centre**, ASA → **Occupational Health and Safety
+Committee**. All recorded in [`TRANSLATION-GLOSSARY.md`](./TRANSLATION-GLOSSARY.md).
+
+⚪ One paragraph was **rewritten rather than translated**: the wording note on the
+G-Untersuchungen overview used to exist purely to justify the word "screening".
+It now explains that "preventive occupational health care" renders
+*arbeitsmedizinische Vorsorge* and that the old G designations remain in
+colloquial use. This is the only place where an argument was replaced rather
+than a term swapped.
 
 ## 🔴 2. English URLs
 

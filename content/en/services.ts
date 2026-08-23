@@ -32,7 +32,7 @@ export const servicePagesEn: Record<ServiceSlug, ContentPageContent> = {
         lead: "All occupational health services – planned, delivered and documented.",
         items: [
           { title: "Occupational Health Services", text: "In accordance with ASiG and DGUV Regulation 2 – with scheduled on-site hours and a dedicated contact." },
-          { title: "Preventive Occupational Health Care", text: "Mandatory, offered and requested occupational health care – clearly organised." },
+          { title: "Preventive Occupational Health Care", text: "Mandatory, optional and elective health care – clearly organised." },
           { title: "Fitness-for-work assessments", text: "Where specifically required, clearly separated from preventive occupational health care." },
           { title: "Occupational Health and Safety Committee Meetings & Workplace Inspections", text: "Participation, documentation and practical recommendations." },
           { title: "Return-to-work management & maternity protection", text: "Occupational health advice for practical workplace solutions." },

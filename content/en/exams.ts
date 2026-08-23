@@ -11,7 +11,7 @@ import type { ExamPageContent, ExamSlug } from "@/content/types";
  * dB(A) values, DGUV references and the 48-hour response promise are carried
  * over unchanged. Terminology follows `docs/TRANSLATION-GLOSSARY.md`.
  */
-export const examParentLabelEn = "Occupational health screening & G-examinations";
+export const examParentLabelEn = "Preventive occupational health care & G examinations";
 
 export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
   g25: {
@@ -70,7 +70,7 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
       "The former designation “G26” has been replaced by the current DGUV Recommendations for Occupational Health Advice and Examinations. Depending on the type of respiratory protective equipment, the work involved and the legal basis, preventive occupational health care and medical fitness assessment may both be relevant.",
       "MonacoMed provides preventive occupational health care and medical assessments for work involving respiratory protective equipment in Munich and, by arrangement, directly at your workplace.",
     ],
-    heroCta: "Request respiratory protection screening",
+    heroCta: "Enquire about G26 preventive health care",
     sections: [
       {
         kind: "checklist",
@@ -127,7 +127,7 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
           "existing corrective eyewear",
           "complaints related to workstation design",
         ],
-        note: "If it emerges that special corrective eyewear is needed for display screen work, that can be assessed as part of the screening.",
+        note: "If it emerges that special corrective eyewear is needed for display screen work, that can be assessed as part of the appointment.",
       },
       {
         kind: "prose",
@@ -139,9 +139,9 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
     ],
     cta: {
       label: "Contact",
-      title: "Display screen screening at your own premises",
-      text: "Where there are a larger number of display screen workstations, screening days can be run efficiently at your company. We support you with scheduling and carry out the screenings together at your site. As a rule we come back to you within 48 hours.",
-      ctaLabel: "Request a screening day",
+      title: "G37 preventive health care directly at your workplace",
+      text: "Where there are a larger number of display screen workstations, occupational health days can be run efficiently at your company. We support you with scheduling and carry out the screenings together at your site. As a rule we come back to you within 48 hours.",
+      ctaLabel: "Enquire about an on-site occupational health day",
     },
   },
   g41: {
@@ -202,12 +202,12 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
       "Typical settings include healthcare, medical facilities and laboratories, as well as other work involving regular contact with biological agents.",
       "MonacoMed provides preventive occupational health care for work involving infection risks for companies in Munich and, by arrangement, directly at your workplace.",
     ],
-    heroCta: "Request G42 screening",
+    heroCta: "Enquire about G42 preventive health care",
     sections: [
       {
         kind: "checklist",
-        title: "Who might need G42 screening?",
-        lead: "Depending on the risk assessment, occupational health screening may be relevant for employees in:",
+        title: "Who may need G42 preventive health care?",
+        lead: "Depending on the risk assessment, preventive occupational health care may be relevant for employees in:",
         items: [
           "hospitals and medical facilities",
           "doctors' and dental practices",
@@ -225,15 +225,15 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
         paragraphs: [
           "The focus is on individual occupational health advice and on assessing the infection risk associated with the work.",
           "Depending on the activity, this covers possible infection risks, routes of transmission and suitable protective measures.",
-          "Vaccination status also plays an important role. Where the work carries an increased risk of infection and an effective vaccination is available, vaccination advice and — where indicated — a vaccination can be offered as part of the screening.",
+          "Vaccination status also plays an important role. Where the work carries an increased risk of infection and an effective vaccination is available, vaccination advice and — where indicated — a vaccination can be offered as part of the appointment.",
         ],
       },
     ],
     cta: {
       label: "Contact",
       title: "G42 Preventive Health Care and Vaccinations at Your Workplace",
-      text: "Where several employees are involved, we can organise screening appointments and vaccinations together at your site. That combines occupational health screening, vaccination status checks and workplace vaccination efficiently. As a rule we come back to you within 48 hours.",
-      ctaLabel: "Request a screening day",
+      text: "Where several employees are involved, we can organise appointments and vaccinations together at your site. That combines preventive occupational health care, vaccination status checks and workplace vaccination efficiently. As a rule we come back to you within 48 hours.",
+      ctaLabel: "Enquire about an on-site occupational health day",
     },
   },
   asbest: {
@@ -261,22 +261,22 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
           "work on older buildings and technical installations",
           "activities with potential exposure to asbestos fibres",
         ],
-        note: "Which screening is required depends on the specific activity and the company's risk assessment.",
+        note: "Which preventive occupational health care is required depends on the specific activity and the company's risk assessment.",
       },
       {
         kind: "prose",
-        title: "What does occupational health screening for asbestos involve?",
+        title: "What does asbestos preventive occupational health care involve?",
         paragraphs: [
           "The focus is on individual occupational health advice and on the health risks of possible asbestos exposure.",
-          "Depending on the reason for the screening and the individual situation, a medical examination can also be offered. This takes into account the activity, any earlier exposure and individual health factors.",
+          "Depending on the reason for the preventive health care and the individual situation, a medical examination can also be offered. This takes into account the activity, any earlier exposure and individual health factors.",
         ],
       },
       {
         kind: "prose",
-        title: "Post-exposure screening after asbestos exposure",
+        title: "Post-exposure health care after asbestos exposure",
         paragraphs: [
-          "Asbestos-related illnesses can appear many years or even decades after occupational exposure. Post-exposure occupational health screening therefore plays a particular role with asbestos.",
-          "Once the hazardous work has ended, screening can be continued beyond the period of employment itself.",
+          "Asbestos-related illnesses can appear many years or even decades after occupational exposure. Post-exposure occupational health care therefore plays a particular role with asbestos.",
+          "Once the hazardous work has ended, preventive health care can be continued beyond the period of employment itself.",
         ],
       },
     ],
@@ -284,7 +284,7 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
       label: "Contact",
       title: "Asbestos Preventive Occupational Health Care for Companies",
       text: "We support companies in determining the appropriate occupational health requirements and arranging the necessary preventive occupational health care. For several employees, appointments can be coordinated and grouped together by arrangement. We usually respond within 48 hours.",
-      ctaLabel: "Request asbestos screening",
+      ctaLabel: "Enquire about asbestos health care",
     },
   },
   g20: {
@@ -314,7 +314,7 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
         kind: "checklist",
         title: "What Does G20 Preventive Health Care Include?",
         lead: "The focus is on occupational health advice on hearing protection and the employee’s individual noise exposure.",
-        intro: "Depending on the reason for screening, the following aspects may be considered:",
+        intro: "Depending on the reason for the preventive health care, the following aspects may be considered:",
         items: [
           "occupational noise exposure",
           "previous noise exposure",
@@ -340,13 +340,13 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
         "G24 examination in Munich: preventive occupational health care for skin exposure from wet work, protective gloves or skin-irritating substances – on-site or at our practice.",
     },
     h1: "G24 examination Munich",
-    tagline: "Occupational health screening for skin exposure",
+    tagline: "Preventive occupational health care for skin exposure",
     intro: [
       "The G24 examination applies to employees whose skin is placed under particular strain by their work.",
-      "The former designation “G24 – skin conditions” is still widely used. Today the screening is based on the specific reason for it and on the company's risk assessment.",
+      "The former designation “G24 – skin conditions” is still widely used. Today the preventive health care is based on the specific reason for it and on the company's risk assessment.",
       "MonacoMed provides preventive occupational health care for skin-exposing work for companies in Munich and, by arrangement, directly at your workplace.",
     ],
-    heroCta: "Request G24 screening",
+    heroCta: "Enquire about G24 preventive health care",
     sections: [
       {
         kind: "checklist",
@@ -360,13 +360,13 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
           "cleaning and disinfection work",
           "work in healthcare, skilled trades or industry",
         ],
-        note: "Whether screening is mandatory or offered depends on the nature and extent of exposure and on the risk assessment.",
+        note: "Whether health care is mandatory or optional depends on the nature and extent of exposure and on the risk assessment.",
       },
       {
         kind: "checklist",
         title: "What Does G24 Preventive Health Care Include?",
         lead: "The focus is on individual advice about skin health and on identifying work-related skin problems early.",
-        intro: "Depending on the reason for screening, the following are considered among others:",
+        intro: "Depending on the reason for the preventive health care, the following are considered among others:",
         items: [
           "current or previous skin complaints",
           "occupational strain on the skin",
@@ -387,9 +387,9 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
     ],
     cta: {
       label: "Contact",
-      title: "G24 screening at your own premises",
+      title: "G24 preventive health care directly at your workplace",
       text: "If several employees carry out work involving significant skin exposure, we can organise preventive occupational health appointments directly at your workplace. We support you with the organisation and determine the appropriate occupational health care based on the work activities and your workplace risk assessment. We usually respond to enquiries within 48 hours.",
-      ctaLabel: "Request a screening day",
+      ctaLabel: "Enquire about an on-site occupational health day",
     },
   },
 };
