@@ -3,14 +3,14 @@ import type { LeadPageContent } from "@/content/types";
 /** English copy for the standalone needs-assessment lead page. */
 export const betreuungsbedarfEn: LeadPageContent = {
   meta: {
-    title: "Assess your requirements free of charge",
+    title: "Get a Free Assessment of Your Support Needs",
     description:
-      "A few details are enough: we review your occupational health requirements and come back to you with a free initial assessment from a physician.",
+      "Tell us a few details about your company. A physician will review your occupational health support needs and provide a free initial assessment.",
   },
-  h1: "Have your requirements assessed free of charge",
-  lead: "A few details are enough — we review what you need and come back to you with a brief assessment.",
-  sideTitle: "Reach us directly",
+  h1: "Get a Free Assessment of Your Occupational Health Support Needs",
+  lead: "A few details are all we need – we’ll review your needs and get back to you with a brief assessment.",
+  sideTitle: "Contact Us Directly",
   addressLabel: "Address",
   onSiteLabel: "On site",
-  onSiteValue: "Munich · Bavaria · further locations on request",
+  onSiteValue: "Munich · Bavaria · additional locations on request",
 };

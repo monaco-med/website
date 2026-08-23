@@ -5,29 +5,29 @@ export const kontaktEn: ContactHubContent = {
   meta: {
     title: "Contact",
     description:
-      "A general question, or would you like your requirements assessed? Tell us briefly what it is about – we will get back to you personally.",
+      "Have a question or need help assessing your company’s support needs? Tell us briefly what you need, and we’ll get back to you personally.",
   },
   label: "Contact",
   h1: "How can we help?",
-  sub: "Tell us briefly what it is about – one click takes you to the right place.",
+  sub: "Tell us briefly what you need – and we will guide you to the right option.",
   choices: [
     {
       label: "Option 01",
       title: "I have a general question",
-      text: "About services, processes or working together – we will call you back and go through it personally.",
+      text: "Questions about our services, processes or working together? We will call you back and discuss them personally.",
       actions: [
         { key: "rueckruf", label: "Request a callback", variant: "primary" },
-        { key: "faq", label: "See frequent questions", variant: "ghost" },
+        { key: "faq", label: "View Frequently Asked Questions", variant: "ghost" },
       ],
     },
     {
       label: "Option 02",
-      title: "I would like my requirements assessed",
-      text: "A few details about your company are enough – you will receive a no-obligation assessment of what you need.",
+      title: "Assess My Company’s Support Needs",
+      text: "Tell us a few details about your company, and we’ll provide a no-obligation assessment of the support you need.",
       actions: [
         { key: "betreuungsbedarf", label: "Assess your requirements", variant: "primary" },
       ],
     },
   ],
-  sideNote: "// Your enquiry is reviewed by a physician directly – no sales team, no call centre.",
+  sideNote: "Your enquiry is reviewed directly by a physician – with no sales department or call centre.",
 };

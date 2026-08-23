@@ -18,21 +18,21 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
     meta: {
       title: "G25 examination Munich",
       description:
-        "G25 examination in Munich: occupational fitness assessment for driving, control and monitoring tasks – at our practice or on your own premises.",
+        "G25 examination in Munich: medical fitness assessment for driving, operating and monitoring activities – at our practice or directly at your workplace.",
     },
     h1: "G25 examination Munich",
-    tagline: "Driving, control and monitoring tasks",
+    tagline: "Driving, Operating and Monitoring Activities",
     intro: [
-      "The G25 examination is one of the best-known occupational fitness assessments. It applies to employees who drive vehicles, operate machinery or monitor safety-critical plant.",
-      "Although the former designation “G25” is no longer the official term, many companies still search for an occupational fitness assessment under that name.",
-      "MonacoMed carries out fitness assessments for driving, control and monitoring tasks in Munich and, by arrangement, at companies' own premises.",
+      "The G25 examination is one of the best-known medical fitness assessments in occupational health. It is relevant for employees who drive vehicles, operate machinery or monitor safety-critical equipment.",
+      "Although “G25” is no longer the official designation, many companies still use the term when looking for a medical fitness assessment.",
+      "MonacoMed provides medical fitness assessments for driving, operating and monitoring activities in Munich and, by arrangement, directly at your workplace.",
     ],
     heroCta: "Request an examination",
     sections: [
       {
         kind: "checklist",
-        title: "Who might a G25 examination apply to?",
-        lead: "A fitness assessment may be sensible, or required by the company, for work such as:",
+        title: "Who May Need a G25 Examination?",
+        lead: "A medical fitness assessment may be appropriate or required by the employer for activities such as:",
         items: [
           "operating industrial trucks and forklifts",
           "driving vehicles on company premises",
@@ -40,20 +40,20 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
           "control and monitoring tasks",
           "work carrying particular responsibility for one's own safety or the safety of others",
         ],
-        note: "Whether a fitness assessment is required and legally permissible depends on the specific activity and the reason for the examination.",
+        note: "Whether a medical fitness assessment is required and legally permissible depends on the specific activity and the reason for the assessment.",
       },
       {
         kind: "prose",
-        title: "What does the G25 examination cover?",
+        title: "What Does the G25 Examination Include?",
         paragraphs: [
-          "The nature and scope of the examination depend on the activity and the individual requirements. Depending on the reason for the examination, a medical history, a physical examination and tests of eyesight and hearing may form part of the fitness assessment.",
+          "The type and scope of the examination depend on the activity and the individual requirements. Depending on the reason for the assessment, it may include a medical history, physical examination and tests of vision and hearing.",
         ],
       },
     ],
     cta: {
       label: "Contact",
-      title: "G25 examinations at your own premises",
-      text: "Where several employees are involved, we can organise examination days at your own site. That fits the examinations efficiently into your operations and reduces time lost. As a rule we come back to you within 48 hours.",
+      title: "G25 Examinations Directly at Your Workplace",
+      text: "If several employees require an assessment, we can organise examination days directly at your workplace. This allows the examinations to be integrated efficiently into day-to-day operations while reducing time away from work. We usually respond within 48 hours.",
       ctaLabel: "Request an examination",
     },
   },
@@ -61,29 +61,29 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
     meta: {
       title: "G26 examination Munich",
       description:
-        "G26 examination in Munich: occupational health screening and fitness assessment for employees who wear respiratory protective equipment at work.",
+        "G26 examination in Munich: preventive occupational health care and medical fitness assessments for employees who wear respiratory protective equipment at work.",
     },
     h1: "G26 examination Munich",
-    tagline: "Occupational health screening and fitness assessment for respiratory protection",
+    tagline: "Preventive Occupational Health Care and Medical Fitness Assessment for Respiratory Protective Equipment",
     intro: [
       "The G26 examination applies to employees who wear respiratory protective equipment at work.",
-      "The former designation “G26” has been replaced by the current DGUV recommendations for occupational health advice and examinations. Depending on the equipment, the activity and the legal basis for the examination, both occupational health screening and questions of medical fitness may come into play.",
-      "MonacoMed offers occupational health screening and examinations for work involving respiratory protection in Munich and, by arrangement, at companies' own premises.",
+      "The former designation “G26” has been replaced by the current DGUV Recommendations for Occupational Health Advice and Examinations. Depending on the type of respiratory protective equipment, the work involved and the legal basis, preventive occupational health care and medical fitness assessment may both be relevant.",
+      "MonacoMed provides preventive occupational health care and medical assessments for work involving respiratory protective equipment in Munich and, by arrangement, directly at your workplace.",
     ],
     heroCta: "Request respiratory protection screening",
     sections: [
       {
         kind: "checklist",
-        title: "Who is a G26 examination relevant for?",
+        title: "Who May Need a G26 Examination?",
         lead: "An occupational health assessment may apply, for example, to employees who:",
         items: [
           "wear filtering devices or respiratory masks",
           "use self-contained breathing apparatus",
           "carry out physically demanding work while using respiratory protection",
           "work in fire and disaster response",
-          "depend on respiratory protection for industrial work",
+          "rely on respiratory protective equipment for industrial activities",
         ],
-        note: "Which occupational health measures are required depends above all on the type and weight of the respiratory equipment, the activity itself and the risk assessment.",
+        note: "The occupational health measures required depend in particular on the type and weight of the respiratory protective equipment, the work involved and the workplace risk assessment.",
       },
       {
         kind: "prose",
@@ -96,7 +96,7 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
     cta: {
       label: "Contact",
       title: "G26 examination days on site",
-      text: "Where several employees are involved, respiratory protection screening and the associated examinations can be grouped into a single examination day at your company. We agree the scope required and the practical arrangements with you in advance. As a rule we come back to you within 48 hours.",
+      text: "If several employees require assessment, we can organise preventive occupational health care and related examinations for respiratory protective equipment as a dedicated on-site examination day. We coordinate the required scope and practical arrangements with you in advance. We usually respond to enquiries within 48 hours.",
       ctaLabel: "Request an examination day",
     },
   },
@@ -104,21 +104,21 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
     meta: {
       title: "G37 examination Munich",
       description:
-        "G37 examination Munich: occupational health screening offered for display screen work – advice, eyesight test and organisation at your own premises.",
+        "G37 examination in Munich: preventive occupational health care for display screen work – including advice, vision testing and on-site organisation.",
     },
     h1: "G37 examination Munich",
-    tagline: "Occupational health screening for display screen work",
+    tagline: "Preventive Occupational Health Care for Display Screen Work",
     intro: [
-      "The G37 examination is the occupational health screening for employees who work regularly at display screens.",
-      "Today it is carried out as screening offered for display screen work. The focus is on individual advice and, in particular, on any complaints or health questions connected with display screen work.",
-      "MonacoMed organises display screen screening for companies in Munich and, by arrangement, at your own site.",
+      "The G37 examination is preventive occupational health care for employees who regularly work with display screen equipment.",
+      "Today, it is provided as optional preventive occupational health care for display screen work. The focus is on individual advice, particularly regarding symptoms and health concerns related to display screen work.",
+      "MonacoMed organises preventive occupational health care for display screen work for companies in Munich and, by arrangement, directly at your workplace.",
     ],
-    heroCta: "Request G37 screening",
+    heroCta: "Enquire About G37 Preventive Health Care",
     sections: [
       {
         kind: "checklist",
-        title: "What does G37 screening involve?",
-        lead: "The screening covers occupational health advice and an appropriate examination of the eyes and eyesight.",
+        title: "What Does G37 Preventive Health Care Include?",
+        lead: "The appointment includes occupational health advice and an appropriate examination of the eyes and vision.",
         intro: "The following aspects may be considered, among others:",
         items: [
           "visual acuity",
@@ -133,7 +133,7 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
         kind: "prose",
         title: "Is the G37 examination mandatory?",
         paragraphs: [
-          "For display screen work this is screening that must be offered. The employer has to offer it to employees in line with the statutory requirements. Taking part is voluntary for the employee.",
+          "For display screen work, preventive occupational health care must generally be offered by the employer in accordance with the statutory requirements. Participation is voluntary for employees.",
         ],
       },
     ],
@@ -148,20 +148,20 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
     meta: {
       title: "G41 examination Munich",
       description:
-        "G41 examination Munich: occupational fitness assessment for work with a risk of falling – organised in Munich and at your own premises.",
+        "G41 examination in Munich: medical fitness assessment for work involving a risk of falling – available in Munich and directly at your workplace.",
     },
     h1: "G41 examination Munich",
-    tagline: "Fitness assessment for work with a risk of falling",
+    tagline: "Medical Fitness Assessment for Work at Height",
     intro: [
       "The G41 examination is frequently requested in connection with work carrying a particular risk of falling.",
-      "The former designation “G41” is no longer the current official term. Where there is a legal basis or a clear operational reason, however, an occupational fitness assessment for work with a risk of falling may be required or sensible.",
-      "MonacoMed carries out these fitness assessments in Munich and, by arrangement, at companies' own premises.",
+      "Although “G41” is no longer the current official designation, a medical fitness assessment for work at height may still be appropriate or required where there is a suitable legal basis or a justified occupational reason.",
+      "MonacoMed provides these medical fitness assessments in Munich and, by arrangement, directly at your workplace.",
     ],
     heroCta: "Request a G41 examination",
     sections: [
       {
         kind: "checklist",
-        title: "Which activities might a fitness assessment apply to?",
+        title: "Which Activities May Require a Medical Fitness Assessment?",
         lead: "For example, work:",
         items: [
           "on roofs",
@@ -171,14 +171,14 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
           "at elevated workstations",
           "where a sudden health problem could put the individual or others at significant risk",
         ],
-        note: "Whether a fitness assessment is required and legally permissible has to be judged against the specific workplace and the reason for the examination.",
+        note: "Whether a medical fitness assessment is required and legally permissible must be determined based on the specific workplace and the reason for the assessment.",
       },
       {
         kind: "prose",
-        title: "What does the examination check?",
+        title: "What Does the Examination Assess?",
         paragraphs: [
-          "The examination is guided by the health requirements of the specific activity. Depending on the case, further examinations may be needed alongside the medical history and physical examination.",
-          "The aim is an occupational health assessment of medical fitness for the intended activity.",
+          "The assessment is based on the medical requirements of the specific activity. Depending on the circumstances, it may include a medical history, physical examination and further tests where required.",
+          "The aim is to assess whether the employee is medically fit for the intended activity.",
         ],
       },
     ],
@@ -193,14 +193,14 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
     meta: {
       title: "G42 examination Munich",
       description:
-        "G42 examination in Munich: occupational health screening for infection risk – for healthcare, laboratories and other settings, including on site.",
+        "G42 examination in Munich: preventive occupational health care for work involving infection risks – for healthcare, laboratories and other occupational settings, including on-site services.",
     },
     h1: "G42 examination Munich",
-    tagline: "Occupational health screening for activities with a risk of infection",
+    tagline: "Preventive Occupational Health Care for Work Involving Infection Risks",
     intro: [
       "The G42 examination applies to employees whose work may expose them to an increased risk of infection from biological agents.",
       "Typical settings include healthcare, medical facilities and laboratories, as well as other work involving regular contact with biological agents.",
-      "MonacoMed offers occupational health screening for work with a risk of infection to companies in Munich and, by arrangement, on site.",
+      "MonacoMed provides preventive occupational health care for work involving infection risks for companies in Munich and, by arrangement, directly at your workplace.",
     ],
     heroCta: "Request G42 screening",
     sections: [
@@ -217,11 +217,11 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
           "emergency services",
           "other settings with a relevant risk of infection",
         ],
-        note: "Whether screening is mandatory or offered depends on the specific activity and the risk involved.",
+        note: "Whether mandatory or optional health care is required depends on the specific work activity and the level of risk involved.",
       },
       {
         kind: "prose",
-        title: "What does G42 screening involve?",
+        title: "What Does G42 Preventive Health Care Include?",
         paragraphs: [
           "The focus is on individual occupational health advice and on assessing the infection risk associated with the work.",
           "Depending on the activity, this covers possible infection risks, routes of transmission and suitable protective measures.",
@@ -231,29 +231,29 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
     ],
     cta: {
       label: "Contact",
-      title: "G42 screening and vaccinations at your own premises",
+      title: "G42 Preventive Health Care and Vaccinations at Your Workplace",
       text: "Where several employees are involved, we can organise screening appointments and vaccinations together at your site. That combines occupational health screening, vaccination status checks and workplace vaccination efficiently. As a rule we come back to you within 48 hours.",
       ctaLabel: "Request a screening day",
     },
   },
   asbest: {
     meta: {
-      title: "Asbestos screening Munich",
+      title: "Asbestos Preventive Occupational Health Care Munich",
       description:
-        "Occupational health screening for work involving asbestos for companies in Munich – including post-exposure screening after exposure ends.",
+        "Preventive occupational health care for work involving asbestos for companies in Munich – including post-exposure health care after exposure has ended.",
     },
-    h1: "Asbestos screening Munich",
-    tagline: "Occupational health screening for work involving asbestos",
+    h1: "Asbestos Preventive Occupational Health Care Munich",
+    tagline: "Preventive Occupational Health Care for Work Involving Asbestos",
     intro: [
       "Work involving asbestos can expose employees to harmful asbestos fibres. Exposure can still occur today, particularly during demolition, refurbishment and maintenance work on older buildings and plant.",
-      "Where work involves exposure to asbestos, mandatory occupational health screening must be arranged. MonacoMed offers occupational health screening for work involving asbestos to companies in Munich and, by arrangement, on site.",
+      "Where work involves exposure to asbestos, mandatory preventive occupational health care must be arranged. MonacoMed provides this service for companies in Munich and, by arrangement, directly at your workplace.",
     ],
-    heroCta: "Request asbestos screening",
+    heroCta: "Enquire About Asbestos Health Care",
     sections: [
       {
         kind: "checklist",
-        title: "Who is asbestos screening relevant for?",
-        lead: "Occupational health screening may apply in particular to employees whose work can bring them into contact with asbestos-containing materials, for example during:",
+        title: "Who May Need Asbestos Preventive Occupational Health Care?",
+        lead: "Preventive occupational health care may be relevant in particular for employees who may come into contact with asbestos-containing materials, for example during:",
         items: [
           "demolition work",
           "refurbishment work",
@@ -282,8 +282,8 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
     ],
     cta: {
       label: "Contact",
-      title: "Asbestos screening for companies",
-      text: "We support companies in assessing what is required and in carrying out the necessary screening. Where several employees are involved, screening appointments can be grouped together by arrangement. As a rule we come back to you within 48 hours.",
+      title: "Asbestos Preventive Occupational Health Care for Companies",
+      text: "We support companies in determining the appropriate occupational health requirements and arranging the necessary preventive occupational health care. For several employees, appointments can be coordinated and grouped together by arrangement. We usually respond within 48 hours.",
       ctaLabel: "Request asbestos screening",
     },
   },
@@ -291,29 +291,29 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
     meta: {
       title: "G20 examination Munich",
       description:
-        "G20 examination (DGUV recommendation “Noise”) in Munich: occupational health screening for noise exposure – for companies and, by arrangement, on site.",
+        "G20 examination (DGUV Recommendation “Noise”) in Munich: preventive occupational health care for noise exposure – for companies and, by arrangement, directly on-site.",
     },
     h1: "G20 examination Munich",
-    tagline: "Occupational health screening for noise",
+    tagline: "Preventive Occupational Health Care for Noise Exposure",
     intro: [
       "The G20 examination applies to employees exposed to significant noise at work.",
-      "The former designation “G20” has been replaced by the current DGUV recommendation “Noise”. In everyday company use, and when searching for occupational health screening, the term G20 is still widely used.",
-      "MonacoMed offers occupational health screening for noise exposure to companies in Munich and, by arrangement, at your own premises.",
+      "The former designation “G20” has been replaced by the current DGUV Recommendation “Noise”. However, the term G20 is still widely used in occupational health practice and when searching for this type of preventive occupational health care.",
+      "MonacoMed provides preventive occupational health care for noise exposure for companies in Munich and, by arrangement, directly at your workplace.",
     ],
-    heroCta: "Request G20 screening",
+    heroCta: "Enquire About G20 Preventive Health Care",
     sections: [
       {
         kind: "prose",
-        title: "When is screening for noise required?",
+        title: "When Is Preventive Occupational Health Care Required for Noise Exposure?",
         paragraphs: [
-          "Where employees are exposed to occupational noise, screening may be offered or mandatory depending on the level of exposure.",
-          "At or above the lower exposure action value of 80 dB(A), screening must generally be offered. At or above the upper exposure action value of 85 dB(A), mandatory screening must be arranged.",
+          "Depending on the level of occupational noise exposure, optional or mandatory preventive occupational health care may be required.",
+          "At or above the lower exposure action value of 80 dB(A), optional health care must generally be offered. At or above the upper exposure action value of 85 dB(A), mandatory health care must be arranged.",
         ],
       },
       {
         kind: "checklist",
-        title: "What does G20 screening involve?",
-        lead: "The focus is on occupational health advice about protecting hearing, and on individual noise exposure.",
+        title: "What Does G20 Preventive Health Care Include?",
+        lead: "The focus is on occupational health advice on hearing protection and the employee’s individual noise exposure.",
         intro: "Depending on the reason for screening, the following aspects may be considered:",
         items: [
           "occupational noise exposure",
@@ -321,42 +321,42 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
           "hearing protection",
           "individual risk factors",
           "complaints about, or changes in, hearing",
-          "a hearing test or audiometry, where medically indicated",
+          "hearing problems or changes in hearing",
         ],
         note: "The aim is to identify work-related health risks early and to advise employees individually on protecting their hearing.",
       },
     ],
     cta: {
       label: "Contact",
-      title: "G20 screening at your own premises",
-      text: "Where several employees are exposed to noise, we can organise the screening together at your site. We agree the number of employees, the examinations required and the practical arrangements with you in advance, so that even larger screening days fit efficiently into your operations. As a rule we come back to you within 48 hours.",
-      ctaLabel: "Request a screening day",
+      title: "G20 Preventive Health Care Directly at Your Workplace",
+      text: "If several employees are exposed to noise, we can organise the preventive occupational health care directly at your workplace. We coordinate the number of employees, any examinations required and the practical arrangements with you in advance. This allows even larger occupational health days to be integrated efficiently into your day-to-day operations. We usually respond to enquiries within 48 hours.",
+      ctaLabel: "Enquire About an On-Site Occupational Health Day",
     },
   },
   g24: {
     meta: {
       title: "G24 examination Munich",
       description:
-        "G24 examination Munich: occupational health screening for skin exposure from wet work, gloves or irritant substances – on site or at our practice.",
+        "G24 examination in Munich: preventive occupational health care for skin exposure from wet work, protective gloves or skin-irritating substances – on-site or at our practice.",
     },
     h1: "G24 examination Munich",
     tagline: "Occupational health screening for skin exposure",
     intro: [
       "The G24 examination applies to employees whose skin is placed under particular strain by their work.",
       "The former designation “G24 – skin conditions” is still widely used. Today the screening is based on the specific reason for it and on the company's risk assessment.",
-      "MonacoMed offers occupational health screening for skin-intensive work to companies in Munich and, by arrangement, at your own premises.",
+      "MonacoMed provides preventive occupational health care for skin-exposing work for companies in Munich and, by arrangement, directly at your workplace.",
     ],
     heroCta: "Request G24 screening",
     sections: [
       {
         kind: "checklist",
-        title: "Who might G24 screening apply to?",
-        lead: "Occupational health screening may be relevant in particular for work placing increased strain on the skin, for example:",
+        title: "Who May Need G24 Preventive Health Care?",
+        lead: "Preventive occupational health care may be relevant in particular for work involving increased skin exposure, for example:",
         items: [
           "wet work",
           "frequent or prolonged wearing of liquid-tight gloves",
           "regular contact with skin-irritant or sensitising substances",
-          "work with cutting fluids",
+          "work involving metalworking fluids",
           "cleaning and disinfection work",
           "work in healthcare, skilled trades or industry",
         ],
@@ -364,7 +364,7 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
       },
       {
         kind: "checklist",
-        title: "What does G24 screening involve?",
+        title: "What Does G24 Preventive Health Care Include?",
         lead: "The focus is on individual advice about skin health and on identifying work-related skin problems early.",
         intro: "Depending on the reason for screening, the following are considered among others:",
         items: [
@@ -378,17 +378,17 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
       },
       {
         kind: "prose",
-        title: "Preventing skin conditions early",
+        title: "Preventing Work-Related Skin Conditions",
         paragraphs: [
-          "Work-related skin conditions can develop gradually. Early occupational health advice and suitable protective measures can help avoid complaints, or prevent them getting worse.",
-          "Occupational health screening complements the technical and organisational protective measures already in place at the company.",
+          "Work-related skin conditions can develop gradually. Early occupational health advice and appropriate protective measures can help prevent symptoms or stop existing problems from worsening.",
+          "Preventive occupational health care complements the technical and organisational protective measures in place at the workplace.",
         ],
       },
     ],
     cta: {
       label: "Contact",
       title: "G24 screening at your own premises",
-      text: "Where several employees do skin-intensive work, we can hold screening appointments together at your site. We support you with the organisation and agree what screening is needed, based on the activities involved and your company's risk assessment. As a rule we come back to you within 48 hours.",
+      text: "If several employees carry out work involving significant skin exposure, we can organise preventive occupational health appointments directly at your workplace. We support you with the organisation and determine the appropriate occupational health care based on the work activities and your workplace risk assessment. We usually respond to enquiries within 48 hours.",
       ctaLabel: "Request a screening day",
     },
   },

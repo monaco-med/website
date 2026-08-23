@@ -5,31 +5,31 @@ export const faqEn: FaqPageContent = {
   meta: {
     title: "Frequently asked questions (FAQ)",
     description:
-      "Answers to the most common questions about company doctors, occupational health, workplace safety and working with MonacoMed.",
+      "Answers to frequently asked questions about occupational physicians, occupational health, occupational safety and working with MonacoMed.",
   },
   label: "FAQ",
-  h1: "Questions companies ask before starting",
-  lead: "Specific rather than general — the questions decision-makers ask most often.",
+  h1: "Frequently Asked Questions Before Getting Started",
+  lead: "Clear answers to the questions decision-makers ask most often.",
   items: [
     {
-      q: "Does my company actually need a company doctor?",
-      a: "Employers are required to ensure occupational health support is in place. What that looks like in practice depends on the number of employees, the work being done and the risks involved. We will help you work out where you stand.",
+      q: "Does my company need an occupational physician?",
+      a: "Employers are required to ensure appropriate occupational health support. The exact form and scope depend on the number of employees, their work activities and workplace hazards. We help you determine what your company needs.",
     },
     {
-      q: "Does MonacoMed cover workplace safety as well?",
-      a: "Yes. MonacoMed combines occupational health and workplace safety – with a company doctor, an occupational safety specialist, safety committee meetings, workplace inspections and risk assessments.",
+      q: "Does MonacoMed also provide occupational safety services?",
+      a: "Yes. MonacoMed combines occupational health and occupational safety – with an occupational physician, occupational safety specialist, Occupational Health and Safety Committee meetings, workplace inspections and risk assessments.",
     },
     {
       q: "Can appointments be organised digitally?",
-      a: "Yes. Employees book their own appointments online. It takes work off HR while keeping the overview in one place.",
+      a: "Yes. Employees can book appointments online themselves. This reduces the administrative burden on HR while maintaining full oversight.",
     },
     {
-      q: "Can you support several locations?",
-      a: "Yes, by arrangement. We support companies in Munich, Bavaria and further regions, with central coordination and on-site days you can plan around.",
+      q: "Can you support multiple locations?",
+      a: "Yes. We support companies in Munich, Bavaria and other regions, with centralised coordination and scheduled on-site appointments.",
     },
     {
-      q: "What does it cost?",
-      a: "That depends on what you actually need. After a short conversation you will receive a clear, transparent quote.",
+      q: "How much does occupational health support cost?",
+      a: "This depends on your actual requirements. After a brief assessment, you will receive a clear and transparent quote.",
     },
   ],
   backLabel: "Back to the homepage",
