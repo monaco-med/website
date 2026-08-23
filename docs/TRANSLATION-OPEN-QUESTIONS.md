@@ -80,9 +80,10 @@ if a data-protection authority or client ever asks, the named processor and the
 actual one differ. David has accepted this; noted here only so nobody
 "discovers" it later and reopens it as a bug.
 
-## 🟡 4. "German version is legally binding" notice
+## ✅ 4. "German version is legally binding" notice
 
-Written and shipped — no longer blocking. It sits in a highlighted box directly
+**APPROVED (David, Aug 2026)** — he returned no corrections on the legal page and
+confirmed it as read. Closed. It sits in a highlighted box directly
 above the first heading on `/en/legal-notice`, and reads:
 
 > Please note: this English text is a translation provided for convenience
