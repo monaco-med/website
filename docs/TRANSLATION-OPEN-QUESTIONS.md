@@ -116,16 +116,28 @@ applied site-wide. The current agreed set lives in
 [`TRANSLATION-GLOSSARY.md`](./TRANSLATION-GLOSSARY.md); the reversals are
 summarised under point 1 above. Nothing outstanding here.
 
-## 🟡 6. Headline rewritten rather than translated
+## ✅ 6. Homepage headline — written by David
 
-German: *„Betriebliche Gesundheit einfach gut organisiert."*
-English: **"Workplace health, simply well organised."**
+He replaced the drafted headline himself in round 2:
 
-A literal translation ("Occupational health simply well organised") is clumsy.
-Mine keeps the rhythm but is slightly less formal. Happy to change it.
+| | |
+|---|---|
+| German | *„Betriebliche Gesundheit einfach gut organisiert."* |
+| Drafted | "Workplace health, simply well organised." |
+| **Live** | **"Occupational health. Simply well organised."** |
 
-Same applies to *„Loslegen statt lange abstimmen"* → **"Get started instead of
-drawn-out planning"**, which is a rewrite rather than a translation.
+Subheadline and hero CTA are his wording too: *"Occupational health and safety
+for companies in Germany – personally delivered and digitally organised."* and
+*"Check your requirements"*, with *"Free and without obligation"* underneath.
+
+⚪ Note the subheadline says **Germany**, widening the pitch, while the coverage
+strip below it still reads "Munich & Bavaria as our core area · further
+locations on request". Deliberate on his side as far as I can tell, but flagged
+in case the two should agree.
+
+*„Loslegen statt lange abstimmen"* → **"Get started instead of drawn-out
+planning"** is still a rewrite rather than a translation, and still fine to
+change.
 
 ## 🟡 7. Statute names kept in German
 
@@ -140,10 +152,10 @@ the English form arrive with "Management" rather than "Geschäftsführung". Ever
 notification email now carries a **"Sprache der Anfrage"** line, so it is always
 clear which language someone wrote in.
 
-## 🟡 9. "Assess your requirements" vs the URL `/en/assess-your-needs`
+## 🟡 9. "Check your requirements" vs the URL `/en/assess-your-needs`
 
-The button says *requirements*, the URL says *needs*. Harmless, but I can align
-them if you'd prefer.
+The homepage button now says *check*, the header says *assess*, the URL says
+*needs*. See 4b — one yes/no settles all three.
 
 ---
 
