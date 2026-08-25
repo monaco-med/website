@@ -101,7 +101,7 @@ export const routesEn: Record<RouteKey, string> = {
   g24: "/en/services/occupational-health-care/g24",
   digitaleProzesse: `/en/services#${anchors.en.digitaleProzesse}`,
   gesundheitsmanagement: `/en/services#${anchors.en.gesundheitsmanagement}`,
-  betriebsarztMuenchen: "/en/occupational-physician-munich",
+  betriebsarztMuenchen: "/en/company-doctor-munich",
   fuerUnternehmen: "/en/for-companies",
   betreuungsbedarf: "/en/assess-your-needs",
   rueckruf: "/en/request-a-callback",

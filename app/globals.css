@@ -1448,6 +1448,11 @@ section.pad {
 }
 /* Precedence notice on the English legal page: the German text is the binding
    one, so it has to read as a statement about the document, not as body copy. */
+.hero-cta-note {
+  margin-top: 12px;
+  font-size: 13.5px;
+  color: var(--mute);
+}
 .legal .notice {
   background: var(--panel);
   border: 1px solid var(--line);

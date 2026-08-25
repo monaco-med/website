@@ -334,6 +334,12 @@ export interface HomePageContent {
   /** Coverage strip under the sub-headline. */
   coverage: string;
   heroCtas: readonly CtaLink[];
+  /**
+   * Small reassurance line under the hero buttons, e.g. "Free and without
+   * obligation". Optional: only the English homepage sets one, so the German
+   * hero renders exactly as before.
+   */
+  heroCtaNote?: string;
   /** Numbered assurances in the hero's right-hand rail. */
   rail: readonly { n: string; text: string }[];
   /** Four-item trust band under the hero. */

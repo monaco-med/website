@@ -28,7 +28,7 @@ export const leistungenEn: ContentPageContent = {
       { id: "04", key: "impfungen", title: "Workplace vaccinations", text: "Workplace vaccination programmes delivered on-site – from planning through to documentation." },
       { id: "05", key: "digitaleProzesse", title: "Digital processes", text: "Online appointment booking, digital management of preventive occupational health care and automatic reminders." },
       { id: "06", key: "gesundheitsmanagement", title: "Health management", text: "Workplace health management, health days, ergonomics and preventive health programmes for your team." },
-      { id: "07", key: "gUntersuchungen", title: "Preventive occupational health care & g examinations", text: "G25, G37, G41 and other occupational health assessments – planned, carried out and documented." },
+      { id: "07", key: "gUntersuchungen", title: "Occupational health care & G examinations", text: "G25, G37, G41 and other occupational health assessments – planned, carried out and documented." },
     ],
   },
   sections: [

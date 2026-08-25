@@ -12,11 +12,12 @@ export const homeEn: HomePageContent = {
     description:
       "Occupational health, occupational safety and health management for companies in Munich – digitally organised, with personal physician-led care",
   },
-  h1: "Workplace health, simply well organised.",
-  sub: "Occupational health and safety services for companies – personally delivered and digitally organised.",
+  h1: "Occupational health. Simply well organised.",
+  sub: "Occupational health and safety for companies in Germany – personally delivered and digitally organised.",
   coverage: "Munich & Bavaria as our core area · further locations on request",
+  heroCtaNote: "Free and without obligation",
   heroCtas: [
-    { key: "betreuungsbedarf", label: "Assess your requirements free of charge", variant: "primary" },
+    { key: "betreuungsbedarf", label: "Check your requirements", variant: "primary" },
     { key: "rueckruf", label: "Request a callback", variant: "ghost" },
   ],
   rail: [

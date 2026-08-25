@@ -55,19 +55,17 @@ that, changing a URL costs redirects and ranking.
 | `/leistungen/vorsorge-g-untersuchungen` | `/en/services/occupational-health-care` ← renamed |
 | `…/g20` … `…/g42` | unchanged (G-codes kept) |
 | `…/asbest` | `…/asbestos` |
-| `/betriebsarzt-muenchen` | `/en/occupational-physician-munich` ← renamed |
+| `/betriebsarzt-muenchen` | `/en/company-doctor-munich` |
 | `/fuer-unternehmen` | `/en/for-companies` |
 | `/betreuungsbedarf` | `/en/assess-your-needs` |
 | `/rueckruf` | `/en/request-a-callback` |
 | `/kontakt` | `/en/contact` |
 | `/impressum` | `/en/legal-notice` |
 
-⚠️ **One of these is a genuine trade-off, and it is David's call.**
-`company-doctor-munich` → `occupational-physician-munich` gains consistency with
-the copy but loses search volume: "company doctor" is what people type into
-Google, "occupational physician" is what the profession calls itself. Since no
-page says "company doctor" any more, the rename is the consistent choice — but
-keeping the old slug would be defensible purely on search grounds.
+✅ **Settled (David, round 2):** search volume wins for the Betriebsarzt page.
+It stays at `/en/company-doctor-munich`, and "company doctor" is the primary
+term in its title, h1 and lead. "Occupational physician" still appears in the
+body there and remains the site-wide term everywhere else.
 
 ## ✅ 3. Hosting provider named in the privacy policy
 
@@ -101,6 +99,15 @@ in brackets — "Bayerische Landesärztekammer (Bavarian State Chamber of
 Physicians)" — so they stay findable. Postal addresses are verbatim.
 
 ---
+
+## ⚪ 4b. "Assess" vs "Check your requirements"
+
+The homepage hero button now says **"Check your requirements"** (David, round 2)
+with "Free and without obligation" underneath. The header button on every page
+still says "Assess your requirements", so both are visible together on the
+homepage. Not wrong — a shorter nav label is normal — but worth a yes/no from
+David if he wants them identical. Eight other CTAs point at the same page with
+context-specific wording, which is intentional.
 
 ## ✅ 5. Terms — settled in review round 1
 

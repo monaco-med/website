@@ -36,7 +36,7 @@ export const commonEn: CommonContent = {
       { key: "bahnmedizin", label: "railway occupational medicine" },
       { key: "impfungen", label: "Vaccinations" },
       { key: "gUntersuchungen", label: "Occupational health care & G examinations" },
-      { key: "betriebsarztMuenchen", label: "occupational health physician in Munich" },
+      { key: "betriebsarztMuenchen", label: "company doctor in Munich" },
       { key: "fuerUnternehmen", label: "For companies" },
       { key: "leitung", label: "Medical director" },
       { key: "faq", label: "FAQ" },

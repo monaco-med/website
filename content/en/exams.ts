@@ -11,7 +11,7 @@ import type { ExamPageContent, ExamSlug } from "@/content/types";
  * dB(A) values, DGUV references and the 48-hour response promise are carried
  * over unchanged. Terminology follows `docs/TRANSLATION-GLOSSARY.md`.
  */
-export const examParentLabelEn = "Preventive occupational health care & G examinations";
+export const examParentLabelEn = "Occupational health care & G examinations";
 
 export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
   g25: {

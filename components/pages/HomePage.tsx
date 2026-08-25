@@ -51,6 +51,7 @@ export default function HomePage({
                   </Link>
                 ))}
               </div>
+              {content.heroCtaNote && <p className="hero-cta-note">{content.heroCtaNote}</p>}
             </Reveal>
             <Reveal className="rail" stagger delay={0.2}>
               {content.rail.map((item) => (

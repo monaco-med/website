@@ -3,12 +3,12 @@ import type { ContentPageContent } from "@/content/types";
 /** English copy for the company-doctor-in-Munich landing page. */
 export const betriebsarztMuenchenEn: ContentPageContent = {
   meta: {
-    title: "Occupational physician Munich",
+    title: "Company doctor Munich | Occupational health services",
     description:
-      "Your occupational physician in Munich: practice on Heidemannstraße, on-site examination days and short-notice appointments – specialist-led and personally delivered.",
+      "Your company doctor in Munich: practice on Heidemannstraße, on-site examination days and short-notice appointments – specialist-led and personally delivered.",
   },
-  heroLabel: "Occupational physician Munich",
-  h1: "Your occupational physician in Munich",
+  heroLabel: "Company doctor Munich",
+  h1: "Company doctor in Munich – occupational health services for companies",
   tagline: "Based in Munich – with on-site services directly at your workplace.",
   intro: [
     "MonacoMed provides occupational health services for companies in Munich and across Bavaria – from our practice at Heidemannstraße 38 and through on-site examination days at your workplace. Additional locations are available on request.",
@@ -21,7 +21,7 @@ export const betriebsarztMuenchenEn: ContentPageContent = {
     {
       kind: "reasons",
       title: "On site, not at arm's length",
-      lead: "A local occupational physician in Munich – accessible, responsive and personal rather than an anonymous large-scale provider.",
+      lead: "A local company doctor in Munich – accessible, responsive and personal rather than an anonymous large-scale provider.",
       items: [
         {
           title: "Local and accessible",
