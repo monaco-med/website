@@ -8,12 +8,12 @@ import type { ContentPageContent } from "@/content/types";
  */
 export const gUntersuchungenEn: ContentPageContent = {
   meta: {
-    title: "Preventive occupational health care & g examinations",
+    title: "Occupational health care & G examinations",
     description:
       "G20 to G46: preventive occupational health care and medical fitness assessments for companies – in Munich or during on-site occupational health days at your workplace.",
   },
-  breadcrumb: "Preventive occupational health care & g examinations",
-  h1: "Preventive occupational health care & G examinations",
+  breadcrumb: "Occupational health care & G examinations",
+  h1: "Occupational health care & G examinations",
   tagline: "Occupational health examinations and assessments for companies – in Munich or directly at your workplace",
   intro: [
     "G25, G26, G37 and G42: many types of preventive occupational health care and medical examinations are still commonly known by their former G designations.",

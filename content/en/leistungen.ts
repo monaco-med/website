@@ -127,7 +127,7 @@ export const leistungenEn: ContentPageContent = {
       kind: "tiles",
       id: "occupational-health-care",
       label: "Service area 07",
-      title: "Preventive occupational health care & g examinations",
+      title: "Occupational health care & G examinations",
       action: { key: "gUntersuchungen", label: "Learn more", variant: "ghost" },
       items: [
         {

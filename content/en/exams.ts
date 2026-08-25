@@ -242,17 +242,17 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
       description:
         "Preventive occupational health care for work involving asbestos for companies in Munich – including post-exposure health care after exposure has ended.",
     },
-    h1: "Asbestos preventive occupational health care Munich",
+    h1: "Occupational health care for asbestos exposure in Munich",
     tagline: "Preventive occupational health care for work involving asbestos",
     intro: [
       "Work involving asbestos can expose employees to harmful asbestos fibres. Exposure can still occur today, particularly during demolition, refurbishment and maintenance work on older buildings and plant.",
       "Where work involves exposure to asbestos, mandatory preventive occupational health care must be arranged. MonacoMed provides this service for companies in Munich and, by arrangement, directly at your workplace.",
     ],
-    heroCta: "Enquire about asbestos health care",
+    heroCta: "Enquire about asbestos occupational health care",
     sections: [
       {
         kind: "checklist",
-        title: "Who may need asbestos preventive occupational health care?",
+        title: "Who may need occupational health care for asbestos exposure?",
         lead: "Preventive occupational health care may be relevant in particular for employees who may come into contact with asbestos-containing materials, for example during:",
         items: [
           "demolition work",
@@ -282,9 +282,9 @@ export const examPagesEn: Record<ExamSlug, ExamPageContent> = {
     ],
     cta: {
       label: "Contact",
-      title: "Asbestos preventive occupational health care for companies",
+      title: "Occupational health care for asbestos exposure at your workplace",
       text: "We support companies in determining the appropriate occupational health requirements and arranging the necessary preventive occupational health care. For several employees, appointments can be coordinated and grouped together by arrangement. We usually respond within 48 hours.",
-      ctaLabel: "Enquire about asbestos health care",
+      ctaLabel: "Enquire about asbestos occupational health care",
     },
   },
   g20: {

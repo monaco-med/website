@@ -61,7 +61,7 @@ export const homeEn: HomePageContent = {
       { n: "Step 01", title: "Send an enquiry", text: "A few details are enough: your company, number of employees, location and what you need." },
       { n: "Step 02", title: "Get clarity", text: "We assess your needs and recommend the level of support that is right for your company." },
       { n: "Step 03", title: "Get a quote", text: "You receive a clear proposal – easy to understand, tailored to your needs and without unnecessary complexity." },
-      { n: "Step 04", title: "Get going", text: "Once you give us the go-ahead, we organise the rest: appointments, preventive occupational health care, occupational health and safety committee meetings, workplace inspections, occupational safety and digital processes." },
+      { n: "Step 04", title: "Get going", text: "Once you give us the go-ahead, we organise the rest: appointments, occupational health services, occupational health and safety committee meetings, workplace inspections, occupational safety and digital processes." },
     ],
   },
   why: [
@@ -82,8 +82,8 @@ export const homeEn: HomePageContent = {
     lead: "Specific rather than general — the questions decision-makers ask most often.",
     allLabel: "See all questions",
     items: [
-      { q: "Does my company need an occupational physician?", a: "Employers are required to ensure appropriate occupational health support. The exact form and scope depend on the number of employees, their work activities and workplace hazards. We help you determine what your company needs." },
-      { q: "Does MonacoMed also provide occupational safety services?", a: "Yes. MonacoMed combines occupational health and occupational safety – with an occupational physician, occupational safety specialist, occupational health and safety committee meetings, workplace inspections and risk assessments." },
+      { q: "Does my company need a company doctor?", a: "Employers are required to ensure appropriate occupational health support. The exact form and scope depend on the number of employees, their work activities and workplace hazards. We help you determine what your company needs." },
+      { q: "Does MonacoMed also provide occupational safety services?", a: "Yes. MonacoMed combines occupational health and occupational safety – with a company doctor, an occupational safety specialist, occupational health and safety committee meetings, workplace inspections and risk assessments." },
       { q: "Can appointments be organised digitally?", a: "Yes. Employees can book appointments online themselves. This reduces the administrative burden on HR while maintaining full oversight." },
     ],
   },
