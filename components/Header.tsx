@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { CommonContent } from "@/content/types";
@@ -8,10 +9,10 @@ import { getCounterpartPath, localeRoutes } from "@/lib/routes";
 
 /**
  * Site-wide sticky header: desktop nav with a hover dropdown, a mobile
- * burger menu (native `<details>`, no JS state needed), and a primary CTA
- * button that's duplicated into the mobile menu panel (the desktop `.hcta`
- * is hidden below 920px — see `app/globals.css` — since there isn't room
- * for it next to the burger icon).
+ * burger menu (a native `<details>`), and a primary CTA button that's
+ * duplicated into the mobile menu panel (the desktop `.hcta` is hidden below
+ * 920px — see `app/globals.css` — since there isn't room for it next to the
+ * burger icon).
  *
  * Labels come from the locale's `common` content and link targets are
  * resolved from that locale's route table, so the same component serves both
@@ -28,6 +29,15 @@ export default function Header({
   const pathname = usePathname();
   const routes = localeRoutes[locale];
   const { header } = content;
+
+  // The burger menu is a native `<details>`, but this header lives in the root
+  // layout and is never remounted, so a client-side navigation leaves it open
+  // and the panel covers the page the visitor just asked for. Closing it has to
+  // be explicit. Delegated from the panel so it covers every link inside it —
+  // nav items, the sub-menu, the CTA and the language switcher — and so it also
+  // fires for same-page anchors, where the pathname never changes and a
+  // pathname effect would not run.
+  const menu = useRef<HTMLDetailsElement>(null);
 
   const isBetreuungsbedarf = pathname === routes.betreuungsbedarf;
   const cta = isBetreuungsbedarf
@@ -88,11 +98,18 @@ export default function Header({
             {cta.label}
           </Link>
         </div>
-        <details className="mnav">
+        <details className="mnav" ref={menu}>
           <summary aria-label={header.menuOpen}>
             <span className="bars" />
           </summary>
-          <div className="mnav-panel">
+          <div
+            className="mnav-panel"
+            onClick={(event) => {
+              if ((event.target as HTMLElement).closest("a")) {
+                menu.current?.removeAttribute("open");
+              }
+            }}
+          >
             <Link href={cta.href} className="btn btn-primary btn-block mnav-cta">
               {cta.label}
             </Link>
