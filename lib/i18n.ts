@@ -23,7 +23,7 @@
  *
  * Flipping this to `true` is the launch step (T22).
  */
-export const englishLaunched = false;
+export const englishLaunched = true;
 
 export type Locale = "de" | "en";
 
